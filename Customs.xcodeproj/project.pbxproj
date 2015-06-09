@@ -40,6 +40,9 @@
 		2A95A6ED1B26F0AD00F29E04 /* CustomsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A6F21B26F0AD00F29E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A95A6F31B26F0AD00F29E04 /* CustomsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomsTests.m; sourceTree = "<group>"; };
+		2A95A7001B26F2FF00F29E04 /* MWViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWViews.h; sourceTree = "<group>"; };
+		2A95A7011B26F31A00F29E04 /* MWUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWUtils.h; sourceTree = "<group>"; };
+		2A95A7021B26F32800F29E04 /* MWBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWBase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,9 @@
 		2A95A6D61B26F0AD00F29E04 /* Customs */ = {
 			isa = PBXGroup;
 			children = (
+				2A95A6FD1B26F2E000F29E04 /* Base */,
+				2A95A6FE1B26F2E000F29E04 /* Utils */,
+				2A95A6FF1B26F2E000F29E04 /* Views */,
 				2A95A6DB1B26F0AD00F29E04 /* AppDelegate.h */,
 				2A95A6DC1B26F0AD00F29E04 /* AppDelegate.m */,
 				2A95A6DE1B26F0AD00F29E04 /* ViewController.h */,
@@ -117,6 +123,30 @@
 				2A95A6F21B26F0AD00F29E04 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A95A6FD1B26F2E000F29E04 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2A95A7021B26F32800F29E04 /* MWBase.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2A95A6FE1B26F2E000F29E04 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2A95A7011B26F31A00F29E04 /* MWUtils.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2A95A6FF1B26F2E000F29E04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A95A7001B26F2FF00F29E04 /* MWViews.h */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +446,7 @@
 				2A95A6F91B26F0AD00F29E04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A95A6FA1B26F0AD00F29E04 /* Build configuration list for PBXNativeTarget "CustomsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +455,7 @@
 				2A95A6FC1B26F0AD00F29E04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
