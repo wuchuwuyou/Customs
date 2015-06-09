@@ -14,6 +14,9 @@
 		2A95A6E51B26F0AD00F29E04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A6E41B26F0AD00F29E04 /* Images.xcassets */; };
 		2A95A6E81B26F0AD00F29E04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A6E61B26F0AD00F29E04 /* LaunchScreen.xib */; };
 		2A95A6F41B26F0AD00F29E04 /* CustomsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6F31B26F0AD00F29E04 /* CustomsTests.m */; };
+		2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A7041B27021700F29E04 /* MWBaseNavigationController.m */; };
+		2A95A7081B27030600F29E04 /* MWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A7071B27030600F29E04 /* MWBaseViewController.m */; };
+		2A95A70B1B27032E00F29E04 /* MWNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A70A1B27032E00F29E04 /* MWNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,14 @@
 		2A95A7001B26F2FF00F29E04 /* MWViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWViews.h; sourceTree = "<group>"; };
 		2A95A7011B26F31A00F29E04 /* MWUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWUtils.h; sourceTree = "<group>"; };
 		2A95A7021B26F32800F29E04 /* MWBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWBase.h; sourceTree = "<group>"; };
+		2A95A7031B27021700F29E04 /* MWBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWBaseNavigationController.h; sourceTree = "<group>"; };
+		2A95A7041B27021700F29E04 /* MWBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWBaseNavigationController.m; sourceTree = "<group>"; };
+		2A95A7061B27030600F29E04 /* MWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWBaseViewController.h; sourceTree = "<group>"; };
+		2A95A7071B27030600F29E04 /* MWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWBaseViewController.m; sourceTree = "<group>"; };
+		2A95A7091B27032E00F29E04 /* MWNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNetworking.h; sourceTree = "<group>"; };
+		2A95A70A1B27032E00F29E04 /* MWNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNetworking.m; sourceTree = "<group>"; };
+		2A95A70D1B27036600F29E04 /* MWConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWConst.h; sourceTree = "<group>"; };
+		2A95A7101B2703BD00F29E04 /* MWMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +95,7 @@
 		2A95A6D61B26F0AD00F29E04 /* Customs */ = {
 			isa = PBXGroup;
 			children = (
+				2A95A70C1B27034900F29E04 /* Const */,
 				2A95A6FD1B26F2E000F29E04 /* Base */,
 				2A95A6FE1B26F2E000F29E04 /* Utils */,
 				2A95A6FF1B26F2E000F29E04 /* Views */,
@@ -129,6 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				2A95A7021B26F32800F29E04 /* MWBase.h */,
+				2A95A7031B27021700F29E04 /* MWBaseNavigationController.h */,
+				2A95A7041B27021700F29E04 /* MWBaseNavigationController.m */,
+				2A95A7061B27030600F29E04 /* MWBaseViewController.h */,
+				2A95A7071B27030600F29E04 /* MWBaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -137,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				2A95A7011B26F31A00F29E04 /* MWUtils.h */,
+				2A95A7091B27032E00F29E04 /* MWNetworking.h */,
+				2A95A70A1B27032E00F29E04 /* MWNetworking.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -147,6 +165,15 @@
 				2A95A7001B26F2FF00F29E04 /* MWViews.h */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2A95A70C1B27034900F29E04 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				2A95A70D1B27036600F29E04 /* MWConst.h */,
+				2A95A7101B2703BD00F29E04 /* MWMacro.h */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +220,7 @@
 		2A95A6CC1B26F0AD00F29E04 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MW;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Murphy;
 				TargetAttributes = {
@@ -251,6 +279,9 @@
 			files = (
 				2A95A6E01B26F0AD00F29E04 /* ViewController.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
+				2A95A7081B27030600F29E04 /* MWBaseViewController.m in Sources */,
+				2A95A70B1B27032E00F29E04 /* MWNetworking.m in Sources */,
+				2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */,
 				2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
