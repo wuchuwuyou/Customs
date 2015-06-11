@@ -23,6 +23,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - iCarousel (1.8.1)
   - JSONModel (1.1.0)
   - Mantle (2.0.2):
     - Mantle/extobjc (= 2.0.2)
@@ -40,6 +41,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
   - AFNetworking-RACExtensions (~> 0.1.8)
+  - iCarousel (~> 1.8.1)
   - JSONModel (~> 1.1.0)
   - Mantle (~> 2.0)
   - ReactiveCocoa (~> 2.5)
@@ -48,6 +50,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   AFNetworking-RACExtensions: a043c6b492fa892395ceb9d20bc4c94e96e08a57
+  iCarousel: dace1cb858e3f4dc2614bee3201041247f82feda
   JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
   Mantle: 967fd31ea0220890b2e76589198996b534bb3fb1
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a

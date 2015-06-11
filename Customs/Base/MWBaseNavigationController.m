@@ -17,8 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationBar.tintColor = [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1];
+    self.navigationBar.backgroundColor = [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1];
+    self.navigationBar.barTintColor = [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1];
+    self.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil];
+    
 }
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
