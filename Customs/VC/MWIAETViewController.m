@@ -7,8 +7,10 @@
 //
 
 #import "MWIAETViewController.h"
-
+#import "MWInputView.h"
 @interface MWIAETViewController ()
+
+@property (nonatomic,weak) IBOutlet MWInputView *inputCode;
 
 @end
 
@@ -17,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    self.inputCode.text = @"相关编号";
+//    self.inputCode.isShow = YES;
+    
+    [self.inputCode titleText:@"相关       编号"];
 }
 
 - (void)didReceiveMemoryWarning {

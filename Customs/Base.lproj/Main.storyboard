@@ -302,7 +302,7 @@
         <!--View Controller-->
         <scene sceneID="pxE-Ze-n7L">
             <objects>
-                <viewController id="BTD-bk-wbz" sceneMemberID="viewController">
+                <viewController id="BTD-bk-wbz" customClass="MWIAETViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vRX-VR-U5N"/>
                         <viewControllerLayoutGuide type="bottom" id="FWl-Wi-xQI"/>
@@ -311,23 +311,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJI-qy-0CW" customClass="MWSingleTextField">
-                                <rect key="frame" x="66" y="84" width="468" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tU4-Gg-KH2" customClass="MWInputView">
+                                <rect key="frame" x="46" y="134" width="508" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="fEm-PR-lAE"/>
+                                    <constraint firstAttribute="height" constant="40" id="vrq-eg-WvX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bJI-qy-0CW" firstAttribute="top" secondItem="vRX-VR-U5N" secondAttribute="bottom" constant="20" id="Dtd-Wn-QuG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bJI-qy-0CW" secondAttribute="trailing" constant="50" id="Qsx-dH-RJG"/>
-                            <constraint firstItem="bJI-qy-0CW" firstAttribute="leading" secondItem="uL2-51-eq5" secondAttribute="leadingMargin" constant="50" id="ZjF-sc-OhM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tU4-Gg-KH2" secondAttribute="trailing" constant="30" id="AYz-fY-oel"/>
+                            <constraint firstItem="tU4-Gg-KH2" firstAttribute="leading" secondItem="uL2-51-eq5" secondAttribute="leadingMargin" constant="30" id="YSg-v5-Lsy"/>
+                            <constraint firstItem="tU4-Gg-KH2" firstAttribute="top" secondItem="vRX-VR-U5N" secondAttribute="bottom" constant="70" id="je3-d2-5nV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L0E-Cw-sL6"/>
+                    <connections>
+                        <outlet property="inputCode" destination="tU4-Gg-KH2" id="sJv-VK-bCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7f-5b-Vdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

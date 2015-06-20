@@ -8,6 +8,7 @@
 
 #import "MWSingleTextField.h"
 #import "MWConst.h"
+#import "MWHelper.h"
 static CGFloat promptWith = 60.0;
 @interface MWSingleTextField () <UITextFieldDelegate>
 @property (nonatomic,strong) NSString *promptName;
@@ -33,20 +34,43 @@ static CGFloat promptWith = 60.0;
     return self;
 }
 - (void)layoutViews{
-    UILabel*label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, promptWith, self.frame.size.height)];
+    CGFloat width = promptWith;
+    
+    UILabel*label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, self.frame.size.height)];
     self.promptLabel = label;
     self.promptLabel.backgroundColor = INPUT_FIELD_COLOR;
+    self.promptLabel.font = [MWFontHelper titleFont];
     self.promptLabel.text = self.promptName;
+    self.promptLabel.numberOfLines = 2;
+    self.promptLabel.lineBreakMode = NSLineBreakByCharWrapping;
+    self.promptLabel.textAlignment = NSTextAlignmentCenter;
     self.leftView = self.promptLabel;
-    self.leftViewMode = UITextFieldViewModeAlways;
-}
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    self.promptLabel.textColor = [UIColor whiteColor];
+    self.textColor = [UIColor whiteColor];
+    self.leftViewMode = UITextFieldViewModeAlways;
+    self.backgroundColor = INPUT_BACKGROUND_COLOR;
+}
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.promptLabel.frame = CGRectMake(0, 0, promptWith, self.frame.size.height);
     
 }
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-    
+- (void)titleText:(NSString *)text{
+    if (text && text.length > 0) {
+        self.promptLabel.text = text;
+    }else {
+        self.leftView = nil;
+    }
 }
+//- (void)setPromptName:(NSString *)promptName{
+//    if (_promptName != promptName) {
+//        _promptName = promptName;
+//    }
+//    if (_promptName == nil) {
+//        self.leftView = nil;
+//    }
+//}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

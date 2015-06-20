@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MWHomeViewController : UIViewController
+#import "MWBase.h"
+@interface MWHomeViewController : MWBaseViewController
 
 @end

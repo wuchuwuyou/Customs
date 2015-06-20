@@ -10,4 +10,5 @@
 
 @interface MWSingleTextField : UITextField
 - (instancetype)initWithPromptText:(NSString *)text;
+- (void)titleText:(NSString *)text;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "MWBaseViewController.h"
-
+#import "MWConst.h"
 @interface MWBaseViewController ()
 
 @end
@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = BACKGROUND_COLOR;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,5 +9,8 @@
 #ifndef Customs_MWBase_h
 #define Customs_MWBase_h
 
+#import "MWBaseNavigationController.h"
+
+#import "MWBaseViewController.h"
 
 #endif
