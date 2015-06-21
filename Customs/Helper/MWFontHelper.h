@@ -10,5 +10,5 @@
 #import <UIKit/UIKit.h>
 @interface MWFontHelper : NSObject
 + (UIFont *)titleFont;
-
++ (UIFont *)buttonFont;
 @end

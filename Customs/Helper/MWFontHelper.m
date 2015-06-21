@@ -12,6 +12,13 @@
 + (UIFont *)titleFont{
     return [UIFont systemFontOfSize:[[self alloc] titleFontSize]];
 }
++ (UIFont *)buttonFont{
+    return [UIFont boldSystemFontOfSize:[[self alloc] buttonFontSize]];
+}
+
+- (CGFloat)buttonFontSize{
+    return 16.0 * [self fontScale];
+}
 - (CGFloat)titleFontSize{
     return 14.0 * [self fontScale];
 }

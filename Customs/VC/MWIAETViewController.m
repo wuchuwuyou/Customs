@@ -8,12 +8,15 @@
 
 #import "MWIAETViewController.h"
 #import "MWInputView.h"
+#import "MWInputViewButton.h"
 @interface MWIAETViewController ()
 
 @property (nonatomic,weak) IBOutlet MWInputView *inputCode;
 
 @property (weak, nonatomic) IBOutlet MWInputView *inputName;
 
+@property (weak, nonatomic) IBOutlet MWInputViewButton *resetButton;
+@property (weak, nonatomic) IBOutlet MWInputViewButton *searchButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollBottomHeight;
 
 @end
@@ -28,6 +31,10 @@
     
     [self.inputCode titleText:@"税则列号"];
     [self.inputName titleText:@"货品名称"];
+    
+    
+    [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
+    [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
     
 /// 监听键盘事件
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];

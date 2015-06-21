@@ -350,13 +350,13 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fm-EA-F35">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fm-EA-F35" customClass="MWInputViewButton">
                                         <rect key="frame" x="20" y="520" width="250" height="40"/>
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY5-Ce-Zuq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY5-Ce-Zuq" customClass="MWInputViewButton">
                                         <rect key="frame" x="330" y="520" width="250" height="40"/>
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -542,7 +542,9 @@
                     <connections>
                         <outlet property="inputCode" destination="tU4-Gg-KH2" id="sJv-VK-bCm"/>
                         <outlet property="inputName" destination="SHT-VD-kle" id="0Vw-3F-fQr"/>
+                        <outlet property="resetButton" destination="4Fm-EA-F35" id="AmB-5r-Rdl"/>
                         <outlet property="scrollBottomHeight" destination="N01-Rv-KFY" id="vdD-wb-LNg"/>
+                        <outlet property="searchButton" destination="XY5-Ce-Zuq" id="9RR-xA-zSO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7f-5b-Vdu" userLabel="First Responder" sceneMemberID="firstResponder"/>

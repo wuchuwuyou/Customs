@@ -12,6 +12,8 @@
 #define HOST_NAME @""
 #define BASE_URL  @""
 
+#define BUTTON_CORNERRADIUS 5.0f
+
 #define INPUT_FIELD_COLOR [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1]
 #define INPUT_BACKGROUND_COLOR [UIColor colorWithRed:195.0/255.0 green:228.0/255.0 blue:252.0/255.0 alpha:1]
 
