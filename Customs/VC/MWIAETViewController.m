@@ -12,6 +12,10 @@
 
 @property (nonatomic,weak) IBOutlet MWInputView *inputCode;
 
+@property (weak, nonatomic) IBOutlet MWInputView *inputName;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollBottomHeight;
+
 @end
 
 @implementation MWIAETViewController
@@ -22,9 +26,57 @@
 //    self.inputCode.text = @"相关编号";
 //    self.inputCode.isShow = YES;
     
-    [self.inputCode titleText:@"相关       编号"];
+    [self.inputCode titleText:@"税则列号"];
+    [self.inputName titleText:@"货品名称"];
+    
+/// 监听键盘事件
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
+- (void)keyboardWillShow:(NSNotification *)aNotification{
+    
+    NSDictionary* info = [aNotification userInfo];
+    
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    NSTimeInterval animationDuration;
+    
+    UIViewAnimationCurve animationCurve;
+    
+    [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+    
+    [[info objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+    
+    UIViewAnimationOptions options = animationCurve << 16;
+    
+    [UIView animateWithDuration:animationDuration delay:0.0f options:options animations:^ {
+            self.scrollBottomHeight.constant = kbSize.height + 20;
+            [self.view layoutIfNeeded];
+    } completion:nil];
+}
+- (void)keyboardWillHide:(NSNotification *)aNotification{
+    
+    NSDictionary* info = [aNotification userInfo];
+    
+//    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    NSTimeInterval animationDuration;
+    
+    UIViewAnimationCurve animationCurve;
+    
+    [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+    
+    [[info objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+    
+    UIViewAnimationOptions options = animationCurve << 16;
+    
+    [UIView animateWithDuration:animationDuration delay:0.0f options:options animations:^ {
+            self.scrollBottomHeight.constant = 20;
+            [self.view layoutIfNeeded];
+    } completion:nil];
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
