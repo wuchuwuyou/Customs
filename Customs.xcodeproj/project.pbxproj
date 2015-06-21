@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F79F24082A58FCB29F117AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE101881797890B33C32F13B /* libPods.a */; };
+		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
+		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6D91B26F0AD00F29E04 /* main.m */; };
 		2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6DC1B26F0AD00F29E04 /* AppDelegate.m */; };
 		2A95A6E31B26F0AD00F29E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A6E11B26F0AD00F29E04 /* Main.storyboard */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
+		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
+		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2A95A6D41B26F0AD00F29E04 /* Customs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A6D81B26F0AD00F29E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A95A6D91B26F0AD00F29E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -197,6 +202,8 @@
 				2A95A7001B26F2FF00F29E04 /* MWViews.h */,
 				2A95A7171B295C4200F29E04 /* MWHomeButton.h */,
 				2A95A7181B295C4200F29E04 /* MWHomeButton.m */,
+				2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */,
+				2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */,
 				2A95A72B1B29CC9C00F29E04 /* MWSingleTextField.h */,
 				2A95A72C1B29CC9C00F29E04 /* MWSingleTextField.m */,
 				2AEC8A941B33EBFD0010E557 /* MWInputView.h */,
@@ -210,6 +217,7 @@
 			children = (
 				2A95A70D1B27036600F29E04 /* MWConst.h */,
 				2A95A7101B2703BD00F29E04 /* MWMacro.h */,
+				2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -363,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A95A6E31B26F0AD00F29E04 /* Main.storyboard in Resources */,
+				2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */,
 				2A95A6E81B26F0AD00F29E04 /* LaunchScreen.xib in Resources */,
 				2A95A6E51B26F0AD00F29E04 /* Images.xcassets in Resources */,
 			);
@@ -424,6 +433,7 @@
 				2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */,
 				2A95A7231B29C17B00F29E04 /* MWFontHelper.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
+				2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */,
 				2A95A7081B27030600F29E04 /* MWBaseViewController.m in Sources */,
 				2A95A70B1B27032E00F29E04 /* MWNetworking.m in Sources */,
 				2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */,
