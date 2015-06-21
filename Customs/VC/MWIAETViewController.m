@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet MWInputViewButton *searchButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollBottomHeight;
 
+@property (nonatomic,strong) NSMutableArray *inputViewArray;
+
 @end
 
 @implementation MWIAETViewController
@@ -32,6 +34,12 @@
     [self.inputCode titleText:@"税则列号"];
     [self.inputName titleText:@"货品名称"];
     
+    self.inputViewArray = [NSMutableArray array];
+    
+    [self.inputViewArray addObject:self.inputCode];
+    [self.inputViewArray addObject:self.inputName];
+
+    
     
     [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
     [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
@@ -39,6 +47,18 @@
 /// 监听键盘事件
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+- (IBAction)resetAll:(id)sender {
+    
+    for (MWInputView *v in self.inputViewArray) {
+        [v clearContent];
+    }
+}
+- (IBAction)query:(id)sender {
+    [self.view endEditing:YES];
+    for (MWInputView *v  in self.inputViewArray) {
+        NSLog(@"%@::::%@",v,v.inputText);
+    }
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{

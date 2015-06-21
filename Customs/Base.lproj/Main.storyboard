@@ -355,12 +355,18 @@
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resetAll:" destination="BTD-bk-wbz" eventType="touchUpInside" id="JbC-hQ-qX1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY5-Ce-Zuq" customClass="MWInputViewButton">
                                         <rect key="frame" x="330" y="520" width="250" height="40"/>
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="query:" destination="BTD-bk-wbz" eventType="touchUpInside" id="Txb-pq-YWs"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlz-QL-nLa" userLabel="Input View3" customClass="MWInputView">
                                         <rect key="frame" x="20" y="140" width="560" height="40"/>

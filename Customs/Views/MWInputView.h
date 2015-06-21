@@ -18,4 +18,6 @@
 
 - (instancetype) initWithText:(NSString *)text andShowLeftView:(BOOL)isShow;
 - (void)titleText:(NSString *)text;
+
+- (void)clearContent;
 @end

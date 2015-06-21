@@ -59,6 +59,10 @@
     }
 }
 
+- (void)clearContent{
+    self.stf.text = @"";
+}
+
 /// notification  textfield
 
 - (void)didBeginEditing:(NSNotification *)noti{
