@@ -33,8 +33,6 @@
 }
 - (void)configView{
     
-
-    
     self.stf = [[MWSingleTextField alloc] initWithPromptText:self.text];
     self.stf.delegate = self;
     self.stf.frame = self.bounds;

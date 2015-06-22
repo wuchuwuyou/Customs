@@ -5,10 +5,22 @@
   Created by Tiny on 15/6/21.
   Copyright (c) 2015年 Murphy. All rights reserved.
 */
+//"" = "";
 
 // 中国海关
 // 首页
 // 进出口税则查询
+
+"tariff_no" = "税则列号";
+"goods_name" = "货品名称";
+"MFN_tariff" = "最惠国税率";
+"general_tariff" = "普通税率";
+"conventional_tariff_ASEAN" = "协定税率(东盟)";
+"conventional_tariff_HongKong" = "协定税率(香港)";
+"conventional_tariff_Macao" = "协定税率(澳门)";
+"export_tariff" = "出口税率";
+
+
 // 税则商品及品目注释
 // 本国子目
 // 重点商品
