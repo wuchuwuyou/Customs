@@ -320,7 +320,7 @@
                                             <constraint firstAttribute="height" constant="1" id="GpH-Gs-EC9"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tU4-Gg-KH2" userLabel="Input View1" customClass="MWInputView">
+                                    <view tag="1001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tU4-Gg-KH2" userLabel="Input View1" customClass="MWInputView">
                                         <rect key="frame" x="20" y="20" width="560" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -335,7 +335,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHT-VD-kle" userLabel="Input View2" customClass="MWInputView">
+                                    <view tag="1002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHT-VD-kle" userLabel="Input View2" customClass="MWInputView">
                                         <rect key="frame" x="20" y="80" width="560" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -371,7 +371,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlz-QL-nLa" userLabel="Input View3">
                                         <rect key="frame" x="20" y="140" width="560" height="40"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBL-0z-lrr" customClass="MWInputView">
+                                            <view tag="1003" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBL-0z-lrr" customClass="MWInputView">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -385,7 +385,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-cb-T8Y" customClass="MWInputView">
+                                            <view tag="1004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-cb-T8Y" customClass="MWInputView">
                                                 <rect key="frame" x="340" y="0.0" width="220" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -416,7 +416,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NB3-2f-Yk0" userLabel="Input View4">
                                         <rect key="frame" x="20" y="200" width="560" height="40"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvn-Zz-h5g" customClass="MWInputView">
+                                            <view tag="1005" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvn-Zz-h5g" customClass="MWInputView">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -430,7 +430,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-8E-taF" customClass="MWInputView">
+                                            <view tag="1006" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-8E-taF" customClass="MWInputView">
                                                 <rect key="frame" x="340" y="0.0" width="220" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -462,7 +462,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmD-oY-gXm" userLabel="Input View5">
                                         <rect key="frame" x="20" y="260" width="560" height="40"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-y5-uoa" customClass="MWInputView">
+                                            <view tag="1007" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-y5-uoa" customClass="MWInputView">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -477,7 +477,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61j-OB-nvO" customClass="MWInputView">
+                                            <view tag="1008" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61j-OB-nvO" customClass="MWInputView">
                                                 <rect key="frame" x="340" y="0.0" width="220" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -509,7 +509,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yi0-3T-sEq" userLabel="Input View7">
                                         <rect key="frame" x="20" y="380" width="560" height="40"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqu-DK-irs" customClass="MWInputView">
+                                            <view tag="1011" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqu-DK-irs" customClass="MWInputView">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -524,7 +524,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4s-Wa-srn" customClass="MWInputView">
+                                            <view tag="1012" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4s-Wa-srn" customClass="MWInputView">
                                                 <rect key="frame" x="340" y="0.0" width="220" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -556,7 +556,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OK3-hU-zLZ" userLabel="Input View8">
                                         <rect key="frame" x="20" y="440" width="560" height="40"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBn-OV-oVW" customClass="MWInputView">
+                                            <view tag="1013" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBn-OV-oVW" customClass="MWInputView">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -571,7 +571,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCc-ll-Q4Y" customClass="MWInputView">
+                                            <view tag="1014" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCc-ll-Q4Y" customClass="MWInputView">
                                                 <rect key="frame" x="340" y="0.0" width="220" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -611,7 +611,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-jN-4jZ" userLabel="Input View6">
                                         <rect key="frame" x="20" y="320" width="560" height="40"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngl-PS-sLH" customClass="MWInputView">
+                                            <view tag="1009" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngl-PS-sLH" customClass="MWInputView">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -626,7 +626,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-ZX-oL6" customClass="MWInputView">
+                                            <view tag="1010" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-ZX-oL6" customClass="MWInputView">
                                                 <rect key="frame" x="340" y="0.0" width="220" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>

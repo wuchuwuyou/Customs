@@ -9,6 +9,26 @@
 #import "MWIAETViewController.h"
 #import "MWInputView.h"
 #import "MWInputViewButton.h"
+
+
+typedef enum {
+    TRAIFFTYPECode = 1001,
+    TRAIFFTYPEName,
+    TRAIFFTYPEMFNMin,
+    TRAIFFTYPEMFNMax,
+    TRAIFFTYPEGeneralMin,
+    TRAIFFTYPEGeneralMax,
+    TRAIFFTYPEAseanMin,
+    TRAIFFTYPEAseanMax,
+    TRAIFFTYPEHKMin,
+    TRAIFFTYPEHKMax,
+    TRAIFFTYPEMACAOMin,
+    TRAIFFTYPEMACAOMax,
+    TRAIFFTYPEExportMin,
+    TRAIFFTYPEExportMax
+}TRAIFFTYPE;
+
+
 @interface MWIAETViewController ()
 
 @property (weak,nonatomic) IBOutlet UIScrollView *bgScrollView;
@@ -125,7 +145,15 @@
 - (IBAction)query:(id)sender {
     [self.view endEditing:YES];
     for (MWInputView *v  in self.inputViewArray) {
-        NSLog(@"%@::::%@",v,v.inputText);
+//        NSLog(@"%@::::%@",v,v.inputText);
+//        switch (v.tag) {
+//            case <#constant#>:
+//                <#statements#>
+//                break;
+//                
+//            default:
+//                break;
+//        }
     }
 }
 
