@@ -33,12 +33,16 @@
 }
 - (void)configView{
     
+
+    
     self.stf = [[MWSingleTextField alloc] initWithPromptText:self.text];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEndEditing:) name:UITextFieldTextDidEndEditingNotification object:nil];
     self.stf.delegate = self;
     self.stf.frame = self.bounds;
     [self addSubview:self.stf];
+    //传入参数 object 制定对应的对象
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:self.stf];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEndEditing:) name:UITextFieldTextDidEndEditingNotification object:self.stf];
+
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -64,11 +68,15 @@
 }
 
 /// notification  textfield
-
+//在下面添加输入框背景变化
 - (void)didBeginEditing:(NSNotification *)noti{
+//    ((MWInputView*)(noti.object)).stf.backgroundColor = [UIColor redColor];
+    ((UITextField *)noti.object).backgroundColor = [UIColor redColor];
     NSLog(@"出现焦点");
 }
 - (void)didEndEditing:(NSNotification *)noti{
+//   ((MWInputView*)(noti.object)).stf.backgroundColor = [UIColor greenColor];
+    ((UITextField *)noti.object).backgroundColor = [UIColor greenColor];
     NSLog(@"失去焦点");
 }
 - (void)dealloc{
