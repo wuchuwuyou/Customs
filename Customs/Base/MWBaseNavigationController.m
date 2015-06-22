@@ -7,7 +7,7 @@
 //
 
 #import "MWBaseNavigationController.h"
-
+#import "MWConst.h"
 @interface MWBaseNavigationController ()
 
 @end
@@ -17,9 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationBar.tintColor = [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1];
-    self.navigationBar.backgroundColor = [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1];
-    self.navigationBar.barTintColor = [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1];
+//    self.navigationBar.tintColor = [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1];
+    self.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationBar.backgroundColor = INPUT_FIELD_COLOR;
+    self.navigationBar.barTintColor = INPUT_FIELD_COLOR;
     self.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil];
     
 }
