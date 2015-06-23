@@ -136,6 +136,8 @@
 //        NSLog(@"%@",v.inputText);
 //    }
     NSLog(@"%@",[self.tariffViewModel.model toDictionary]);
+    
+    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"IAETTableViewController"] animated:YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
