@@ -10,9 +10,9 @@
 
 @interface MWInputView : UIView
 
-@property (nonatomic,readonly) NSString *inputText;
+@property (nonatomic,readonly,strong) NSString *inputText;
 
-
+@property (nonatomic,strong) RACSignal *inputTextSignal;
 @property (nonatomic,strong) NSString *text;
 @property (nonatomic,assign) BOOL isShow;
 

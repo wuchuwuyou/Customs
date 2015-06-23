@@ -40,7 +40,13 @@
     //传入参数 object 制定对应的对象
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:self.stf];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEndEditing:) name:UITextFieldTextDidEndEditingNotification object:self.stf];
-
+    
+    self.inputTextSignal = self.stf.rac_textSignal;
+    
+    [self.stf.rac_textSignal subscribeNext:^(NSString *text) {
+        _inputText = text;
+    }];
+    
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -55,11 +61,11 @@
         self.text = nil ;
     }
 }
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-    if ( textField == self.stf) {
-        _inputText = textField.text;
-    }
-}
+//- (void)textFieldDidEndEditing:(UITextField *)textField{
+//    if ( textField == self.stf) {
+//        _inputText = textField.text;
+//    }
+//}
 
 - (void)clearContent{
     self.stf.text = @"";

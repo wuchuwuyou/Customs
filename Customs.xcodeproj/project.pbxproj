@@ -49,6 +49,7 @@
 		2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffModel.m; sourceTree = "<group>"; };
 		2A3B83D21B38588C008EDCD5 /* MWTariffViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTariffViewModel.h; sourceTree = "<group>"; };
 		2A3B83D31B38588C008EDCD5 /* MWTariffViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffViewModel.m; sourceTree = "<group>"; };
+		2A3B83D51B394CC1008EDCD5 /* customs.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = customs.pch; sourceTree = "<group>"; };
 		2A95A6D41B26F0AD00F29E04 /* Customs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A6D81B26F0AD00F29E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A95A6D91B26F0AD00F29E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 			children = (
 				2A95A6D81B26F0AD00F29E04 /* Info.plist */,
 				2A95A6D91B26F0AD00F29E04 /* main.m */,
+				2A3B83D51B394CC1008EDCD5 /* customs.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -576,6 +578,8 @@
 			baseConfigurationReference = 5D1222FD8E5B5CB22B073EAC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Customs/customs.pch";
 				INFOPLIST_FILE = Customs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -590,6 +594,8 @@
 			baseConfigurationReference = 93C26B5ED6B39FDA2EC75BED /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Customs/customs.pch";
 				INFOPLIST_FILE = Customs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

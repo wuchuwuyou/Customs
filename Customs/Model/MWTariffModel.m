@@ -21,7 +21,7 @@
                  @"saeanRateMax":@"ASEAN_max",
                  @"saeanRateMin":@"ASEAN_min",
                  @"hkRateMax":@"HK_max",
-                 @"nkRateMin":@"HK_min",
+                 @"hkRateMin":@"HK_min",
                  @"makaoRateMax":@"MACAO_max",
                  @"makaoRateMin":@"MACAO_min",
                  @"exportRateMax":@"export_max",

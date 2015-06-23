@@ -9,24 +9,8 @@
 #import "MWIAETViewController.h"
 #import "MWInputView.h"
 #import "MWInputViewButton.h"
+#import "MWTariffViewModel.h"
 
-
-typedef enum {
-    TRAIFFTYPECode = 1001,
-    TRAIFFTYPEName,
-    TRAIFFTYPEMFNMin,
-    TRAIFFTYPEMFNMax,
-    TRAIFFTYPEGeneralMin,
-    TRAIFFTYPEGeneralMax,
-    TRAIFFTYPEAseanMin,
-    TRAIFFTYPEAseanMax,
-    TRAIFFTYPEHKMin,
-    TRAIFFTYPEHKMax,
-    TRAIFFTYPEMACAOMin,
-    TRAIFFTYPEMACAOMax,
-    TRAIFFTYPEExportMin,
-    TRAIFFTYPEExportMax
-}TRAIFFTYPE;
 
 
 @interface MWIAETViewController ()
@@ -65,6 +49,8 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet MWInputViewButton *searchButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollBottomHeight;
 
+@property (nonatomic, strong) MWTariffViewModel *tariffViewModel;
+
 @property (nonatomic,strong) NSMutableArray *inputViewArray;
 
 @end
@@ -80,6 +66,8 @@ typedef enum {
 
     [self initViews];
 
+    self.tariffViewModel = [[MWTariffViewModel alloc] initWithMWInputViewArray:self.inputViewArray];
+    
     [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
     [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
     
@@ -134,7 +122,7 @@ typedef enum {
     [self.inputViewArray addObject:self.inputCKSL1];
     [self.inputViewArray addObject:self.inputCKSL2];
 
-
+    
 }
 - (IBAction)resetAll:(id)sender {
     
@@ -144,17 +132,10 @@ typedef enum {
 }
 - (IBAction)query:(id)sender {
     [self.view endEditing:YES];
-    for (MWInputView *v  in self.inputViewArray) {
-//        NSLog(@"%@::::%@",v,v.inputText);
-//        switch (v.tag) {
-//            case <#constant#>:
-//                <#statements#>
-//                break;
-//                
-//            default:
-//                break;
-//        }
-    }
+//    for (MWInputView *v in self.inputViewArray) {
+//        NSLog(@"%@",v.inputText);
+//    }
+    NSLog(@"%@",[self.tariffViewModel.model toDictionary]);
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
