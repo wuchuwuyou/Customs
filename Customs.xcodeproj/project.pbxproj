@@ -12,6 +12,7 @@
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
 		2A3B83D41B38588C008EDCD5 /* MWTariffViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D31B38588C008EDCD5 /* MWTariffViewModel.m */; };
+		2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D71B399FD2008EDCD5 /* MWBaseTableViewController.m */; };
 		2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6D91B26F0AD00F29E04 /* main.m */; };
 		2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6DC1B26F0AD00F29E04 /* AppDelegate.m */; };
 		2A95A6E31B26F0AD00F29E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A6E11B26F0AD00F29E04 /* Main.storyboard */; };
@@ -50,6 +51,8 @@
 		2A3B83D21B38588C008EDCD5 /* MWTariffViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTariffViewModel.h; sourceTree = "<group>"; };
 		2A3B83D31B38588C008EDCD5 /* MWTariffViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffViewModel.m; sourceTree = "<group>"; };
 		2A3B83D51B394CC1008EDCD5 /* customs.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = customs.pch; sourceTree = "<group>"; };
+		2A3B83D61B399FD2008EDCD5 /* MWBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWBaseTableViewController.h; sourceTree = "<group>"; };
+		2A3B83D71B399FD2008EDCD5 /* MWBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWBaseTableViewController.m; sourceTree = "<group>"; };
 		2A95A6D41B26F0AD00F29E04 /* Customs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A6D81B26F0AD00F29E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A95A6D91B26F0AD00F29E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				2A95A7041B27021700F29E04 /* MWBaseNavigationController.m */,
 				2A95A7061B27030600F29E04 /* MWBaseViewController.h */,
 				2A95A7071B27030600F29E04 /* MWBaseViewController.m */,
+				2A3B83D61B399FD2008EDCD5 /* MWBaseTableViewController.h */,
+				2A3B83D71B399FD2008EDCD5 /* MWBaseTableViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				2A95A71C1B29881C00F29E04 /* MWEntranceViewModel.m in Sources */,
 				2A95A7191B295C4200F29E04 /* MWHomeButton.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
+				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
 				2A95A72A1B29C84800F29E04 /* MWIAETViewController.m in Sources */,
 				2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */,
