@@ -6,8 +6,14 @@
 //  Copyright (c) 2015年 Murphy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <RVMViewModel.h>
+#import "MWTariffModel.h"
+#import "MWListDataModel.h"
+@interface MWTariffListViewModel : RVMViewModel
 
-@interface MWTariffListViewModel : UITableViewHeaderFooterView
+@property (nonatomic,strong) RACSignal *updatedContentSignal;
+
+@property (nonatomic,strong,readonly) NSArray *listArray;
+
 
 @end

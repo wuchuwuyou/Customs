@@ -11,4 +11,5 @@
 @interface MWListDataModel : JSONModel
 @property (nonatomic,strong) NSString *source_no;
 @property (nonatomic,strong) NSString *source_name;
+@property (nonatomic,strong) NSString *source_rate;
 @end
