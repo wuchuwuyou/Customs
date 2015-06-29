@@ -10,4 +10,16 @@
 
 @implementation MWAPIManager
 
++ (instancetype)sharedManager{
+    
+    static MWAPIManager *instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [self manager];
+    });
+    return instance;
+}
+- (RACSignal *)requestWithPath:(NSString *)path andParameters:(NSDictionary *)params{
+    return [self rac_POST:path parameters:params];
+}
 @end

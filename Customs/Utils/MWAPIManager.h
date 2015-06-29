@@ -7,7 +7,10 @@
 //
 
 #import "AFHTTPSessionManager.h"
-
+#import <AFHTTPSessionManager+RACSupport.h>
 @interface MWAPIManager : AFHTTPSessionManager
+
++ (instancetype)sharedManager;
+- (RACSignal *)requestWithPath:(NSString *)path andParameters:(NSDictionary *)params;
 
 @end
