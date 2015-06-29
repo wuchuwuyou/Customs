@@ -9,8 +9,10 @@
 #import "MWIAETTableViewController.h"
 #import "MWListCell.h"
 #import "MWListHeaderView.h"
+#import "MWTariffListViewModel.h"
 @interface MWIAETTableViewController ()
 @property (nonatomic,weak) IBOutlet MWListHeaderView *headerView;
+@property (nonatomic,strong) MWTariffListViewModel *viewModel;
 @end
 
 @implementation MWIAETTableViewController
@@ -18,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,7 +31,7 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.viewModel.listArray.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;

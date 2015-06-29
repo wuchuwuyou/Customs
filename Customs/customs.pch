@@ -16,4 +16,6 @@
 #import "MWConst.h"
 #import "MWMacro.h"
 #import "MWConstString.h"
+#import "MWProtocols.h"
+#import "MWAPIHelper.h"
 #endif

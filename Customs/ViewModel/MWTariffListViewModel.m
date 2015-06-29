@@ -7,9 +7,19 @@
 //
 
 #import "MWTariffListViewModel.h"
+#import "MWAPIManager.h"
+@interface MWTariffListViewModel ()
+@property (nonatomic,strong) MWTariffModel *tModel;
+@end
 
 @implementation MWTariffListViewModel
 
-
+- (instancetype)initWithModel:(MWTariffModel *)model{
+    
+    if (self = [super init]) {
+        self.tModel = model;
+    }
+    return self;
+}
 
 @end

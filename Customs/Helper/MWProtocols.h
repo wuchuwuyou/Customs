@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class RACSignal;
 
 @protocol MWProtocols <NSObject>
 
+@end
+
+@protocol MWListProtoclos <NSObject>
+
+- (RACSignal *)requestWithParames:(NSDictionary *)parames withIndex:(NSInteger)index andSize:(NSInteger)size;
+- (RACSignal *)loadMore;
 @end

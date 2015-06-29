@@ -10,7 +10,7 @@
 #import "MWInputView.h"
 #import "MWInputViewButton.h"
 #import "MWTariffViewModel.h"
-
+#import "MWIAETTableViewController.h"
 
 
 @interface MWIAETViewController ()
@@ -137,7 +137,9 @@
 //    }
     NSLog(@"%@",[self.tariffViewModel.model toDictionary]);
     
-    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"IAETTableViewController"] animated:YES];
+    MWIAETTableViewController *tbvc = [self.storyboard instantiateViewControllerWithIdentifier:@"IAETTableViewController"];
+    tbvc.model = self.tariffViewModel.model;
+    [self.navigationController pushViewController:tbvc animated:YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{

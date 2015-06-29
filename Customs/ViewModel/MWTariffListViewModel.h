@@ -9,11 +9,13 @@
 #import <RVMViewModel.h>
 #import "MWTariffModel.h"
 #import "MWListDataModel.h"
-@interface MWTariffListViewModel : RVMViewModel
+///列表数据模型
+@interface MWTariffListViewModel : RVMViewModel 
 
 @property (nonatomic,strong) RACSignal *updatedContentSignal;
 
 @property (nonatomic,strong,readonly) NSArray *listArray;
 
+- (instancetype)initWithModel:(MWTariffModel *)model;
 
 @end

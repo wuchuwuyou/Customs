@@ -77,6 +77,7 @@
 		2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAPIHelper.m; sourceTree = "<group>"; };
 		2A3B83F11B4190C9008EDCD5 /* MWConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWConstString.h; sourceTree = "<group>"; };
 		2A3B83F21B4190C9008EDCD5 /* MWConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWConstString.m; sourceTree = "<group>"; };
+		2A3B83F51B419951008EDCD5 /* MWProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWProtocols.h; sourceTree = "<group>"; };
 		2A95A6D41B26F0AD00F29E04 /* Customs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A6D81B26F0AD00F29E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A95A6D91B26F0AD00F29E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -297,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				2AEC8A971B33FFCB0010E557 /* MWHelper.h */,
+				2A3B83F51B419951008EDCD5 /* MWProtocols.h */,
 				2A95A7211B29C17B00F29E04 /* MWFontHelper.h */,
 				2A95A7221B29C17B00F29E04 /* MWFontHelper.m */,
 				2A3B83EE1B418E6F008EDCD5 /* MWAPIHelper.h */,
