@@ -9,8 +9,7 @@
 #ifndef Customs_MWConst_h
 #define Customs_MWConst_h
 
-#define HOST_NAME @""
-#define BASE_URL  @""
+
 
 #define BUTTON_CORNERRADIUS 5.0f
 
@@ -19,4 +18,11 @@
 
 
 #define BACKGROUND_COLOR [UIColor colorWithRed:251.0/255.0 green:251.0/255.0 blue:251.0/255.0 alpha:1]
+
+
+#define HOST_NAME @"http://111.161.74.54"
+#define PORT 8002
+
+
+
 #endif

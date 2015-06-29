@@ -6,8 +6,5 @@
 //  Copyright (c) 2015年 Murphy. All rights reserved.
 //
 
-#import "MWConstString.h"
 
-@implementation MWConstString
-
-@end
+NSString *const MWTariffListPath = @"/Tariff/getTraiff";

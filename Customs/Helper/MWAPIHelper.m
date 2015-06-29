@@ -9,5 +9,11 @@
 #import "MWAPIHelper.h"
 
 @implementation MWAPIHelper
-
++ (NSString *)tariffListURL{
+    return [[self baseURL] stringByAppendingString:MWTariffListPath];
+}
++ (NSString *)baseURL{
+//    NSString *host = HOST_NAME;
+    return [NSString stringWithFormat:@"%@:%d",HOST_NAME,PORT];
+}
 @end
