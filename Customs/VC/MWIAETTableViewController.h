@@ -7,7 +7,10 @@
 //
 
 #import "MWBaseTableViewController.h"
-
+#import "MWTariffModel.h"
 @interface MWIAETTableViewController : MWBaseTableViewController
+
+///查询参数模型
+@property (nonatomic,strong) MWTariffModel *model;
 
 @end

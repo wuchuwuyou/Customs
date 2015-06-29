@@ -7,9 +7,10 @@
 //
 
 #import "MWIAETTableViewController.h"
-
+#import "MWListCell.h"
+#import "MWListHeaderView.h"
 @interface MWIAETTableViewController ()
-
+@property (nonatomic,weak) IBOutlet MWListHeaderView *headerView;
 @end
 
 @implementation MWIAETTableViewController
@@ -35,6 +36,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listCell"];
     return cell;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    return self.headerView;
 }
 /*
 #pragma mark - Navigation

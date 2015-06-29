@@ -17,6 +17,10 @@
 		2A3B83DE1B39A643008EDCD5 /* MWBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83DD1B39A643008EDCD5 /* MWBaseTableViewCell.m */; };
 		2A3B83E11B39A65E008EDCD5 /* MWListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83E01B39A65E008EDCD5 /* MWListCell.m */; };
 		2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83E31B39A741008EDCD5 /* MWListHeaderView.m */; };
+		2A3B83E71B418588008EDCD5 /* MWTariffListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83E61B418588008EDCD5 /* MWTariffListViewModel.m */; };
+		2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83E91B418B62008EDCD5 /* MWAPIManager.m */; };
+		2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */; };
+		2A3B83F31B4190C9008EDCD5 /* MWConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83F21B4190C9008EDCD5 /* MWConstString.m */; };
 		2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6D91B26F0AD00F29E04 /* main.m */; };
 		2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6DC1B26F0AD00F29E04 /* AppDelegate.m */; };
 		2A95A6E31B26F0AD00F29E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A6E11B26F0AD00F29E04 /* Main.storyboard */; };
@@ -65,6 +69,14 @@
 		2A3B83E01B39A65E008EDCD5 /* MWListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWListCell.m; sourceTree = "<group>"; };
 		2A3B83E21B39A741008EDCD5 /* MWListHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWListHeaderView.h; sourceTree = "<group>"; };
 		2A3B83E31B39A741008EDCD5 /* MWListHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWListHeaderView.m; sourceTree = "<group>"; };
+		2A3B83E51B418588008EDCD5 /* MWTariffListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTariffListViewModel.h; sourceTree = "<group>"; };
+		2A3B83E61B418588008EDCD5 /* MWTariffListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffListViewModel.m; sourceTree = "<group>"; };
+		2A3B83E81B418B62008EDCD5 /* MWAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAPIManager.h; sourceTree = "<group>"; };
+		2A3B83E91B418B62008EDCD5 /* MWAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAPIManager.m; sourceTree = "<group>"; };
+		2A3B83EE1B418E6F008EDCD5 /* MWAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAPIHelper.h; sourceTree = "<group>"; };
+		2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAPIHelper.m; sourceTree = "<group>"; };
+		2A3B83F11B4190C9008EDCD5 /* MWConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWConstString.h; sourceTree = "<group>"; };
+		2A3B83F21B4190C9008EDCD5 /* MWConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWConstString.m; sourceTree = "<group>"; };
 		2A95A6D41B26F0AD00F29E04 /* Customs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A6D81B26F0AD00F29E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A95A6D91B26F0AD00F29E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -219,6 +231,8 @@
 				2A95A7011B26F31A00F29E04 /* MWUtils.h */,
 				2A95A7091B27032E00F29E04 /* MWNetworking.h */,
 				2A95A70A1B27032E00F29E04 /* MWNetworking.m */,
+				2A3B83E81B418B62008EDCD5 /* MWAPIManager.h */,
+				2A3B83E91B418B62008EDCD5 /* MWAPIManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -246,6 +260,8 @@
 		2A95A70C1B27034900F29E04 /* Const */ = {
 			isa = PBXGroup;
 			children = (
+				2A3B83F11B4190C9008EDCD5 /* MWConstString.h */,
+				2A3B83F21B4190C9008EDCD5 /* MWConstString.m */,
 				2A95A70D1B27036600F29E04 /* MWConst.h */,
 				2A95A7101B2703BD00F29E04 /* MWMacro.h */,
 				2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */,
@@ -261,6 +277,8 @@
 				2A95A71B1B29881C00F29E04 /* MWEntranceViewModel.m */,
 				2A3B83D21B38588C008EDCD5 /* MWTariffViewModel.h */,
 				2A3B83D31B38588C008EDCD5 /* MWTariffViewModel.m */,
+				2A3B83E51B418588008EDCD5 /* MWTariffListViewModel.h */,
+				2A3B83E61B418588008EDCD5 /* MWTariffListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -281,6 +299,8 @@
 				2AEC8A971B33FFCB0010E557 /* MWHelper.h */,
 				2A95A7211B29C17B00F29E04 /* MWFontHelper.h */,
 				2A95A7221B29C17B00F29E04 /* MWFontHelper.m */,
+				2A3B83EE1B418E6F008EDCD5 /* MWAPIHelper.h */,
+				2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -467,12 +487,15 @@
 				2A3B83E11B39A65E008EDCD5 /* MWListCell.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
+				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
 				2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
 				2A95A72A1B29C84800F29E04 /* MWIAETViewController.m in Sources */,
 				2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */,
+				2A3B83E71B418588008EDCD5 /* MWTariffListViewModel.m in Sources */,
 				2A95A7231B29C17B00F29E04 /* MWFontHelper.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
+				2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */,
 				2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */,
 				2A3B83D41B38588C008EDCD5 /* MWTariffViewModel.m in Sources */,
 				2A95A7081B27030600F29E04 /* MWBaseViewController.m in Sources */,
@@ -480,6 +503,7 @@
 				2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */,
 				2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */,
 				2A3B83DB1B39A01D008EDCD5 /* MWIAETTableViewController.m in Sources */,
+				2A3B83F31B4190C9008EDCD5 /* MWConstString.m in Sources */,
 				2A3B83DE1B39A643008EDCD5 /* MWBaseTableViewCell.m in Sources */,
 				2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */,
 			);

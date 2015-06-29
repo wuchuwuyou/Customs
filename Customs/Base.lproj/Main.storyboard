@@ -880,6 +880,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="d0x-eE-OAq"/>
+                    <connections>
+                        <outlet property="headerView" destination="OjZ-xL-lx2" id="2Ik-UP-mK2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woo-28-U7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
