@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSError (MWErrorString)
-
+- (NSString *)errorString;
 @end

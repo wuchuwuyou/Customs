@@ -9,5 +9,15 @@
 #import "NSDictionary+MWJSONTransform.h"
 
 @implementation NSDictionary (MWJSONTransform)
+- (NSString *)getJSONString{
+    NSError *parseError = nil;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&parseError];
+    
+    if (parseError) {
+        NSAssert(parseError, @"字典转化json字符串出错");
+    }
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 
+}
 @end

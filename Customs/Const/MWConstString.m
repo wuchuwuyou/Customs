@@ -8,3 +8,5 @@
 
 
 NSString *const MWTariffListPath = @"/Tariff/getTraiff";
+
+NSInteger const PAGESIZE = 20;

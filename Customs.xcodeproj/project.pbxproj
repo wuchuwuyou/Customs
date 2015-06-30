@@ -21,6 +21,9 @@
 		2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83E91B418B62008EDCD5 /* MWAPIManager.m */; };
 		2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */; };
 		2A3B83F31B4190C9008EDCD5 /* MWConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83F21B4190C9008EDCD5 /* MWConstString.m */; };
+		2A3B83F91B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83F81B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m */; };
+		2A3B83FC1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83FB1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m */; };
+		2A3B83FF1B42DAA5008EDCD5 /* NSError+MWErrorString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83FE1B42DAA5008EDCD5 /* NSError+MWErrorString.m */; };
 		2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6D91B26F0AD00F29E04 /* main.m */; };
 		2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A6DC1B26F0AD00F29E04 /* AppDelegate.m */; };
 		2A95A6E31B26F0AD00F29E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A6E11B26F0AD00F29E04 /* Main.storyboard */; };
@@ -78,6 +81,12 @@
 		2A3B83F11B4190C9008EDCD5 /* MWConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWConstString.h; sourceTree = "<group>"; };
 		2A3B83F21B4190C9008EDCD5 /* MWConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWConstString.m; sourceTree = "<group>"; };
 		2A3B83F51B419951008EDCD5 /* MWProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWProtocols.h; sourceTree = "<group>"; };
+		2A3B83F71B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MWGetURLString.h"; sourceTree = "<group>"; };
+		2A3B83F81B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MWGetURLString.m"; sourceTree = "<group>"; };
+		2A3B83FA1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MWJSONTransform.h"; sourceTree = "<group>"; };
+		2A3B83FB1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MWJSONTransform.m"; sourceTree = "<group>"; };
+		2A3B83FD1B42DAA5008EDCD5 /* NSError+MWErrorString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MWErrorString.h"; sourceTree = "<group>"; };
+		2A3B83FE1B42DAA5008EDCD5 /* NSError+MWErrorString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MWErrorString.m"; sourceTree = "<group>"; };
 		2A95A6D41B26F0AD00F29E04 /* Customs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A6D81B26F0AD00F29E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A95A6D91B26F0AD00F29E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +151,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A3B83F61B42BF88008EDCD5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2A3B83F71B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.h */,
+				2A3B83F81B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m */,
+				2A3B83FA1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.h */,
+				2A3B83FB1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m */,
+				2A3B83FD1B42DAA5008EDCD5 /* NSError+MWErrorString.h */,
+				2A3B83FE1B42DAA5008EDCD5 /* NSError+MWErrorString.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		2A95A6CB1B26F0AD00F29E04 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +187,7 @@
 		2A95A6D61B26F0AD00F29E04 /* Customs */ = {
 			isa = PBXGroup;
 			children = (
+				2A3B83F61B42BF88008EDCD5 /* Category */,
 				2A95A6FD1B26F2E000F29E04 /* Base */,
 				2A95A6FE1B26F2E000F29E04 /* Utils */,
 				2A95A6FF1B26F2E000F29E04 /* Views */,
@@ -495,6 +518,7 @@
 				2A95A72A1B29C84800F29E04 /* MWIAETViewController.m in Sources */,
 				2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */,
 				2A3B83E71B418588008EDCD5 /* MWTariffListViewModel.m in Sources */,
+				2A3B83F91B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m in Sources */,
 				2A95A7231B29C17B00F29E04 /* MWFontHelper.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
 				2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */,
@@ -503,7 +527,9 @@
 				2A95A7081B27030600F29E04 /* MWBaseViewController.m in Sources */,
 				2A95A70B1B27032E00F29E04 /* MWNetworking.m in Sources */,
 				2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */,
+				2A3B83FF1B42DAA5008EDCD5 /* NSError+MWErrorString.m in Sources */,
 				2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */,
+				2A3B83FC1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m in Sources */,
 				2A3B83DB1B39A01D008EDCD5 /* MWIAETTableViewController.m in Sources */,
 				2A3B83F31B4190C9008EDCD5 /* MWConstString.m in Sources */,
 				2A3B83DE1B39A643008EDCD5 /* MWBaseTableViewCell.m in Sources */,

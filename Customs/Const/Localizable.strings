@@ -30,4 +30,5 @@
 // 公用
 "reset" = "重置";
 "search" = "查询";
+"network_error" = "网络错误";
 //

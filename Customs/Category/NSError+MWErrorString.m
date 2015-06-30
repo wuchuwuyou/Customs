@@ -9,5 +9,7 @@
 #import "NSError+MWErrorString.h"
 
 @implementation NSError (MWErrorString)
-
+- (NSString *)errorString{
+    return NSLocalizedString(@"network_error", @"网络错误");
+}
 @end

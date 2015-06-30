@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (MWJSONTransform)
+- (NSString *)getJSONString;
 
 @end

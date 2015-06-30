@@ -20,9 +20,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.viewModel = [[MWTariffListViewModel alloc] initWithModel:self.model];
+    @weakify(self);
+    [self.tableView addLegendHeaderWithRefreshingBlock:^{
+        @strongify(self);
+        [self loadData];
+    }];
+    
+    [self.tableView addLegendFooterWithRefreshingBlock:^{
+        @strongify(self);
+        self.viewModel.page_index++;
+        [self loadData];
+    }];
+    
+    [RACObserve(self.viewModel, listArray) subscribeNext:^(id x) {
+        @strongify(self);
+        [self.tableView reloadData];
+    }];
     
 }
-
+- (void)loadData{
+    
+    [[self.viewModel queryMWTariff] subscribeNext:^(id x) {
+        NSMutableArray *arr = [NSMutableArray arrayWithArray: self.viewModel.listArray];
+        [arr addObjectsFromArray:[self.viewModel modelArrayWithArray:x]];
+        self.viewModel.listArray = arr;
+        [self endRefresh];
+    } error:^(NSError *error) {
+        [self endRefresh];
+        [SVProgressHUD showErrorWithStatus:[error errorString]];
+    }];
+}
+- (void)endRefresh{
+    [self.tableView.header endRefreshing];
+    [self.tableView.footer endRefreshing];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
