@@ -29,22 +29,37 @@
     
     [self.tableView addLegendFooterWithRefreshingBlock:^{
         @strongify(self);
+        if (!self.viewModel.canLoadMore) {
+            [self endRefresh];
+        }
         self.viewModel.page_index++;
         [self loadData];
     }];
     
-    [RACObserve(self.viewModel, listArray) subscribeNext:^(id x) {
+    [RACObserve(self.viewModel, listArray) subscribeNext:^(NSArray *arr) {
         @strongify(self);
         [self.tableView reloadData];
     }];
-    
+    [RACObserve(self.viewModel, canLoadMore) subscribeNext:^(NSNumber *canLoadMore) {
+        if (!canLoadMore.boolValue) {
+            [self.tableView.footer noticeNoMoreData];
+        }else{
+            [self.tableView.footer resetNoMoreData];
+        }
+    }];
+    self.viewModel.canLoadMore = self.viewModel.listArray.count<0?YES:NO;
+
 }
 - (void)loadData{
+    
+    
     
     [[self.viewModel queryMWTariff] subscribeNext:^(id x) {
         NSMutableArray *arr = [NSMutableArray arrayWithArray: self.viewModel.listArray];
         [arr addObjectsFromArray:[self.viewModel modelArrayWithArray:x]];
         self.viewModel.listArray = arr;
+        NSInteger count = 0;
+        self.viewModel.canLoadMore = self.viewModel.listArray.count<count?YES:NO;
         [self endRefresh];
     } error:^(NSError *error) {
         [self endRefresh];

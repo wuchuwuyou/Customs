@@ -20,6 +20,7 @@
 ///页数 用于数据请求
 @property (nonatomic,assign) NSInteger page_size;
 
+@property (nonatomic,assign) BOOL canLoadMore;
 /*!
  *  @author Murphy, 2015-06-30 19:06:11
  *

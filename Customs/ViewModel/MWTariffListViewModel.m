@@ -11,6 +11,7 @@
 #import "MWListDataModel.h"
 @interface MWTariffListViewModel ()
 @property (nonatomic,strong) MWTariffModel *tModel;
+
 @end
 
 @implementation MWTariffListViewModel
@@ -21,6 +22,7 @@
         self.tModel = model;
         self.page_index = 1;
         self.page_size = PAGESIZE;
+        self.canLoadMore = YES;
     }
     return self;
 }
