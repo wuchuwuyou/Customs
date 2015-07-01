@@ -17,6 +17,12 @@
 
 @implementation MWListCell
 
+- (void)configCellWithLeft:(NSString *)lf mid:(NSString *)mid right:(NSString *)rg{
+    self.codeLabel.text = lf;
+    self.nameLabel.text = mid;
+    self.rateLabel.text = rg;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

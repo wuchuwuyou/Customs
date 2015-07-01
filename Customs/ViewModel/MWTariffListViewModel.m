@@ -8,7 +8,7 @@
 
 #import "MWTariffListViewModel.h"
 #import "MWAPIManager.h"
-#import "MWListDataModel.h"
+#import "MWTariffListDataModel.h"
 @interface MWTariffListViewModel ()
 @property (nonatomic,strong) MWTariffModel *tModel;
 
@@ -37,16 +37,21 @@
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
     
-//    [AFHTTPSessionManager manager].responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
-//
-//    [[AFHTTPSessionManager manager] POST:[MWAPIHelper tariffListURL] parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        
+    
+//   return  [[[[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper tariffListURL] andParameters:params] map:^id(RACTuple *JSONAndHeaders) {
+//       NSLog(@"data===%@",JSONAndHeaders.first);
+//       return [((NSDictionary *)JSONAndHeaders.first).rac_sequence signal];
+//   }];
+//    return [[self rac_GET:urlString parameters:nil] map:^id(NSDictionary *data) {
+//        NSLog(@"%@",data);
+//        return [[((NSArray *)data[@"pins"]).rac_sequence map:^id(id value) {
+//            NSLog(@"%@",value);
+//            NSLog(@"%@",[[BZPinModel alloc] initWithDictionary:value error:nil]);
+//            return [[BZPinModel alloc] initWithDictionary:value error:nil];
+//        }] array];
 //    }];
     
-    RACSignal *signal =  [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper tariffListURL] andParameters:params];
-    return signal;
+    return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper tariffListURL] andParameters:params];
 }
 - (NSArray *)listArray{
     if (!_listArray) {
@@ -57,7 +62,7 @@
 
 
 - (NSArray *)modelArrayWithArray:(NSArray *)arr{
-   return  [MWListDataModel arrayOfDictionariesFromModels:arr];
+    return  [MWTariffListDataModel arrayOfModelsFromDictionaries:arr];
 }
 
 @end

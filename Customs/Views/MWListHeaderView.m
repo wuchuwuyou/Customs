@@ -18,6 +18,22 @@
 
 @implementation MWListHeaderView
 
+- (void)awakeFromNib{
+    [self configViews];
+}
+
+- (void)setLeftTitle:(NSString *)lf mid:(NSString *)mid right:(NSString *)rg{
+    self.codeLabel.text = lf;
+    self.nameLabel.text = mid;
+    self.rateLabel.text = rg;
+}
+- (void)configViews{
+    
+    UIFont *font = [MWFontHelper headerFont];
+    self.codeLabel.font = font;
+    self.nameLabel.font = font;
+    self.rateLabel.font = font;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

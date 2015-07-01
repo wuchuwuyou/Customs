@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MWListHeaderView : UITableViewHeaderFooterView
-
+- (void)setLeftTitle:(NSString *)lf mid:(NSString *)mid right:(NSString *)rg;
 @end

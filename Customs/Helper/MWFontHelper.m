@@ -15,13 +15,21 @@
 + (UIFont *)buttonFont{
     return [UIFont boldSystemFontOfSize:[[self alloc] buttonFontSize]];
 }
-
++ (UIFont *)headerFont{
+    return [UIFont boldSystemFontOfSize:[[self alloc] headFontSize]];
+}
 - (CGFloat)buttonFontSize{
     return 16.0 * [self fontScale];
 }
 - (CGFloat)titleFontSize{
     return 14.0 * [self fontScale];
 }
+- (CGFloat)headFontSize{
+    return 18.0 * [self fontScale];
+}
+
+
+
 - (CGFloat)fontScale{
     return 1.0f;
 }

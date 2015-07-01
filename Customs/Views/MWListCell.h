@@ -9,5 +9,5 @@
 #import "MWBaseTableViewCell.h"
 
 @interface MWListCell : MWBaseTableViewCell
-
+- (void)configCellWithLeft:(NSString *)lf mid:(NSString *)mid right:(NSString *)rg;
 @end

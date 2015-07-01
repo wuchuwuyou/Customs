@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0F79F24082A58FCB29F117AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE101881797890B33C32F13B /* libPods.a */; };
+		2A060F901B43E8BA009F9EC7 /* MWTariffListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */; };
+		2A060F931B43FDC0009F9EC7 /* MWDetailTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F921B43FDC0009F9EC7 /* MWDetailTextViewController.m */; };
+		2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F951B43FDEB009F9EC7 /* MWDetailTableViewController.m */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -54,6 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A060F8E1B43E8BA009F9EC7 /* MWTariffListDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTariffListDataModel.h; sourceTree = "<group>"; };
+		2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffListDataModel.m; sourceTree = "<group>"; };
+		2A060F911B43FDC0009F9EC7 /* MWDetailTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailTextViewController.h; sourceTree = "<group>"; };
+		2A060F921B43FDC0009F9EC7 /* MWDetailTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDetailTextViewController.m; sourceTree = "<group>"; };
+		2A060F941B43FDEB009F9EC7 /* MWDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailTableViewController.h; sourceTree = "<group>"; };
+		2A060F951B43FDEB009F9EC7 /* MWDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDetailTableViewController.m; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -312,6 +321,10 @@
 			children = (
 				2A95A7141B295B8700F29E04 /* MWHomeViewController.h */,
 				2A95A7151B295B8700F29E04 /* MWHomeViewController.m */,
+				2A060F911B43FDC0009F9EC7 /* MWDetailTextViewController.h */,
+				2A060F921B43FDC0009F9EC7 /* MWDetailTextViewController.m */,
+				2A060F941B43FDEB009F9EC7 /* MWDetailTableViewController.h */,
+				2A060F951B43FDEB009F9EC7 /* MWDetailTableViewController.m */,
 				2A95A7271B29C80900F29E04 /* 进出口税则 */,
 			);
 			path = VC;
@@ -346,6 +359,8 @@
 			children = (
 				2AEC8A991B35BEA00010E557 /* MWListDataModel.h */,
 				2AEC8A9A1B35BEA00010E557 /* MWListDataModel.m */,
+				2A060F8E1B43E8BA009F9EC7 /* MWTariffListDataModel.h */,
+				2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */,
 				2A3B83CF1B384E3F008EDCD5 /* MWTariffModel.h */,
 				2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */,
 			);
@@ -515,6 +530,8 @@
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
 				2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
+				2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */,
+				2A060F901B43E8BA009F9EC7 /* MWTariffListDataModel.m in Sources */,
 				2A95A72A1B29C84800F29E04 /* MWIAETViewController.m in Sources */,
 				2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */,
 				2A3B83E71B418588008EDCD5 /* MWTariffListViewModel.m in Sources */,
@@ -529,6 +546,7 @@
 				2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */,
 				2A3B83FF1B42DAA5008EDCD5 /* NSError+MWErrorString.m in Sources */,
 				2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */,
+				2A060F931B43FDC0009F9EC7 /* MWDetailTextViewController.m in Sources */,
 				2A3B83FC1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m in Sources */,
 				2A3B83DB1B39A01D008EDCD5 /* MWIAETTableViewController.m in Sources */,
 				2A3B83F31B4190C9008EDCD5 /* MWConstString.m in Sources */,

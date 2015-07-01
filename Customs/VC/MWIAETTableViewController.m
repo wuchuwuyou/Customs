@@ -10,6 +10,7 @@
 #import "MWListCell.h"
 #import "MWListHeaderView.h"
 #import "MWTariffListViewModel.h"
+#import "MWTariffListDataModel.h"
 @interface MWIAETTableViewController ()
 @property (nonatomic,weak) IBOutlet MWListHeaderView *headerView;
 @property (nonatomic,strong) MWTariffListViewModel *viewModel;
@@ -47,21 +48,29 @@
             [self.tableView.footer resetNoMoreData];
         }
     }];
-    self.viewModel.canLoadMore = self.viewModel.listArray.count<0?YES:NO;
-
+    
+    [self.headerView setLeftTitle:NSLocalizedString(@"tariff_no", nil) mid:NSLocalizedString(@"goods_name", nil) right:NSLocalizedString(@"general_tariff", nil)];
+    
+    [self.tableView.header beginRefreshing];
+    
 }
 - (void)loadData{
-    
-    
-    
-    [[self.viewModel queryMWTariff] subscribeNext:^(id x) {
+
+    @weakify(self);
+    [[self.viewModel queryMWTariff] subscribeNext:^(RACTuple *value) {
+        @strongify(self);
+        
+        NSDictionary *dict = value.first;
+        NSArray *array  = [dict objectForKey:@"CLS00003"];
+        
         NSMutableArray *arr = [NSMutableArray arrayWithArray: self.viewModel.listArray];
-        [arr addObjectsFromArray:[self.viewModel modelArrayWithArray:x]];
+        [arr addObjectsFromArray:[self.viewModel modelArrayWithArray:array]];
         self.viewModel.listArray = arr;
-        NSInteger count = 0;
+        NSInteger count = [[[[dict objectForKey:@"CLS000031"] lastObject] objectForKey:@"rows"] integerValue];
         self.viewModel.canLoadMore = self.viewModel.listArray.count<count?YES:NO;
         [self endRefresh];
     } error:^(NSError *error) {
+        @strongify(self);
         [self endRefresh];
         [SVProgressHUD showErrorWithStatus:[error errorString]];
     }];
@@ -84,12 +93,16 @@
     return 60;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listCell"];
+    MWListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listCell"];
+    
+    MWTariffListDataModel *m = self.viewModel.listArray[indexPath.row];
+    
+    [cell configCellWithLeft:m.CODE_TS mid:m.G_NAME right:m.COMM_RATE];
+    
     return cell;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return self.headerView;
 }
 /*
 #pragma mark - Navigation

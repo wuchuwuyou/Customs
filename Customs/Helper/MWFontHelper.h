@@ -11,4 +11,5 @@
 @interface MWFontHelper : NSObject
 + (UIFont *)titleFont;
 + (UIFont *)buttonFont;
++ (UIFont *)headerFont;
 @end
