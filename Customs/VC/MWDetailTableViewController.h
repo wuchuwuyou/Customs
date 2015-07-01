@@ -7,7 +7,7 @@
 //
 
 #import "MWBaseTableViewController.h"
-
+#import "MWTariffListDataModel.h"
 @interface MWDetailTableViewController : MWBaseTableViewController
 
 

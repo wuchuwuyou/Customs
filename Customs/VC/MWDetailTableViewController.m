@@ -7,16 +7,16 @@
 //
 
 #import "MWDetailTableViewController.h"
-
+#import "MWCommonDataHelper.h"
 @interface MWDetailTableViewController ()
-
+@property (nonatomic,strong) NSArray *dataArray;
 @end
 
 @implementation MWDetailTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//     Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

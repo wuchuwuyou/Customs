@@ -42,6 +42,8 @@
 		2A95A7231B29C17B00F29E04 /* MWFontHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A7221B29C17B00F29E04 /* MWFontHelper.m */; };
 		2A95A72A1B29C84800F29E04 /* MWIAETViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A7291B29C84800F29E04 /* MWIAETViewController.m */; };
 		2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A72C1B29CC9C00F29E04 /* MWSingleTextField.m */; };
+		2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB171B443888006D7942 /* MWCommonModel.m */; };
+		2AA6AB1B1B443958006D7942 /* MWCommonDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB1A1B443958006D7942 /* MWCommonDataHelper.m */; };
 		2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC8A951B33EBFD0010E557 /* MWInputView.m */; };
 		2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC8A9A1B35BEA00010E557 /* MWListDataModel.m */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,10 @@
 		2A95A7291B29C84800F29E04 /* MWIAETViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWIAETViewController.m; sourceTree = "<group>"; };
 		2A95A72B1B29CC9C00F29E04 /* MWSingleTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSingleTextField.h; sourceTree = "<group>"; };
 		2A95A72C1B29CC9C00F29E04 /* MWSingleTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSingleTextField.m; sourceTree = "<group>"; };
+		2AA6AB161B443888006D7942 /* MWCommonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommonModel.h; sourceTree = "<group>"; };
+		2AA6AB171B443888006D7942 /* MWCommonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonModel.m; sourceTree = "<group>"; };
+		2AA6AB191B443958006D7942 /* MWCommonDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommonDataHelper.h; sourceTree = "<group>"; };
+		2AA6AB1A1B443958006D7942 /* MWCommonDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonDataHelper.m; sourceTree = "<group>"; };
 		2AEC8A941B33EBFD0010E557 /* MWInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputView.h; sourceTree = "<group>"; };
 		2AEC8A951B33EBFD0010E557 /* MWInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputView.m; sourceTree = "<group>"; };
 		2AEC8A971B33FFCB0010E557 /* MWHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWHelper.h; sourceTree = "<group>"; };
@@ -339,6 +345,8 @@
 				2A95A7221B29C17B00F29E04 /* MWFontHelper.m */,
 				2A3B83EE1B418E6F008EDCD5 /* MWAPIHelper.h */,
 				2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */,
+				2AA6AB191B443958006D7942 /* MWCommonDataHelper.h */,
+				2AA6AB1A1B443958006D7942 /* MWCommonDataHelper.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -363,6 +371,8 @@
 				2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */,
 				2A3B83CF1B384E3F008EDCD5 /* MWTariffModel.h */,
 				2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */,
+				2AA6AB161B443888006D7942 /* MWCommonModel.h */,
+				2AA6AB171B443888006D7942 /* MWCommonModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -529,8 +539,10 @@
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
 				2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */,
+				2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
 				2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */,
+				2AA6AB1B1B443958006D7942 /* MWCommonDataHelper.m in Sources */,
 				2A060F901B43E8BA009F9EC7 /* MWTariffListDataModel.m in Sources */,
 				2A95A72A1B29C84800F29E04 /* MWIAETViewController.m in Sources */,
 				2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */,
