@@ -298,7 +298,7 @@
             </objects>
             <point key="canvasLocation" x="805" y="-405"/>
         </scene>
-        <!--View Controller-->
+        <!--进出口税则查询-->
         <scene sceneID="pxE-Ze-n7L">
             <objects>
                 <viewController id="BTD-bk-wbz" customClass="MWIAETViewController" sceneMemberID="viewController">
@@ -733,7 +733,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="L0E-Cw-sL6"/>
+                    <navigationItem key="navigationItem" title="进出口税则查询" id="L0E-Cw-sL6"/>
                     <connections>
                         <outlet property="inputCKSL1" destination="kBn-OV-oVW" id="9C4-yd-FjP"/>
                         <outlet property="inputCKSL2" destination="uCc-ll-Q4Y" id="qE9-kp-a4r"/>
@@ -759,7 +759,7 @@
             </objects>
             <point key="canvasLocation" x="1680" y="-556"/>
         </scene>
-        <!--Table View Controller-->
+        <!--进出口税则查询-->
         <scene sceneID="Lsx-SE-oVT">
             <objects>
                 <tableViewController storyboardIdentifier="IAETTableViewController" id="oiA-OD-7hq" customClass="MWIAETTableViewController" sceneMemberID="viewController">
@@ -879,7 +879,7 @@
                             <outlet property="delegate" destination="oiA-OD-7hq" id="h8u-3o-vyp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="d0x-eE-OAq"/>
+                    <navigationItem key="navigationItem" title="进出口税则查询" id="d0x-eE-OAq"/>
                     <connections>
                         <outlet property="headerView" destination="OjZ-xL-lx2" id="2Ik-UP-mK2"/>
                         <segue destination="ZSQ-ce-bIY" kind="push" id="2pw-Ny-8iO"/>
@@ -909,6 +909,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q32-l3-gib">
                                 <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fSZ-uo-bJX"/>
                                 </constraints>
@@ -916,22 +917,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d9-wp-1cd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMw-He-Rk7">
                                 <rect key="frame" x="0.0" y="114" width="600" height="886"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q32-l3-gib" firstAttribute="leading" secondItem="cNd-Ks-UC5" secondAttribute="leading" id="3u8-s6-4Jv"/>
-                            <constraint firstItem="7d9-wp-1cd" firstAttribute="top" secondItem="Q32-l3-gib" secondAttribute="bottom" id="9sn-ov-3Tq"/>
+                            <constraint firstAttribute="trailing" secondItem="UMw-He-Rk7" secondAttribute="trailing" id="781-WB-bHZ"/>
                             <constraint firstItem="Q32-l3-gib" firstAttribute="top" secondItem="0DX-ia-4MP" secondAttribute="bottom" id="DTn-1Y-BTI"/>
-                            <constraint firstAttribute="trailing" secondItem="7d9-wp-1cd" secondAttribute="trailing" id="Pox-tu-Cd3"/>
-                            <constraint firstItem="gbO-ja-0Xw" firstAttribute="top" secondItem="7d9-wp-1cd" secondAttribute="bottom" id="aZN-tI-wCc"/>
+                            <constraint firstItem="gbO-ja-0Xw" firstAttribute="top" secondItem="UMw-He-Rk7" secondAttribute="bottom" id="LEL-qm-CY4"/>
+                            <constraint firstItem="UMw-He-Rk7" firstAttribute="leading" secondItem="cNd-Ks-UC5" secondAttribute="leading" id="XeN-qs-kNJ"/>
                             <constraint firstAttribute="trailing" secondItem="Q32-l3-gib" secondAttribute="trailing" id="dQP-6P-13g"/>
-                            <constraint firstItem="7d9-wp-1cd" firstAttribute="leading" secondItem="cNd-Ks-UC5" secondAttribute="leading" id="oOK-ZM-3Ym"/>
+                            <constraint firstItem="UMw-He-Rk7" firstAttribute="top" secondItem="Q32-l3-gib" secondAttribute="bottom" id="lUf-Xu-TgX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -941,7 +943,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oHX-GO-4Lg"/>
                     <connections>
-                        <outlet property="detailLabel" destination="7d9-wp-1cd" id="Ndx-7G-8Vq"/>
+                        <outlet property="detailTextView" destination="UMw-He-Rk7" id="XMC-9T-AR1"/>
                         <outlet property="titleLabel" destination="Q32-l3-gib" id="yY6-ko-yWv"/>
                     </connections>
                 </viewController>

@@ -9,6 +9,7 @@
 #import "MWBaseViewController.h"
 
 @interface MWDetailTextViewController : MWBaseViewController
+
 - (void)configViewWittTitle:(NSString *)title detailText:(NSString *)dt;
 
 @end

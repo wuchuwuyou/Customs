@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
     
     self.tableView.tableFooterView = [UIView new];
+    self.title = NSLocalizedString(@"tariff_result", @"进出口税则查询结果");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,8 +81,10 @@
     MWCommonModel *model = self.dataArray[indexPath.row];
     if (model.isMore) {
         MWDetailTextViewController *textVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWDetailTextViewController"];
+        textVC.title = NSLocalizedString(@"tariff_result", @"进出口税则查询结果");
         [textVC configViewWittTitle:model.name detailText:model.content];
         [self.navigationController pushViewController:textVC animated:YES];
+
     }
 }
 /*

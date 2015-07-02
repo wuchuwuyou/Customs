@@ -10,8 +10,9 @@
 
 @interface MWDetailTextViewController ()
 @property (nonatomic,weak) IBOutlet UILabel *titleLabel;
-@property (nonatomic,weak) IBOutlet UILabel *detailLabel;
-
+@property (nonatomic,weak) IBOutlet UITextView *detailTextView;
+@property (nonatomic,strong) NSString *titleText;
+@property (nonatomic,strong) NSString *detailText;
 @end
 
 @implementation MWDetailTextViewController
@@ -19,6 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [RACObserve(self, titleText) subscribeNext:^(NSString *value) {
+        self.titleLabel.text = value;
+    }];
+
+    [RACObserve(self, detailText) subscribeNext:^(NSString *value) {
+        self.detailTextView.text = value;
+    }];
+    
+    self.detailTextView.editable = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,8 +36,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)configViewWittTitle:(NSString *)title detailText:(NSString *)dt{
-    self.titleLabel.text = title;
-    self.detailLabel.text = dt;
+    self.titleText = title;
+    self.detailText = dt;
 }
 
 /*

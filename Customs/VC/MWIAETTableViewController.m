@@ -35,12 +35,15 @@
         if (!self.viewModel.canLoadMore) {
             [self endRefresh];
         }
-        self.viewModel.page_index++;
+        if (self.viewModel.listArray.count != 0) {
+            self.viewModel.page_index++;
+        }
         [self loadData];
     }];
     
     [RACObserve(self.viewModel, listArray) subscribeNext:^(NSArray *arr) {
         @strongify(self);
+        
         [self.tableView reloadData];
     }];
     [RACObserve(self.viewModel, canLoadMore) subscribeNext:^(NSNumber *canLoadMore) {
