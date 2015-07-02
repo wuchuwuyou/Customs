@@ -13,6 +13,8 @@
 UIKIT_EXTERN NSString *const MWTariffListPath;
 
 /// 税则商品及品目注释
+UIKIT_EXTERN NSString *const MWGoodsTariffItemPath;
+
 /// 本国子目
 /// 重点商品
 /// 归类决定

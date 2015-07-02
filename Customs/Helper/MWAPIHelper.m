@@ -12,6 +12,9 @@
 + (NSString *)tariffListURL{
     return [[self baseURL] stringByAppendingString:MWTariffListPath];
 }
++ (NSString *)goodsTariffItemURL{
+    return [[self baseURL] stringByAppendingString:MWGoodsTariffItemPath];
+}
 + (NSString *)baseURL{
 //    NSString *host = HOST_NAME;
     return [NSString stringWithFormat:@"%@:%d",HOST_NAME,PORT];

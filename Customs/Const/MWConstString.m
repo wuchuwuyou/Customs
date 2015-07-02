@@ -9,4 +9,7 @@
 
 NSString *const MWTariffListPath = @"/Tariff/getTraiff";
 
+
+NSString *const MWGoodsTariffItemPath = @"/GetItemList/getItemsList";
+
 NSInteger const PAGESIZE = 20;

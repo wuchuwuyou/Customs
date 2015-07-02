@@ -53,22 +53,21 @@
     
     [self.tableView.header beginRefreshing];
     
-
     
 }
 - (void)loadData{
-   /*
+   
     @weakify(self);
     [[self.viewModel queryTCIN] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         
         NSDictionary *dict = value.first;
-        NSArray *array  = [dict objectForKey:@"CLS00003"];
+        NSArray *array  = [dict objectForKey:@"CLS00004"];
         
         NSMutableArray *arr = [NSMutableArray arrayWithArray: self.viewModel.listArray];
         [arr addObjectsFromArray:[self.viewModel modelArrayWithArray:array]];
         self.viewModel.listArray = arr;
-        NSInteger count = [[[[dict objectForKey:@"CLS000031"] lastObject] objectForKey:@"rows"] integerValue];
+        NSInteger count = [[[[dict objectForKey:@"CLS000041"] lastObject] objectForKey:@"rows"] integerValue];
         self.viewModel.canLoadMore = self.viewModel.listArray.count<count?YES:NO;
         [self endRefresh];
     } error:^(NSError *error) {
@@ -76,7 +75,7 @@
         [self endRefresh];
         [SVProgressHUD showErrorWithStatus:[error errorString]];
     }];
-    */
+    
 }
 - (void)endRefresh{
     [self.tableView.header endRefreshing];

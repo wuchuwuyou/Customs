@@ -16,6 +16,7 @@
 
 
 /// 税则商品及品目注释
++ (NSString *)goodsTariffItemURL;
 /// 本国子目
 /// 重点商品
 /// 归类决定

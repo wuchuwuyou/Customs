@@ -16,22 +16,28 @@
 @end
 
 @implementation MWTCINViewModel
-
+- (instancetype)init{
+    if (self = [super init]) {
+        self.page_index = 1;
+        self.page_size = PAGESIZE;
+    }
+    return self;
+}
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k{
     self.subTitle = sb;
     self.keyword = k;
 }
 - (RACSignal *)queryTCIN{
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
-    [data setValue:self.subTitle forKey:@"codeArticle"];
-    [data setValue:self.keyword forKey:@"codeTS"];
+    [data setValue:self.subTitle forKey:@"tariffNo"];
+    [data setValue:self.keyword forKey:@"keyWord"];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:[data getJSONString] forKey:@"jsonParams"];
-    [params setValue:@"CLS00005" forKey:@"messageCode"];
+    [params setValue:@"CLS00004" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
     
-    return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper tariffListURL] andParameters:params];
+    return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper goodsTariffItemURL] andParameters:params];
 }
 - (NSArray *)modelArrayWithArray:(NSArray *)arr{
     return [MWTCINListDateModel arrayOfModelsFromDictionaries:arr];
