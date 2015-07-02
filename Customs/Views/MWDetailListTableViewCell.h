@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MWDetailListTableViewCell : UITableViewCell
+
+@property (nonatomic,strong,readonly) UILabel *nameLabel_;
+@property (nonatomic,strong,readonly) UILabel *contentLabel_;
+
 - (void)configCellWithTitle:(NSString *)title content:(NSString *)content;
-- (CGRect)contentRect;
 @end

@@ -882,6 +882,7 @@
                     <navigationItem key="navigationItem" id="d0x-eE-OAq"/>
                     <connections>
                         <outlet property="headerView" destination="OjZ-xL-lx2" id="2Ik-UP-mK2"/>
+                        <segue destination="ZSQ-ce-bIY" kind="push" id="2pw-Ny-8iO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woo-28-U7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -891,13 +892,13 @@
         <!--Detail Text View Controller-->
         <scene sceneID="xkM-IN-8Q9">
             <objects>
-                <viewController id="ZSQ-ce-bIY" customClass="MWDetailTextViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MWDetailTextViewController" id="ZSQ-ce-bIY" customClass="MWDetailTextViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0DX-ia-4MP"/>
                         <viewControllerLayoutGuide type="bottom" id="gbO-ja-0Xw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cNd-Ks-UC5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhj-bF-MLM">
@@ -916,7 +917,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d9-wp-1cd">
-                                <rect key="frame" x="0.0" y="114" width="600" height="486"/>
+                                <rect key="frame" x="0.0" y="114" width="600" height="886"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -965,24 +966,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N78-ix-UUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="92" y="-380"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="47F-sq-FIs">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbw-Zy-n21" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g4g-fL-yX3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ZSQ-ce-bIY" kind="relationship" relationship="rootViewController" id="Cv6-n0-SD8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4jX-gA-Eq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1906" y="-2152"/>
         </scene>
     </scenes>
 </document>

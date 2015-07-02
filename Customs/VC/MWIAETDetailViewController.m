@@ -26,6 +26,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -45,18 +46,27 @@
     if (!cell) {
 
         cell = [[[NSBundle mainBundle] loadNibNamed:@"MWDetailListTableViewCell" owner:self options:nil] lastObject];
-    }
-
-#warning TODO:计算字数大小 是否显示剪头进入下一页
-    
+    }    
     
     
     MWCommonModel *model = self.dataArray[indexPath.row];
     
+    CGSize size = cell.contentLabel_.frame.size;
+
     
-    CGSize size = [cell contentRect].size;
-    
-    
+//    CGFloat realHeight = [model.content sizeWithFont:cell.contentLabel_.font forWidth:size.width lineBreakMode:cell.contentLabel_.lineBreakMode].height;
+    CGSize realSize = Multline_TextSize(model.content, cell.contentLabel_.font, size, cell.contentLabel_.lineBreakMode);
+    model.isMore = realSize.height>(size.height-16)?YES:NO;
+    if (model.isMore) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        NSLog(@"%@",model);
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     [cell configCellWithTitle:model.name content:model.content];
     
     return cell;
@@ -67,7 +77,12 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    MWCommonModel *model = self.dataArray[indexPath.row];
+    if (model.isMore) {
+        MWDetailTextViewController *textVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWDetailTextViewController"];
+        [textVC configViewWittTitle:model.name detailText:model.content];
+        [self.navigationController pushViewController:textVC animated:YES];
+    }
 }
 /*
 #pragma mark - Navigation

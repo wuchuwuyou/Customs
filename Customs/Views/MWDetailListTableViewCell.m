@@ -28,6 +28,12 @@
 - (CGRect)contentRect{
     return self.contentLabel.frame;
 }
+- (UILabel *)nameLabel_{
+    return self.nameLabel;
+}
+- (UILabel *)contentLabel_{
+    return self.contentLabel;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

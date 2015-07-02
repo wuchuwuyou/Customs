@@ -17,4 +17,22 @@
 
 #endif
 
+
+
+
+
+/**
+ * 自动调整文本高度
+ */
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+#define Multline_TextSize(text, font, maxSize, mode) [text length] > 0 ? [text \
+boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) \
+attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
+#else
+#define Multline_TextSize(text, font, maxSize, mode) [text length] > 0 ? [text \
+sizeWithFont:font constrainedToSize:maxSize lineBreakMode:mode] : CGSizeZero;
+#endif
+// -----------------------------------------
+
+
 #endif
