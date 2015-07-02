@@ -22,7 +22,8 @@
     self.navigationBar.backgroundColor = INPUT_FIELD_COLOR;
     self.navigationBar.barTintColor = INPUT_FIELD_COLOR;
     self.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil];
-    
+   
+
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
