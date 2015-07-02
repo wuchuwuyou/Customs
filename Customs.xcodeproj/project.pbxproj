@@ -44,6 +44,9 @@
 		2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A72C1B29CC9C00F29E04 /* MWSingleTextField.m */; };
 		2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB171B443888006D7942 /* MWCommonModel.m */; };
 		2AA6AB1B1B443958006D7942 /* MWCommonDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB1A1B443958006D7942 /* MWCommonDataHelper.m */; };
+		2AA6AB1E1B44DA26006D7942 /* MWDetailListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB1D1B44DA26006D7942 /* MWDetailListTableViewCell.m */; };
+		2AA6AB201B44DAA8006D7942 /* MWDetailListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6AB1F1B44DAA8006D7942 /* MWDetailListTableViewCell.xib */; };
+		2AA6AB231B44DC59006D7942 /* MWIAETDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB221B44DC59006D7942 /* MWIAETDetailViewController.m */; };
 		2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC8A951B33EBFD0010E557 /* MWInputView.m */; };
 		2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC8A9A1B35BEA00010E557 /* MWListDataModel.m */; };
 /* End PBXBuildFile section */
@@ -137,6 +140,11 @@
 		2AA6AB171B443888006D7942 /* MWCommonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonModel.m; sourceTree = "<group>"; };
 		2AA6AB191B443958006D7942 /* MWCommonDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommonDataHelper.h; sourceTree = "<group>"; };
 		2AA6AB1A1B443958006D7942 /* MWCommonDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonDataHelper.m; sourceTree = "<group>"; };
+		2AA6AB1C1B44DA26006D7942 /* MWDetailListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailListTableViewCell.h; sourceTree = "<group>"; };
+		2AA6AB1D1B44DA26006D7942 /* MWDetailListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDetailListTableViewCell.m; sourceTree = "<group>"; };
+		2AA6AB1F1B44DAA8006D7942 /* MWDetailListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWDetailListTableViewCell.xib; sourceTree = "<group>"; };
+		2AA6AB211B44DC59006D7942 /* MWIAETDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWIAETDetailViewController.h; sourceTree = "<group>"; };
+		2AA6AB221B44DC59006D7942 /* MWIAETDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWIAETDetailViewController.m; sourceTree = "<group>"; };
 		2AEC8A941B33EBFD0010E557 /* MWInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputView.h; sourceTree = "<group>"; };
 		2AEC8A951B33EBFD0010E557 /* MWInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputView.m; sourceTree = "<group>"; };
 		2AEC8A971B33FFCB0010E557 /* MWHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWHelper.h; sourceTree = "<group>"; };
@@ -292,6 +300,9 @@
 				2A3B83E01B39A65E008EDCD5 /* MWListCell.m */,
 				2A3B83E21B39A741008EDCD5 /* MWListHeaderView.h */,
 				2A3B83E31B39A741008EDCD5 /* MWListHeaderView.m */,
+				2AA6AB1C1B44DA26006D7942 /* MWDetailListTableViewCell.h */,
+				2AA6AB1D1B44DA26006D7942 /* MWDetailListTableViewCell.m */,
+				2AA6AB1F1B44DAA8006D7942 /* MWDetailListTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -358,6 +369,8 @@
 				2A95A7291B29C84800F29E04 /* MWIAETViewController.m */,
 				2A3B83D91B39A01D008EDCD5 /* MWIAETTableViewController.h */,
 				2A3B83DA1B39A01D008EDCD5 /* MWIAETTableViewController.m */,
+				2AA6AB211B44DC59006D7942 /* MWIAETDetailViewController.h */,
+				2AA6AB221B44DC59006D7942 /* MWIAETDetailViewController.m */,
 			);
 			name = "进出口税则";
 			sourceTree = "<group>";
@@ -481,6 +494,7 @@
 				2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */,
 				2A95A6E81B26F0AD00F29E04 /* LaunchScreen.xib in Resources */,
 				2A95A6E51B26F0AD00F29E04 /* Images.xcassets in Resources */,
+				2AA6AB201B44DAA8006D7942 /* MWDetailListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA6AB231B44DC59006D7942 /* MWIAETDetailViewController.m in Sources */,
 				2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */,
 				2A95A71C1B29881C00F29E04 /* MWEntranceViewModel.m in Sources */,
 				2A95A7191B295C4200F29E04 /* MWHomeButton.m in Sources */,
@@ -539,6 +554,7 @@
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
 				2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */,
+				2AA6AB1E1B44DA26006D7942 /* MWDetailListTableViewCell.m in Sources */,
 				2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
 				2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */,

@@ -9,7 +9,7 @@
 #import "MWDetailTableViewController.h"
 #import "MWCommonDataHelper.h"
 @interface MWDetailTableViewController ()
-@property (nonatomic,strong) NSArray *dataArray;
+
 @end
 
 @implementation MWDetailTableViewController

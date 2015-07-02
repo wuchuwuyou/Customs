@@ -12,6 +12,7 @@
 #import "MWTariffListViewModel.h"
 #import "MWTariffListDataModel.h"
 #import "MWCommonDataHelper.h"
+#import "MWIAETDetailViewController.h"
 @interface MWIAETTableViewController ()
 @property (nonatomic,weak) IBOutlet MWListHeaderView *headerView;
 @property (nonatomic,strong) MWTariffListViewModel *viewModel;
@@ -104,6 +105,9 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
    NSArray *arr = [[MWCommonDataHelper sharedManager] tariffListWithModel:self.viewModel.listArray[indexPath.row]];
+    MWIAETDetailViewController *dvc = [[MWIAETDetailViewController alloc] init];
+    dvc.dataArray = arr;
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 /*
 #pragma mark - Navigation

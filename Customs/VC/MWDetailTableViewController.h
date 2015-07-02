@@ -11,4 +11,7 @@
 @interface MWDetailTableViewController : MWBaseTableViewController
 
 
+@property (nonatomic,strong) NSArray *dataArray;
+
+
 @end
