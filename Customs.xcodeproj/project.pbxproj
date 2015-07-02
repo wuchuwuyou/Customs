@@ -48,6 +48,7 @@
 		2AA6AB201B44DAA8006D7942 /* MWDetailListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6AB1F1B44DAA8006D7942 /* MWDetailListTableViewCell.xib */; };
 		2AA6AB231B44DC59006D7942 /* MWIAETDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB221B44DC59006D7942 /* MWIAETDetailViewController.m */; };
 		2AA6AB261B451B11006D7942 /* MWAppDelegateConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB251B451B11006D7942 /* MWAppDelegateConfig.m */; };
+		2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB291B4521A5006D7942 /* MWTCINViewController.m */; };
 		2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC8A951B33EBFD0010E557 /* MWInputView.m */; };
 		2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC8A9A1B35BEA00010E557 /* MWListDataModel.m */; };
 /* End PBXBuildFile section */
@@ -148,6 +149,8 @@
 		2AA6AB221B44DC59006D7942 /* MWIAETDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWIAETDetailViewController.m; sourceTree = "<group>"; };
 		2AA6AB241B451B11006D7942 /* MWAppDelegateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAppDelegateConfig.h; sourceTree = "<group>"; };
 		2AA6AB251B451B11006D7942 /* MWAppDelegateConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAppDelegateConfig.m; sourceTree = "<group>"; };
+		2AA6AB281B4521A5006D7942 /* MWTCINViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINViewController.h; sourceTree = "<group>"; };
+		2AA6AB291B4521A5006D7942 /* MWTCINViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINViewController.m; sourceTree = "<group>"; };
 		2AEC8A941B33EBFD0010E557 /* MWInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputView.h; sourceTree = "<group>"; };
 		2AEC8A951B33EBFD0010E557 /* MWInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputView.m; sourceTree = "<group>"; };
 		2AEC8A971B33FFCB0010E557 /* MWHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWHelper.h; sourceTree = "<group>"; };
@@ -348,6 +351,7 @@
 				2A060F941B43FDEB009F9EC7 /* MWDetailTableViewController.h */,
 				2A060F951B43FDEB009F9EC7 /* MWDetailTableViewController.m */,
 				2A95A7271B29C80900F29E04 /* 进出口税则 */,
+				2AA6AB271B452114006D7942 /* 税则商品及品目注释 */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -378,6 +382,15 @@
 				2AA6AB221B44DC59006D7942 /* MWIAETDetailViewController.m */,
 			);
 			name = "进出口税则";
+			sourceTree = "<group>";
+		};
+		2AA6AB271B452114006D7942 /* 税则商品及品目注释 */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6AB281B4521A5006D7942 /* MWTCINViewController.h */,
+				2AA6AB291B4521A5006D7942 /* MWTCINViewController.m */,
+			);
+			name = "税则商品及品目注释";
 			sourceTree = "<group>";
 		};
 		2AEC8A981B35BE080010E557 /* Model */ = {
@@ -570,6 +583,7 @@
 				2A3B83E71B418588008EDCD5 /* MWTariffListViewModel.m in Sources */,
 				2A3B83F91B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m in Sources */,
 				2A95A7231B29C17B00F29E04 /* MWFontHelper.m in Sources */,
+				2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
 				2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */,
 				2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */,
