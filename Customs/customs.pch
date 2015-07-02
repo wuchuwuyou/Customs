@@ -26,7 +26,8 @@
 #import "MWHelper.h"
 
 
-
+#import "MWAPIHelper.h"
+#import "MWAPIManager.h"
 
 
 

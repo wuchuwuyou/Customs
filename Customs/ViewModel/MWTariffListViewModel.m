@@ -28,28 +28,12 @@
 }
 - (RACSignal *)queryMWTariff{
     
-    
-   
     NSMutableDictionary *data = [NSMutableDictionary dictionaryWithDictionary:[self.tModel toDictionary]];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:[data getJSONString] forKey:@"jsonParams"];
     [params setValue:@"CLS00003" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
-    
-    
-//   return  [[[[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper tariffListURL] andParameters:params] map:^id(RACTuple *JSONAndHeaders) {
-//       NSLog(@"data===%@",JSONAndHeaders.first);
-//       return [((NSDictionary *)JSONAndHeaders.first).rac_sequence signal];
-//   }];
-//    return [[self rac_GET:urlString parameters:nil] map:^id(NSDictionary *data) {
-//        NSLog(@"%@",data);
-//        return [[((NSArray *)data[@"pins"]).rac_sequence map:^id(id value) {
-//            NSLog(@"%@",value);
-//            NSLog(@"%@",[[BZPinModel alloc] initWithDictionary:value error:nil]);
-//            return [[BZPinModel alloc] initWithDictionary:value error:nil];
-//        }] array];
-//    }];
     
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper tariffListURL] andParameters:params];
 }

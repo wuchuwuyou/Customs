@@ -765,7 +765,7 @@
         <!--税则商品及品目注释查询-->
         <scene sceneID="jjh-JC-Zse">
             <objects>
-                <viewController id="b0j-8k-b0c" sceneMemberID="viewController">
+                <viewController id="b0j-8k-b0c" customClass="MWTCINViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CdE-Gc-bco"/>
                         <viewControllerLayoutGuide type="bottom" id="UGa-J7-oOb"/>
@@ -820,6 +820,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="resetAll:" destination="b0j-8k-b0c" eventType="touchUpInside" id="9pa-LG-iu5"/>
                                             <action selector="resetAll:" destination="BTD-bk-wbz" eventType="touchUpInside" id="pRg-zv-JHm"/>
                                         </connections>
                                     </button>
@@ -829,6 +830,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="query:" destination="b0j-8k-b0c" eventType="touchUpInside" id="LUz-lv-8Cd"/>
                                             <action selector="query:" destination="BTD-bk-wbz" eventType="touchUpInside" id="oML-UP-A2Y"/>
                                         </connections>
                                     </button>
@@ -890,10 +892,43 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="税则商品及品目注释查询" id="BkL-ni-FlT"/>
+                    <connections>
+                        <outlet property="bgScrollView" destination="ZHI-hr-761" id="xJp-6P-ZMR"/>
+                        <outlet property="keyword" destination="cIY-nG-vG6" id="NjG-YL-RH2"/>
+                        <outlet property="resetButton" destination="Qsa-ob-0Pp" id="M08-hT-dcL"/>
+                        <outlet property="scrollBottomHeight" destination="ddf-Vw-Yj1" id="hVl-xs-6zL"/>
+                        <outlet property="searchButton" destination="iZi-cq-LJk" id="9TS-Rx-0Sj"/>
+                        <outlet property="subtitle" destination="bKC-ZK-Oxy" id="Ko6-52-FIV"/>
+                        <segue destination="btr-dl-tre" kind="push" id="Kyl-oC-nNC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qx8-nr-wyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1680" y="503"/>
+        </scene>
+        <!--进出口税则商品及品目注释-->
+        <scene sceneID="fs2-H9-6dh">
+            <objects>
+                <tableViewController storyboardIdentifier="MWTCINTableViewController" id="btr-dl-tre" customClass="MWTCINTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YxV-X4-QIa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="OXC-Nn-oFd" userLabel="header view" customClass="MWListHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="btr-dl-tre" id="AOH-Ta-e5l"/>
+                            <outlet property="delegate" destination="btr-dl-tre" id="SoO-lj-Oiu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="进出口税则商品及品目注释" id="jII-gi-886"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A72-LL-nF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426" y="503"/>
         </scene>
         <!--进出口税则查询-->
         <scene sceneID="Lsx-SE-oVT">

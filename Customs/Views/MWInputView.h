@@ -10,6 +10,7 @@
 
 @interface MWInputView : UIView
 
+///输入框内容
 @property (nonatomic,readonly,strong) NSString *inputText;
 
 @property (nonatomic,strong) RACSignal *inputTextSignal;
