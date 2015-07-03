@@ -106,7 +106,12 @@
     return 60;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MWListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listCell"];
+    static NSString *CellIdentifier = @"listCell";
+    
+    MWListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"MWListCell" owner:nil options:nil] lastObject];
+    }
     
     MWTariffListDataModel *m = self.viewModel.listArray[indexPath.row];
     

@@ -933,53 +933,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="listCell" id="Cpv-fC-aEQ" customClass="MWListCell">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cpv-fC-aEQ" id="Zu6-LP-aKe">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pw-pU-KLY">
-                                            <rect key="frame" x="0.0" y="0.0" width="189" height="43.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZl-96-IKw">
-                                            <rect key="frame" x="189" y="0.0" width="189" height="43.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLw-IN-xMg">
-                                            <rect key="frame" x="378" y="0.0" width="189" height="43.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="WLw-IN-xMg" firstAttribute="top" secondItem="Zu6-LP-aKe" secondAttribute="top" id="41Z-M5-JYC"/>
-                                        <constraint firstItem="AZl-96-IKw" firstAttribute="leading" secondItem="5Pw-pU-KLY" secondAttribute="trailing" id="4cp-k5-qrK"/>
-                                        <constraint firstAttribute="trailing" secondItem="WLw-IN-xMg" secondAttribute="trailing" id="CIN-o5-DvX"/>
-                                        <constraint firstAttribute="bottom" secondItem="WLw-IN-xMg" secondAttribute="bottom" id="GoC-Dl-JFT"/>
-                                        <constraint firstItem="5Pw-pU-KLY" firstAttribute="leading" secondItem="Zu6-LP-aKe" secondAttribute="leading" id="IvQ-zA-24M"/>
-                                        <constraint firstItem="AZl-96-IKw" firstAttribute="width" secondItem="WLw-IN-xMg" secondAttribute="width" id="Jtt-sS-XXG"/>
-                                        <constraint firstItem="AZl-96-IKw" firstAttribute="width" secondItem="5Pw-pU-KLY" secondAttribute="width" id="NcJ-ow-7OJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="AZl-96-IKw" secondAttribute="bottom" id="PFE-Fb-Pwp"/>
-                                        <constraint firstItem="5Pw-pU-KLY" firstAttribute="top" secondItem="Zu6-LP-aKe" secondAttribute="top" id="W5Y-Nj-5Fe"/>
-                                        <constraint firstItem="AZl-96-IKw" firstAttribute="top" secondItem="Zu6-LP-aKe" secondAttribute="top" id="daj-HE-biQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="5Pw-pU-KLY" secondAttribute="bottom" id="hQg-K5-jIo"/>
-                                        <constraint firstItem="WLw-IN-xMg" firstAttribute="leading" secondItem="AZl-96-IKw" secondAttribute="trailing" id="oRo-ci-NnK"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="codeLabel" destination="5Pw-pU-KLY" id="jlq-Db-6Ci"/>
-                                    <outlet property="nameLabel" destination="AZl-96-IKw" id="cdz-Mf-Mdi"/>
-                                    <outlet property="rateLabel" destination="WLw-IN-xMg" id="k2z-AE-y7p"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="oiA-OD-7hq" id="NCp-rF-wrq"/>
                             <outlet property="delegate" destination="oiA-OD-7hq" id="h8u-3o-vyp"/>

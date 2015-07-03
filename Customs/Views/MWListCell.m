@@ -2,7 +2,7 @@
 //  MWListCell.m
 //  Customs
 //
-//  Created by Tiny on 15/6/23.
+//  Created by Tiny on 15/7/3.
 //  Copyright (c) 2015年 Murphy. All rights reserved.
 //
 
@@ -17,18 +17,18 @@
 
 @implementation MWListCell
 
+- (void)awakeFromNib {
+    // Initialization code
+}
 - (void)configCellWithLeft:(NSString *)lf mid:(NSString *)mid right:(NSString *)rg{
     self.codeLabel.text = lf;
     self.nameLabel.text = mid;
     self.rateLabel.text = rg;
 }
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+    // Configure the view for the selected state
 }
-*/
 
 @end
