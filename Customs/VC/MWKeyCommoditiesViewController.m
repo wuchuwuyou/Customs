@@ -7,7 +7,8 @@
 //
 
 #import "MWKeyCommoditiesViewController.h"
-
+#import "MWKeyCommoditiesViewModel.h"
+#import "MWKCTableViewController.h"
 @interface MWKeyCommoditiesViewController ()
 @property (weak, nonatomic) IBOutlet  UIScrollView *bgScrollView;
 @property (weak ,nonatomic) IBOutlet MWInputView *code;
@@ -40,7 +41,7 @@
     [self.code titleText:NSLocalizedString(@"goods_no", @"商品编号")];
     [self.name titleText:NSLocalizedString(@"goods_name_1", @"商品名称")];
     [self.keyword titleText:NSLocalizedString(@"keywords", @"关键字")];
-
+    
     [self.inputViewArray addObject:self.code];
     [self.inputViewArray addObject:self.name];
     [self.inputViewArray addObject:self.keyword];
@@ -61,11 +62,11 @@
     //    for (MWInputView *v in self.inputViewArray) {
     //        NSLog(@"%@",v.inputText);
     //    }
-    //    MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-    //    [vm subtitle:self.subtitle.inputText keyword:self.keyword.inputText];
-    //    MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
-    //    vc.viewModel = vm;
-    //    [self.navigationController pushViewController:vc animated: YES];
+    MWKeyCommoditiesViewModel *vm = [[MWKeyCommoditiesViewModel alloc] init];
+    [vm code:self.code.inputText name:self.name.inputText keyword:self.keyword.inputText];
+    MWKCTableViewController *kcvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWKCTableViewController"];
+    kcvc.viewModel = vm;
+    [self.navigationController pushViewController:kcvc animated: YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
@@ -122,13 +123,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

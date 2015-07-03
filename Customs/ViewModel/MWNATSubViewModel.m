@@ -22,10 +22,11 @@
     }
     return self;
 }
-- (void)subtitle:(NSString *)sb keyword:(NSString *)k{
-    self.nat = sb;
-    self.sub = k;
+- (void)national:(NSString *)na subTitle:(NSString *)sub{
+    self.nat = na;
+    self.sub = sub;
 }
+
 - (RACSignal *)queryNATSub{
 #warning TODO requeset  params
     /*

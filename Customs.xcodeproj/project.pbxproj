@@ -17,6 +17,9 @@
 		2A148DCB1B466F78009ED904 /* MWNATSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DCA1B466F78009ED904 /* MWNATSubViewController.m */; };
 		2A148DCE1B4671B8009ED904 /* MWNATSubViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DCD1B4671B8009ED904 /* MWNATSubViewModel.m */; };
 		2A148DD21B468092009ED904 /* MWKeyCommoditiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DD11B468092009ED904 /* MWKeyCommoditiesViewController.m */; };
+		2A148DD51B468D13009ED904 /* MWKeyCommoditiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DD41B468D13009ED904 /* MWKeyCommoditiesModel.m */; };
+		2A148DD81B468DF6009ED904 /* MWKeyCommoditiesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DD71B468DF6009ED904 /* MWKeyCommoditiesViewModel.m */; };
+		2A148DDB1B4690DD009ED904 /* MWKCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DDA1B4690DD009ED904 /* MWKCTableViewController.m */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -88,6 +91,12 @@
 		2A148DCD1B4671B8009ED904 /* MWNATSubViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNATSubViewModel.m; sourceTree = "<group>"; };
 		2A148DD01B468092009ED904 /* MWKeyCommoditiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWKeyCommoditiesViewController.h; sourceTree = "<group>"; };
 		2A148DD11B468092009ED904 /* MWKeyCommoditiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWKeyCommoditiesViewController.m; sourceTree = "<group>"; };
+		2A148DD31B468D13009ED904 /* MWKeyCommoditiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWKeyCommoditiesModel.h; sourceTree = "<group>"; };
+		2A148DD41B468D13009ED904 /* MWKeyCommoditiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWKeyCommoditiesModel.m; sourceTree = "<group>"; };
+		2A148DD61B468DF6009ED904 /* MWKeyCommoditiesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWKeyCommoditiesViewModel.h; sourceTree = "<group>"; };
+		2A148DD71B468DF6009ED904 /* MWKeyCommoditiesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWKeyCommoditiesViewModel.m; sourceTree = "<group>"; };
+		2A148DD91B4690DD009ED904 /* MWKCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWKCTableViewController.h; sourceTree = "<group>"; };
+		2A148DDA1B4690DD009ED904 /* MWKCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWKCTableViewController.m; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -216,6 +225,8 @@
 			children = (
 				2A148DD01B468092009ED904 /* MWKeyCommoditiesViewController.h */,
 				2A148DD11B468092009ED904 /* MWKeyCommoditiesViewController.m */,
+				2A148DD91B4690DD009ED904 /* MWKCTableViewController.h */,
+				2A148DDA1B4690DD009ED904 /* MWKCTableViewController.m */,
 			);
 			name = "重点商品";
 			sourceTree = "<group>";
@@ -383,6 +394,8 @@
 				2AA6AB2F1B4532B9006D7942 /* MWTCINViewModel.m */,
 				2A148DCC1B4671B8009ED904 /* MWNATSubViewModel.h */,
 				2A148DCD1B4671B8009ED904 /* MWNATSubViewModel.m */,
+				2A148DD61B468DF6009ED904 /* MWKeyCommoditiesViewModel.h */,
+				2A148DD71B468DF6009ED904 /* MWKeyCommoditiesViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -456,6 +469,8 @@
 				2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */,
 				2AA6AB161B443888006D7942 /* MWCommonModel.h */,
 				2AA6AB171B443888006D7942 /* MWCommonModel.m */,
+				2A148DD31B468D13009ED904 /* MWKeyCommoditiesModel.h */,
+				2A148DD41B468D13009ED904 /* MWKeyCommoditiesModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -644,14 +659,17 @@
 				2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */,
 				2AA6AB301B4532B9006D7942 /* MWTCINViewModel.m in Sources */,
 				2A148DC61B4667D4009ED904 /* MWListCell.m in Sources */,
+				2A148DDB1B4690DD009ED904 /* MWKCTableViewController.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
 				2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */,
+				2A148DD51B468D13009ED904 /* MWKeyCommoditiesModel.m in Sources */,
 				2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */,
 				2A3B83D41B38588C008EDCD5 /* MWTariffViewModel.m in Sources */,
 				2A95A7081B27030600F29E04 /* MWBaseViewController.m in Sources */,
 				2A95A70B1B27032E00F29E04 /* MWNetworking.m in Sources */,
 				2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */,
 				2A3B83FF1B42DAA5008EDCD5 /* NSError+MWErrorString.m in Sources */,
+				2A148DD81B468DF6009ED904 /* MWKeyCommoditiesViewModel.m in Sources */,
 				2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */,
 				2A060F931B43FDC0009F9EC7 /* MWDetailTextViewController.m in Sources */,
 				2AA6AB261B451B11006D7942 /* MWAppDelegateConfig.m in Sources */,

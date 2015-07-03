@@ -11,5 +11,5 @@ NSString *const MWTariffListPath = @"/Tariff/getTraiff";
 
 
 NSString *const MWGoodsTariffItemPath = @"/GetItemList/getItemsList";
-
+NSString *const MWGoodsKeyPath = @"/KeyGoods/getKeyGoods";
 NSInteger const PAGESIZE = 20;

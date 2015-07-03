@@ -17,6 +17,7 @@ UIKIT_EXTERN NSString *const MWGoodsTariffItemPath;
 
 /// 本国子目
 /// 重点商品
+UIKIT_EXTERN NSString *const MWGoodsKeyPath;
 /// 归类决定
 /// 归类裁定
 /// 化验状态
