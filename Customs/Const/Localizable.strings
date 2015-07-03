@@ -35,6 +35,8 @@
 "chapter" = "章节";
 "sub_clause" = "子目条文";
 // 本国子目
+
+"national_subheadings" = "本国子目";
 // 重点商品
 // 归类决定
 // 归类裁定

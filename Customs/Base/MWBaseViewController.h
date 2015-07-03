@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWInputView.h"
+#import "MWInputViewButton.h"
 
 @interface MWBaseViewController : UIViewController
 

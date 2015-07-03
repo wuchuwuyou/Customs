@@ -14,6 +14,8 @@
 		2A148DC21B4659F0009ED904 /* MWListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A148DC11B4659F0009ED904 /* MWListHeaderView.xib */; };
 		2A148DC61B4667D4009ED904 /* MWListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DC41B4667D4009ED904 /* MWListCell.m */; };
 		2A148DC71B4667D4009ED904 /* MWListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A148DC51B4667D4009ED904 /* MWListCell.xib */; };
+		2A148DCB1B466F78009ED904 /* MWNATSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DCA1B466F78009ED904 /* MWNATSubViewController.m */; };
+		2A148DCE1B4671B8009ED904 /* MWNATSubViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DCD1B4671B8009ED904 /* MWNATSubViewModel.m */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -79,6 +81,10 @@
 		2A148DC31B4667D4009ED904 /* MWListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWListCell.h; sourceTree = "<group>"; };
 		2A148DC41B4667D4009ED904 /* MWListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWListCell.m; sourceTree = "<group>"; };
 		2A148DC51B4667D4009ED904 /* MWListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWListCell.xib; sourceTree = "<group>"; };
+		2A148DC91B466F78009ED904 /* MWNATSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNATSubViewController.h; sourceTree = "<group>"; };
+		2A148DCA1B466F78009ED904 /* MWNATSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNATSubViewController.m; sourceTree = "<group>"; };
+		2A148DCC1B4671B8009ED904 /* MWNATSubViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNATSubViewModel.h; sourceTree = "<group>"; };
+		2A148DCD1B4671B8009ED904 /* MWNATSubViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNATSubViewModel.m; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -193,6 +199,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A148DC81B466F08009ED904 /* 本国子目 */ = {
+			isa = PBXGroup;
+			children = (
+				2A148DC91B466F78009ED904 /* MWNATSubViewController.h */,
+				2A148DCA1B466F78009ED904 /* MWNATSubViewController.m */,
+			);
+			name = "本国子目";
+			sourceTree = "<group>";
+		};
 		2A3B83F61B42BF88008EDCD5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +369,8 @@
 				2A3B83E61B418588008EDCD5 /* MWTariffListViewModel.m */,
 				2AA6AB2E1B4532B9006D7942 /* MWTCINViewModel.h */,
 				2AA6AB2F1B4532B9006D7942 /* MWTCINViewModel.m */,
+				2A148DCC1B4671B8009ED904 /* MWNATSubViewModel.h */,
+				2A148DCD1B4671B8009ED904 /* MWNATSubViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -369,6 +386,7 @@
 				2A060F951B43FDEB009F9EC7 /* MWDetailTableViewController.m */,
 				2A95A7271B29C80900F29E04 /* 进出口税则 */,
 				2AA6AB271B452114006D7942 /* 税则商品及品目注释 */,
+				2A148DC81B466F08009ED904 /* 本国子目 */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -587,12 +605,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA6AB231B44DC59006D7942 /* MWIAETDetailViewController.m in Sources */,
+				2A148DCE1B4671B8009ED904 /* MWNATSubViewModel.m in Sources */,
 				2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */,
 				2A95A71C1B29881C00F29E04 /* MWEntranceViewModel.m in Sources */,
 				2A95A7191B295C4200F29E04 /* MWHomeButton.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
+				2A148DCB1B466F78009ED904 /* MWNATSubViewController.m in Sources */,
 				2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */,
 				2AA6AB1E1B44DA26006D7942 /* MWDetailListTableViewCell.m in Sources */,
 				2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */,

@@ -1,17 +1,13 @@
 //
-//  MWTCINViewController.m
+//  MWNATSubViewController.m
 //  Customs
 //
-//  Created by Tiny on 15/7/2.
+//  Created by Tiny on 15/7/3.
 //  Copyright (c) 2015年 Murphy. All rights reserved.
 //
 
-#import "MWTCINViewController.h"
-#import "MWInputView.h"
-#import "MWInputViewButton.h"
-#import "MWTCINTableViewController.h"
-@interface MWTCINViewController ()
-
+#import "MWNATSubViewController.h"
+@interface MWNATSubViewController ()
 @property (weak, nonatomic) IBOutlet  UIScrollView *bgScrollView;
 @property (weak ,nonatomic) IBOutlet MWInputView *subtitle;
 
@@ -22,37 +18,31 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollBottomHeight;
 
 @property (nonatomic,strong) NSMutableArray *inputViewArray;
-
 @end
 
-@implementation MWTCINViewController
+@implementation MWNATSubViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-//    self.tariffViewModel = [[MWTariffViewModel alloc] initWithMWInputViewArray:self.inputViewArray];
-    
-    
+    [self initViews];
     /// 监听键盘事件
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
-    [self initViews];
+
 }
+
 - (void)initViews{
     self.inputViewArray = [NSMutableArray array];
     
-    [self.subtitle titleText:NSLocalizedString(@"tariff_item", @"税则子目")];
-    [self.keyword titleText:NSLocalizedString(@"keywords", @"关键字")];
+    [self.subtitle titleText:NSLocalizedString(@"national_subheadings", @"本国子目")];
+    [self.keyword titleText:NSLocalizedString(@"sub_clause", @"子目条文")];
     [self.inputViewArray addObject:self.subtitle];
     [self.inputViewArray addObject:self.keyword];
     
     
     [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
     [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
-
-    
 
 }
 - (IBAction)resetAll:(id)sender {
@@ -66,11 +56,11 @@
     //    for (MWInputView *v in self.inputViewArray) {
     //        NSLog(@"%@",v.inputText);
     //    }
-    MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-    [vm subtitle:self.subtitle.inputText keyword:self.keyword.inputText];
-    MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
-    vc.viewModel = vm;
-    [self.navigationController pushViewController:vc animated: YES];
+//    MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+//    [vm subtitle:self.subtitle.inputText keyword:self.keyword.inputText];
+//    MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+//    vc.viewModel = vm;
+//    [self.navigationController pushViewController:vc animated: YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
