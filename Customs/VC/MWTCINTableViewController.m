@@ -9,7 +9,7 @@
 #import "MWTCINTableViewController.h"
 #import "MWListHeaderView.h"
 @interface MWTCINTableViewController ()
-@property (nonatomic,weak) IBOutlet MWListHeaderView *headerView;
+@property (nonatomic,strong)  MWListHeaderView *headerView;
 
 @end
 
@@ -20,6 +20,10 @@
     // Do any additional setup after loading the view.
     
     @weakify(self);
+    self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"MWListHeaderView" owner:nil options:nil] lastObject];
+    
+    self.tableView.tableHeaderView = self.headerView;
+    
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         @strongify(self);
         [self loadData];

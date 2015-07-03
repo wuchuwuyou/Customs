@@ -14,7 +14,7 @@
 #import "MWCommonDataHelper.h"
 #import "MWIAETDetailViewController.h"
 @interface MWIAETTableViewController ()
-@property (nonatomic,weak) IBOutlet MWListHeaderView *headerView;
+@property (nonatomic,strong)  MWListHeaderView *headerView;
 @property (nonatomic,strong) MWTariffListViewModel *viewModel;
 @end
 
@@ -23,6 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"MWListHeaderView" owner:nil options:nil] lastObject];
+    
+    self.tableView.tableHeaderView = self.headerView;
+    
+
+    
     self.viewModel = [[MWTariffListViewModel alloc] initWithModel:self.model];
     @weakify(self);
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
@@ -59,6 +66,7 @@
     [self.tableView.header beginRefreshing];
     
 }
+
 - (void)loadData{
 
     @weakify(self);

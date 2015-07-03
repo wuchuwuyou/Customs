@@ -20,9 +20,9 @@
 @property (nonatomic,assign) BOOL canLoadMore;
 
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k;
-
+///字典数组 －> 模型数组
 - (NSArray *)modelArrayWithArray:(NSArray *)arr;
-
+///请求数据
 - (RACSignal *)queryTCIN;
 
 @end
