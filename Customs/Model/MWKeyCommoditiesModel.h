@@ -27,7 +27,7 @@
 
 @property (nonatomic,strong) NSString *CORP_TYPE;
 
-@property (nonatomic,strong) NSString *IE_FLAG;
+//@property (nonatomic,strong) NSString *IE_FLAG;
 
 @property (nonatomic,strong) NSString *CUSTOMS_CODE;
 
