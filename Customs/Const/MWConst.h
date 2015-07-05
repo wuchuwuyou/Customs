@@ -20,9 +20,7 @@
 #define BACKGROUND_COLOR [UIColor colorWithRed:251.0/255.0 green:251.0/255.0 blue:251.0/255.0 alpha:1]
 
 
-#define HOST_NAME @"http://111.161.74.54"
-#define PORT 8002
 
-
+#define PAGESIZE  20
 
 #endif

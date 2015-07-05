@@ -16,3 +16,10 @@
     return [NSString stringWithFormat:@"第%zd章第%zd节",cha,sec];
 }
 @end
+
+
+@implementation MWTCINDetailDataModel
+
+
+
+@end

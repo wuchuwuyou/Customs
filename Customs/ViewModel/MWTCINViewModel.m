@@ -39,6 +39,11 @@
     
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper goodsTariffItemURL] andParameters:params];
 }
++ (RACSignal *)loadDetailData:(NSString *)tariffNo {
+    NSMutableDictionary *data = [NSMutableDictionary dictionary];
+    [data setValue:tariffNo forKey:@"tariffNo"];
+    return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper goodsDetailURL] andParameters:data];
+}
 - (NSArray *)modelArrayWithArray:(NSArray *)arr{
     return [MWTCINListDateModel arrayOfModelsFromDictionaries:arr];
 }

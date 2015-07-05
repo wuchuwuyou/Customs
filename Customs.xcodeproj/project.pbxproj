@@ -20,6 +20,7 @@
 		2A148DD51B468D13009ED904 /* MWKeyCommoditiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DD41B468D13009ED904 /* MWKeyCommoditiesModel.m */; };
 		2A148DD81B468DF6009ED904 /* MWKeyCommoditiesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DD71B468DF6009ED904 /* MWKeyCommoditiesViewModel.m */; };
 		2A148DDB1B4690DD009ED904 /* MWKCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DDA1B4690DD009ED904 /* MWKCTableViewController.m */; };
+		2A148DDE1B496737009ED904 /* MWTCINDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DDD1B496737009ED904 /* MWTCINDetailViewController.m */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -97,6 +98,8 @@
 		2A148DD71B468DF6009ED904 /* MWKeyCommoditiesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWKeyCommoditiesViewModel.m; sourceTree = "<group>"; };
 		2A148DD91B4690DD009ED904 /* MWKCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWKCTableViewController.h; sourceTree = "<group>"; };
 		2A148DDA1B4690DD009ED904 /* MWKCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWKCTableViewController.m; sourceTree = "<group>"; };
+		2A148DDC1B496737009ED904 /* MWTCINDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINDetailViewController.h; sourceTree = "<group>"; };
+		2A148DDD1B496737009ED904 /* MWTCINDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINDetailViewController.m; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -452,6 +455,8 @@
 				2AA6AB291B4521A5006D7942 /* MWTCINViewController.m */,
 				2AA6AB2B1B453165006D7942 /* MWTCINTableViewController.h */,
 				2AA6AB2C1B453165006D7942 /* MWTCINTableViewController.m */,
+				2A148DDC1B496737009ED904 /* MWTCINDetailViewController.h */,
+				2A148DDD1B496737009ED904 /* MWTCINDetailViewController.m */,
 			);
 			name = "税则商品及品目注释";
 			sourceTree = "<group>";
@@ -641,6 +646,7 @@
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
 				2A148DCB1B466F78009ED904 /* MWNATSubViewController.m in Sources */,
+				2A148DDE1B496737009ED904 /* MWTCINDetailViewController.m in Sources */,
 				2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */,
 				2AA6AB1E1B44DA26006D7942 /* MWDetailListTableViewCell.m in Sources */,
 				2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */,

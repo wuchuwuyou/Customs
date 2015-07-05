@@ -10,6 +10,7 @@
 #import "MWListHeaderView.h"
 #import "MWListCell.h"
 #import "MWTCINListDateModel.h"
+#import "MWTCINDetailViewController.h"
 @interface MWTCINTableViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
@@ -122,6 +123,11 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    MWTCINDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINDetailViewController"];
+    MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
+    detail.tariffNo = model.TARIFF_NO;
+    [self.navigationController pushViewController:detail animated:YES];
     
 }
 - (void)didReceiveMemoryWarning {

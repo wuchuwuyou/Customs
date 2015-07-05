@@ -18,10 +18,13 @@ UIKIT_EXTERN NSString *const MWGoodsTariffItemPath;
 /// 本国子目
 /// 重点商品
 UIKIT_EXTERN NSString *const MWGoodsKeyPath;
+UIKIT_EXTERN NSString *const MWGoodsDetailPath;
 /// 归类决定
 /// 归类裁定
 /// 化验状态
 
 /// 通用
 
-UIKIT_EXTERN NSInteger const PAGESIZE;
+UIKIT_EXTERN NSString *const HOST_NAME;
+
+UIKIT_EXTERN NSInteger const PORT;

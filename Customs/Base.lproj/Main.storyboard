@@ -1257,10 +1257,104 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="进出口税则商品及品目注释" id="jII-gi-886"/>
+                    <connections>
+                        <segue destination="pdD-If-zQc" kind="push" id="Z67-uy-iEj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A72-LL-nF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2426" y="503"/>
+        </scene>
+        <!--进出口税则商品及品目注释-->
+        <scene sceneID="f6O-3a-fW0">
+            <objects>
+                <viewController storyboardIdentifier="MWTCINDetailViewController" id="pdD-If-zQc" customClass="MWTCINDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N78-jo-IjH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ic6-3W-ToP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5sE-Ic-j4o">
+                        <rect key="frame" x="0.0" y="64" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAu-Ll-8qt" userLabel="bottom View">
+                                <rect key="frame" x="0.0" y="951" width="600" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awH-dD-ntY" userLabel="Button1">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="49"/>
+                                        <state key="normal" title="类注">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="classButtonAction:" destination="pdD-If-zQc" eventType="touchUpInside" id="fau-ra-k3y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0t-Bf-lKu" userLabel="Button3">
+                                        <rect key="frame" x="400" y="0.0" width="200" height="49"/>
+                                        <state key="normal" title="品目注释">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="itemButtonAction:" destination="pdD-If-zQc" eventType="touchUpInside" id="BPm-Jx-fYE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTE-tl-sdb" userLabel="Button2">
+                                        <rect key="frame" x="200" y="0.0" width="200" height="49"/>
+                                        <state key="normal" title="章注">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chapterButtonAction:" destination="pdD-If-zQc" eventType="touchUpInside" id="W0B-5a-khA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="awH-dD-ntY" firstAttribute="width" secondItem="jTE-tl-sdb" secondAttribute="width" id="0Op-kr-LbL"/>
+                                    <constraint firstItem="jTE-tl-sdb" firstAttribute="leading" secondItem="awH-dD-ntY" secondAttribute="trailing" id="2lq-SB-REK"/>
+                                    <constraint firstAttribute="bottom" secondItem="M0t-Bf-lKu" secondAttribute="bottom" id="6t2-xg-mMV"/>
+                                    <constraint firstAttribute="height" constant="49" id="7aC-ov-ZEP"/>
+                                    <constraint firstItem="M0t-Bf-lKu" firstAttribute="width" secondItem="jTE-tl-sdb" secondAttribute="width" id="H5a-AD-HBB"/>
+                                    <constraint firstAttribute="bottom" secondItem="jTE-tl-sdb" secondAttribute="bottom" id="NZI-fH-atF"/>
+                                    <constraint firstItem="awH-dD-ntY" firstAttribute="leading" secondItem="rAu-Ll-8qt" secondAttribute="leading" id="UUz-Nt-EUF"/>
+                                    <constraint firstItem="M0t-Bf-lKu" firstAttribute="top" secondItem="rAu-Ll-8qt" secondAttribute="top" id="bYN-iE-l3G"/>
+                                    <constraint firstAttribute="trailing" secondItem="M0t-Bf-lKu" secondAttribute="trailing" id="c4y-kJ-MXX"/>
+                                    <constraint firstAttribute="bottom" secondItem="awH-dD-ntY" secondAttribute="bottom" id="cCd-H3-58j"/>
+                                    <constraint firstItem="jTE-tl-sdb" firstAttribute="top" secondItem="rAu-Ll-8qt" secondAttribute="top" id="eYD-UR-rZ2"/>
+                                    <constraint firstItem="M0t-Bf-lKu" firstAttribute="leading" secondItem="jTE-tl-sdb" secondAttribute="trailing" id="fzi-mb-lbV"/>
+                                    <constraint firstItem="jTE-tl-sdb" firstAttribute="leading" secondItem="awH-dD-ntY" secondAttribute="trailing" id="iLf-iS-NTu"/>
+                                    <constraint firstItem="awH-dD-ntY" firstAttribute="top" secondItem="rAu-Ll-8qt" secondAttribute="top" id="iay-tp-Jfy"/>
+                                    <constraint firstItem="M0t-Bf-lKu" firstAttribute="leading" secondItem="jTE-tl-sdb" secondAttribute="trailing" id="mFZ-6K-Fsj"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0b-5N-jeo">
+                                <rect key="frame" x="0.0" y="64" width="600" height="887"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e0b-5N-jeo" firstAttribute="leading" secondItem="5sE-Ic-j4o" secondAttribute="leading" id="6mh-BW-d2I"/>
+                            <constraint firstAttribute="trailing" secondItem="e0b-5N-jeo" secondAttribute="trailing" id="ChV-nh-gyk"/>
+                            <constraint firstItem="e0b-5N-jeo" firstAttribute="top" secondItem="N78-jo-IjH" secondAttribute="bottom" id="Jy9-21-vfn"/>
+                            <constraint firstItem="rAu-Ll-8qt" firstAttribute="leading" secondItem="5sE-Ic-j4o" secondAttribute="leading" id="UfF-sp-5eq"/>
+                            <constraint firstItem="rAu-Ll-8qt" firstAttribute="top" secondItem="e0b-5N-jeo" secondAttribute="bottom" id="V9c-Vr-q6m"/>
+                            <constraint firstItem="Ic6-3W-ToP" firstAttribute="top" secondItem="rAu-Ll-8qt" secondAttribute="bottom" id="WM9-xX-hoe"/>
+                            <constraint firstAttribute="trailing" secondItem="rAu-Ll-8qt" secondAttribute="trailing" id="Zvl-NN-C2q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="进出口税则商品及品目注释" id="obc-Vg-2oN"/>
+                    <connections>
+                        <outlet property="bottomViewHeight" destination="7aC-ov-ZEP" id="E1E-2c-sYs"/>
+                        <outlet property="chapterButton" destination="jTE-tl-sdb" id="EeO-eJ-uUE"/>
+                        <outlet property="classButton" destination="awH-dD-ntY" id="gdx-ra-eGv"/>
+                        <outlet property="contentWebView" destination="e0b-5N-jeo" id="5Wa-qx-oZf"/>
+                        <outlet property="itemButton" destination="M0t-Bf-lKu" id="giv-8u-z1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KxE-aV-Rbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3094" y="503"/>
         </scene>
         <!--进出口税则查询-->
         <scene sceneID="Lsx-SE-oVT">

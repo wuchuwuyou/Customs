@@ -25,4 +25,5 @@
 ///请求数据
 - (RACSignal *)queryTCIN;
 
++ (RACSignal *)loadDetailData:(NSString *)tariffNo;
 @end
