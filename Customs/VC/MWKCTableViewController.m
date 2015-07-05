@@ -67,7 +67,9 @@
         
         NSDictionary *dict = value.first;
         NSArray *array  = [dict objectForKey:@"CLS00006"];
-        
+        if (self.viewModel.page_index == 1) {
+            self.viewModel.listArray = nil;
+        }
         NSMutableArray *arr = [NSMutableArray arrayWithArray: self.viewModel.listArray];
         [arr addObjectsFromArray:[self.viewModel modelArrayWithArray:array]];
         self.viewModel.listArray = arr;

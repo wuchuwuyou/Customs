@@ -28,6 +28,7 @@
     
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         @strongify(self);
+
         [self loadData];
     }];
     
@@ -70,6 +71,10 @@
         NSDictionary *dict = value.first;
         NSArray *array  = [dict objectForKey:@"CLS00004"];
         
+        if (self.viewModel.page_index == 1) {
+            self.viewModel.listArray = nil;
+        }
+        
         NSMutableArray *arr = [NSMutableArray arrayWithArray: self.viewModel.listArray];
         [arr addObjectsFromArray:[self.viewModel modelArrayWithArray:array]];
         self.viewModel.listArray = arr;
@@ -109,7 +114,9 @@
     [cell configCellWithLeft:model.CHAPTER_NO mid:model.TARIFF_NO right:model.TARIFF_NAME];
     return cell;
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.f;
+}
 
 
 #pragma mark - UITableViewDelegate
