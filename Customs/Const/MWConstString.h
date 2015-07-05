@@ -16,6 +16,7 @@ UIKIT_EXTERN NSString *const MWTariffListPath;
 UIKIT_EXTERN NSString *const MWGoodsTariffItemPath;
 
 /// 本国子目
+UIKIT_EXTERN NSString *const MWNativeSubItemPath;
 /// 重点商品
 UIKIT_EXTERN NSString *const MWGoodsKeyPath;
 UIKIT_EXTERN NSString *const MWGoodsDetailPath;

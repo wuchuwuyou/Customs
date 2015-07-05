@@ -28,20 +28,17 @@
 }
 
 - (RACSignal *)queryNATSub{
-#warning TODO requeset  params
-    /*
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
-    [data setValue:self.subTitle forKey:@"tariffNo"];
-    [data setValue:self.keyword forKey:@"keyWord"];
+    [data setValue:self.nat forKey:@"codeArticle"];
+    [data setValue:self.sub forKey:@"codeTS"];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:[data getJSONString] forKey:@"jsonParams"];
-    [params setValue:@"CLS00004" forKey:@"messageCode"];
+    [params setValue:@"CLS00005" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
     
-    return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper goodsTariffItemURL] andParameters:params];
-     */
-    return nil;
+    return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper nativeSubItemURL] andParameters:params];
+    
 }
 - (NSArray *)modelArrayWithArray:(NSArray *)arr{
 //    return [MWTCINListDateModel arrayOfModelsFromDictionaries:arr];

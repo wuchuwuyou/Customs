@@ -9,18 +9,31 @@
 #import "MWAPIHelper.h"
 
 @implementation MWAPIHelper
+
 + (NSString *)tariffListURL{
     return [[self baseURL] stringByAppendingString:MWTariffListPath];
 }
+
+
 + (NSString *)goodsTariffItemURL{
     return [[self baseURL] stringByAppendingString:MWGoodsTariffItemPath];
 }
 + (NSString *)goodsDetailURL{
     return [[self baseURL] stringByAppendingString:MWGoodsDetailPath];
 }
+
++(NSString *)nativeSubItemURL{
+    return [[self baseURL] stringByAppendingString:MWNativeSubItemPath];
+}
+
+
+
 + (NSString *)goodsKeyURL{
     return [[self baseURL] stringByAppendingString:MWGoodsKeyPath];
 }
+
+
+
 + (NSString *)baseURL{
 //    NSString *host = HOST_NAME;
     return [NSString stringWithFormat:@"%@:%zd",HOST_NAME,PORT];

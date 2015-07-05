@@ -19,6 +19,7 @@
 + (NSString *)goodsTariffItemURL;
 + (NSString *)goodsDetailURL;
 /// 本国子目
++ (NSString *)nativeSubItemURL;
 /// 重点商品
 + (NSString *)goodsKeyURL;
 /// 归类决定
