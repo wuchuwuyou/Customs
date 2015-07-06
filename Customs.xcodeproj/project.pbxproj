@@ -28,6 +28,7 @@
 		2A148DED1B4A28B2009ED904 /* MW2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DEB1B4A28B2009ED904 /* MW2TableViewCell.m */; };
 		2A148DEE1B4A28B2009ED904 /* MW2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A148DEC1B4A28B2009ED904 /* MW2TableViewCell.xib */; };
 		2A148DF11B4A6CFB009ED904 /* MWKCDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DF01B4A6CFB009ED904 /* MWKCDetailTableViewController.m */; };
+		2A148DF31B4A78DE009ED904 /* MWConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DF21B4A78DE009ED904 /* MWConstString.m */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -118,6 +119,7 @@
 		2A148DEC1B4A28B2009ED904 /* MW2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MW2TableViewCell.xib; sourceTree = "<group>"; };
 		2A148DEF1B4A6CFB009ED904 /* MWKCDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWKCDetailTableViewController.h; sourceTree = "<group>"; };
 		2A148DF01B4A6CFB009ED904 /* MWKCDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWKCDetailTableViewController.m; sourceTree = "<group>"; };
+		2A148DF21B4A78DE009ED904 /* MWConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWConstString.m; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				2A3B83F11B4190C9008EDCD5 /* MWConstString.h */,
+				2A148DF21B4A78DE009ED904 /* MWConstString.m */,
 				2A95A70D1B27036600F29E04 /* MWConst.h */,
 				2A95A7101B2703BD00F29E04 /* MWMacro.h */,
 				2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */,
@@ -699,6 +702,7 @@
 				2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */,
 				2AA6AB301B4532B9006D7942 /* MWTCINViewModel.m in Sources */,
 				2A148DC61B4667D4009ED904 /* MWListCell.m in Sources */,
+				2A148DF31B4A78DE009ED904 /* MWConstString.m in Sources */,
 				2A148DED1B4A28B2009ED904 /* MW2TableViewCell.m in Sources */,
 				2A148DDB1B4690DD009ED904 /* MWKCTableViewController.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
