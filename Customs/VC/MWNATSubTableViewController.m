@@ -110,7 +110,7 @@
     
     MWNATSubModel *m = self.viewModel.listArray[indexPath.row];
     
-    [cell configCellWithLeftTitle:m.CODE_TS right:m.CODE_ARTICLE];
+    [cell configCellWithLeftTitle:m.CODE_TS right:m.ARTICLE];
     
     return cell;
 }
