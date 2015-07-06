@@ -7,6 +7,8 @@
 //
 
 #import "MWNATSubViewController.h"
+
+#import "MWNATSubTableViewController.h"
 @interface MWNATSubViewController ()
 @property (weak, nonatomic) IBOutlet  UIScrollView *bgScrollView;
 @property (weak ,nonatomic) IBOutlet MWInputView *subtitle;
@@ -56,11 +58,10 @@
     //    for (MWInputView *v in self.inputViewArray) {
     //        NSLog(@"%@",v.inputText);
     //    }
-//    MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-//    [vm subtitle:self.subtitle.inputText keyword:self.keyword.inputText];
-//    MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
-//    vc.viewModel = vm;
-//    [self.navigationController pushViewController:vc animated: YES];
+    MWNATSubViewModel *vm = [[MWNATSubViewModel alloc] init];
+    MWNATSubTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWNATSubTableViewController"];
+    vc.viewModel = vm;
+    [self.navigationController pushViewController:vc animated: YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{

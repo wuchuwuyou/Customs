@@ -22,6 +22,11 @@
 		2A148DDB1B4690DD009ED904 /* MWKCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DDA1B4690DD009ED904 /* MWKCTableViewController.m */; };
 		2A148DDE1B496737009ED904 /* MWTCINDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DDD1B496737009ED904 /* MWTCINDetailViewController.m */; };
 		2A148DE11B4A100B009ED904 /* MWNATSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DE01B4A100B009ED904 /* MWNATSubModel.m */; };
+		2A148DE41B4A247F009ED904 /* MWNATSubTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DE31B4A247F009ED904 /* MWNATSubTableViewController.m */; };
+		2A148DE71B4A2801009ED904 /* MW2TableViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DE61B4A2801009ED904 /* MW2TableViewHeaderView.m */; };
+		2A148DE91B4A2816009ED904 /* MW2TableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A148DE81B4A2816009ED904 /* MW2TableViewHeaderView.xib */; };
+		2A148DED1B4A28B2009ED904 /* MW2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DEB1B4A28B2009ED904 /* MW2TableViewCell.m */; };
+		2A148DEE1B4A28B2009ED904 /* MW2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A148DEC1B4A28B2009ED904 /* MW2TableViewCell.xib */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -103,6 +108,14 @@
 		2A148DDD1B496737009ED904 /* MWTCINDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINDetailViewController.m; sourceTree = "<group>"; };
 		2A148DDF1B4A100B009ED904 /* MWNATSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNATSubModel.h; sourceTree = "<group>"; };
 		2A148DE01B4A100B009ED904 /* MWNATSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNATSubModel.m; sourceTree = "<group>"; };
+		2A148DE21B4A247F009ED904 /* MWNATSubTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNATSubTableViewController.h; sourceTree = "<group>"; };
+		2A148DE31B4A247F009ED904 /* MWNATSubTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNATSubTableViewController.m; sourceTree = "<group>"; };
+		2A148DE51B4A2801009ED904 /* MW2TableViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MW2TableViewHeaderView.h; sourceTree = "<group>"; };
+		2A148DE61B4A2801009ED904 /* MW2TableViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MW2TableViewHeaderView.m; sourceTree = "<group>"; };
+		2A148DE81B4A2816009ED904 /* MW2TableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MW2TableViewHeaderView.xib; sourceTree = "<group>"; };
+		2A148DEA1B4A28B2009ED904 /* MW2TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MW2TableViewCell.h; sourceTree = "<group>"; };
+		2A148DEB1B4A28B2009ED904 /* MW2TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MW2TableViewCell.m; sourceTree = "<group>"; };
+		2A148DEC1B4A28B2009ED904 /* MW2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MW2TableViewCell.xib; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -222,6 +235,8 @@
 			children = (
 				2A148DC91B466F78009ED904 /* MWNATSubViewController.h */,
 				2A148DCA1B466F78009ED904 /* MWNATSubViewController.m */,
+				2A148DE21B4A247F009ED904 /* MWNATSubTableViewController.h */,
+				2A148DE31B4A247F009ED904 /* MWNATSubTableViewController.m */,
 			);
 			name = "本国子目";
 			sourceTree = "<group>";
@@ -364,12 +379,18 @@
 				2A3B83E21B39A741008EDCD5 /* MWListHeaderView.h */,
 				2A3B83E31B39A741008EDCD5 /* MWListHeaderView.m */,
 				2A148DC11B4659F0009ED904 /* MWListHeaderView.xib */,
+				2A148DE51B4A2801009ED904 /* MW2TableViewHeaderView.h */,
+				2A148DE61B4A2801009ED904 /* MW2TableViewHeaderView.m */,
+				2A148DE81B4A2816009ED904 /* MW2TableViewHeaderView.xib */,
 				2AA6AB1C1B44DA26006D7942 /* MWDetailListTableViewCell.h */,
 				2AA6AB1D1B44DA26006D7942 /* MWDetailListTableViewCell.m */,
 				2AA6AB1F1B44DAA8006D7942 /* MWDetailListTableViewCell.xib */,
 				2A148DC31B4667D4009ED904 /* MWListCell.h */,
 				2A148DC41B4667D4009ED904 /* MWListCell.m */,
 				2A148DC51B4667D4009ED904 /* MWListCell.xib */,
+				2A148DEA1B4A28B2009ED904 /* MW2TableViewCell.h */,
+				2A148DEB1B4A28B2009ED904 /* MW2TableViewCell.m */,
+				2A148DEC1B4A28B2009ED904 /* MW2TableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -585,11 +606,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A148DE91B4A2816009ED904 /* MW2TableViewHeaderView.xib in Resources */,
 				2A95A6E31B26F0AD00F29E04 /* Main.storyboard in Resources */,
 				2A148DC21B4659F0009ED904 /* MWListHeaderView.xib in Resources */,
 				2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */,
 				2A95A6E81B26F0AD00F29E04 /* LaunchScreen.xib in Resources */,
 				2A95A6E51B26F0AD00F29E04 /* Images.xcassets in Resources */,
+				2A148DEE1B4A28B2009ED904 /* MW2TableViewCell.xib in Resources */,
 				2A148DC71B4667D4009ED904 /* MWListCell.xib in Resources */,
 				2AA6AB201B44DAA8006D7942 /* MWDetailListTableViewCell.xib in Resources */,
 			);
@@ -650,6 +673,7 @@
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
+				2A148DE71B4A2801009ED904 /* MW2TableViewHeaderView.m in Sources */,
 				2A148DCB1B466F78009ED904 /* MWNATSubViewController.m in Sources */,
 				2A148DDE1B496737009ED904 /* MWTCINDetailViewController.m in Sources */,
 				2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */,
@@ -657,6 +681,7 @@
 				2A148DE11B4A100B009ED904 /* MWNATSubModel.m in Sources */,
 				2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
+				2A148DE41B4A247F009ED904 /* MWNATSubTableViewController.m in Sources */,
 				2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */,
 				2AA6AB331B4537FB006D7942 /* MWTCINListDateModel.m in Sources */,
 				2AA6AB2D1B453165006D7942 /* MWTCINTableViewController.m in Sources */,
@@ -671,6 +696,7 @@
 				2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */,
 				2AA6AB301B4532B9006D7942 /* MWTCINViewModel.m in Sources */,
 				2A148DC61B4667D4009ED904 /* MWListCell.m in Sources */,
+				2A148DED1B4A28B2009ED904 /* MW2TableViewCell.m in Sources */,
 				2A148DDB1B4690DD009ED904 /* MWKCTableViewController.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
 				2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */,

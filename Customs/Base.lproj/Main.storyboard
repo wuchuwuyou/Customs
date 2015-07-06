@@ -1098,7 +1098,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbM-he-sms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2502" y="3035"/>
+            <point key="canvasLocation" x="2438" y="3043"/>
         </scene>
         <!--本国子目-->
         <scene sceneID="qvd-F2-qr1">
@@ -1160,6 +1160,7 @@
                                         <connections>
                                             <action selector="resetAll:" destination="b0j-8k-b0c" eventType="touchUpInside" id="4KP-LG-bga"/>
                                             <action selector="resetAll:" destination="BTD-bk-wbz" eventType="touchUpInside" id="UWD-JV-3av"/>
+                                            <action selector="resetAll:" destination="TqS-CL-zTG" eventType="touchUpInside" id="uLD-QS-8MB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sd-MW-ARu" customClass="MWInputViewButton">
@@ -1168,6 +1169,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="query:" destination="TqS-CL-zTG" eventType="touchUpInside" id="Zpr-BW-14u"/>
                                             <action selector="query:" destination="b0j-8k-b0c" eventType="touchUpInside" id="ZvK-JB-DL5"/>
                                             <action selector="query:" destination="BTD-bk-wbz" eventType="touchUpInside" id="lo7-I6-bPX"/>
                                         </connections>
@@ -1237,11 +1239,39 @@
                         <outlet property="scrollBottomHeight" destination="02T-jy-yuE" id="3Hr-z5-Jtk"/>
                         <outlet property="searchButton" destination="9sd-MW-ARu" id="fjW-w6-cVb"/>
                         <outlet property="subtitle" destination="HKj-Nh-UZI" id="x60-c5-OJG"/>
+                        <segue destination="JHs-zQ-kff" kind="push" id="18p-AU-Lrz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZD-Nq-0J8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1680" y="1677"/>
+        </scene>
+        <!--本国子目查询结果-->
+        <scene sceneID="kbc-Hh-0p5">
+            <objects>
+                <tableViewController storyboardIdentifier="MWNATSubTableViewController" id="JHs-zQ-kff" customClass="MWNATSubTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kND-He-3vz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OTA-RW-w4g">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTA-RW-w4g" id="cB9-ES-ZnB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JHs-zQ-kff" id="FEQ-zN-gLp"/>
+                            <outlet property="delegate" destination="JHs-zQ-kff" id="Uve-kr-oJI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="本国子目查询结果" id="Ry4-aN-hqt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRg-X9-MJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2446" y="1677"/>
         </scene>
         <!--进出口税则商品及品目注释-->
         <scene sceneID="fs2-H9-6dh">
