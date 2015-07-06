@@ -10,6 +10,8 @@
 #import "MWListHeaderView.h"
 #import "MWListCell.h"
 #import "MWKeyCommoditiesModel.h"
+#import "MWKCDetailTableViewController.h"
+#import "MWCommonDataHelper.h"
 @interface MWKCTableViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
@@ -114,10 +116,10 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSArray *arr = [[MWCommonDataHelper sharedManager] tariffListWithModel:self.viewModel.listArray[indexPath.row]];
-//    MWIAETDetailViewController *dvc = [[MWIAETDetailViewController alloc] init];
-//    dvc.dataArray = arr;
-//    [self.navigationController pushViewController:dvc animated:YES];
+    NSArray *arr = [[MWCommonDataHelper sharedManager] keyCommoditiesListWithModel:self.viewModel.listArray[indexPath.row]];
+    MWKCDetailTableViewController *dvc = [[MWKCDetailTableViewController alloc] init];
+    dvc.dataArray = arr;
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 
 

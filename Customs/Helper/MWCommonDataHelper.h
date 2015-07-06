@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "MWTariffListDataModel.h"
+
+#import "MWKeyCommoditiesModel.h"
 @interface MWCommonDataHelper : NSObject
 
 + (instancetype)sharedManager;
 
 - (NSArray *)tariffListWithModel:(MWTariffListDataModel*)model;
+
+- (NSArray *)keyCommoditiesListWithModel:(MWKeyCommoditiesModel *)model;
 @end

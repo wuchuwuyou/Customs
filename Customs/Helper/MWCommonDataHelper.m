@@ -76,36 +76,46 @@
         
         [data addObject:m];
     }
-    
-    
-    
-//    ///-- G_NAME  ： 货物名称
-//    @property (nonatomic,strong) NSString *G_NAME;
-    
-//    ///-- CODE_TS  ： 商品编码
-//    @property (nonatomic,strong) NSString *CODE_TS;
-//    
-//    ///-- COMM_RATE  ：普通税率
-//    @property (nonatomic,strong) NSString *COMM_RATE;
-//    ///-- ASEAN_RATE  ：东盟税率
-//    @property (nonatomic,strong) NSString *ASEAN_RATE;
-//    
-//    ///-- HK_RATE  ： 香港税率
-//    @property (nonatomic,strong) NSString *HK_RATE;
-//    ///-- MACAO_RATE  ：澳门税率
-//    @property (nonatomic,strong) NSString *MACAO_RATE;
-//    
-//    ///-- EXPORT_RATE  ：出口税率
-//    @property (nonatomic,strong) NSString *EXPORT_RATE;
-//    ///-- APTA_RATE   ： 亚太税率
-//    @property (nonatomic,strong) NSString *APTA_RATE;
-//    
-//    ///-- MFN_RATE   ：最惠国税率
-//    @property (nonatomic,strong) NSString *MFN_RATE;
-//    ///-- REMARK : 备注
-//    @property (nonatomic,strong) NSString *REMARK;
-    
-    
     return data;
+}
+
+- (NSArray *)keyCommoditiesListWithModel:(MWKeyCommoditiesModel *)model{
+    NSMutableArray *data = [NSMutableArray array];
+    
+    NSInteger num = [model toDictionary].allKeys.count;
+    
+    for (NSInteger i = 0; i<num ; i++) {
+        
+        MWCommonModel *m = [[MWCommonModel alloc] init];
+        
+        switch (i) {
+            case 0:
+                m.name = NSLocalizedString(@"goods_no", @"商品编号");
+                m.content = model.CODE_TS;
+                break;
+            case 1:
+                m.name = NSLocalizedString(@"goods_name_1", @"商品名称");
+                m.content = model.G_NAME;
+                break;
+            case 2:
+                m.name = NSLocalizedString(@"specification_model", @"规格型号");
+                m.content = model.G_MODEL;
+                break;
+            case 3:
+                m.name = NSLocalizedString(@"keywords", @"关键字");
+                m.content = model.KEY_WORD;
+                break;
+            case 4:
+                m.name = NSLocalizedString(@"goods_description", @"商品描述");
+                m.content = model.G_DESC;
+                break;
+            default:
+                break;
+        }
+        
+        [data addObject:m];
+    }
+    return data;
+
 }
 @end
