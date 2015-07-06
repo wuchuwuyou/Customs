@@ -34,6 +34,7 @@
         @strongify(self);
         if (!self.viewModel.canLoadMore) {
             [self endRefresh];
+            
         }
         if (self.viewModel.listArray.count != 0) {
             self.viewModel.page_index++;

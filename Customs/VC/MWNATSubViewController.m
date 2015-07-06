@@ -59,6 +59,7 @@
     //        NSLog(@"%@",v.inputText);
     //    }
     MWNATSubViewModel *vm = [[MWNATSubViewModel alloc] init];
+    [vm national:self.keyword.inputText subTitle:self.subtitle.inputText];
     MWNATSubTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWNATSubTableViewController"];
     vc.viewModel = vm;
     [self.navigationController pushViewController:vc animated: YES];

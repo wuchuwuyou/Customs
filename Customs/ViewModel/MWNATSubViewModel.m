@@ -18,7 +18,7 @@
 - (instancetype)init{
     if (self = [super init]) {
         self.page_index = 1;
-        self.page_size = 10;
+        self.page_size = 10;//PAGESIZE;
     }
     return self;
 }
@@ -29,8 +29,8 @@
 
 - (RACSignal *)queryNATSub{
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
-    [data setValue:self.nat forKey:@"codeArticle"];
-    [data setValue:self.sub forKey:@"codeTS"];
+    [data setValue:self.sub forKey:@"codeArticle"];
+    [data setValue:self.nat forKey:@"codeTS"];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:[data getJSONString] forKey:@"jsonParams"];
     [params setValue:@"CLS00005" forKey:@"messageCode"];
