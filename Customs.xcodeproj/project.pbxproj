@@ -39,7 +39,6 @@
 		2A3B83E71B418588008EDCD5 /* MWTariffListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83E61B418588008EDCD5 /* MWTariffListViewModel.m */; };
 		2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83E91B418B62008EDCD5 /* MWAPIManager.m */; };
 		2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */; };
-		2A3B83F31B4190C9008EDCD5 /* MWConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83F21B4190C9008EDCD5 /* MWConstString.m */; };
 		2A3B83F91B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83F81B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m */; };
 		2A3B83FC1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83FB1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m */; };
 		2A3B83FF1B42DAA5008EDCD5 /* NSError+MWErrorString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83FE1B42DAA5008EDCD5 /* NSError+MWErrorString.m */; };
@@ -142,7 +141,6 @@
 		2A3B83EE1B418E6F008EDCD5 /* MWAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAPIHelper.h; sourceTree = "<group>"; };
 		2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAPIHelper.m; sourceTree = "<group>"; };
 		2A3B83F11B4190C9008EDCD5 /* MWConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWConstString.h; sourceTree = "<group>"; };
-		2A3B83F21B4190C9008EDCD5 /* MWConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWConstString.m; sourceTree = "<group>"; };
 		2A3B83F51B419951008EDCD5 /* MWProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWProtocols.h; sourceTree = "<group>"; };
 		2A3B83F71B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MWGetURLString.h"; sourceTree = "<group>"; };
 		2A3B83F81B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MWGetURLString.m"; sourceTree = "<group>"; };
@@ -404,7 +402,6 @@
 			isa = PBXGroup;
 			children = (
 				2A3B83F11B4190C9008EDCD5 /* MWConstString.h */,
-				2A3B83F21B4190C9008EDCD5 /* MWConstString.m */,
 				2A95A70D1B27036600F29E04 /* MWConst.h */,
 				2A95A7101B2703BD00F29E04 /* MWMacro.h */,
 				2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */,
@@ -719,7 +716,6 @@
 				2AA6AB261B451B11006D7942 /* MWAppDelegateConfig.m in Sources */,
 				2A3B83FC1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m in Sources */,
 				2A3B83DB1B39A01D008EDCD5 /* MWIAETTableViewController.m in Sources */,
-				2A3B83F31B4190C9008EDCD5 /* MWConstString.m in Sources */,
 				2A3B83DE1B39A643008EDCD5 /* MWBaseTableViewCell.m in Sources */,
 				2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */,
 			);
