@@ -42,6 +42,8 @@
 // 重点商品
 "goods_description" = "商品描述";
 "key_goods_result" = "重点商品查询结果";
+"sub_annotation" = "子目注释";
+"relate_content" = "相关内容";
 // 归类决定
 // 归类裁定
 // 化验状态

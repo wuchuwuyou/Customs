@@ -10,6 +10,7 @@
 #import "MW2TableViewCell.h"
 #import "MW2TableViewHeaderView.h"
 #import "MWNATSubModel.h"
+#import "MWNATSubTabBarController.h"
 @interface MWNATSubTableViewController ()
 @property (nonatomic,strong)  MW2TableViewHeaderView *headerView;
 
@@ -116,10 +117,11 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //    NSArray *arr = [[MWCommonDataHelper sharedManager] tariffListWithModel:self.viewModel.listArray[indexPath.row]];
-    //    MWIAETDetailViewController *dvc = [[MWIAETDetailViewController alloc] init];
-    //    dvc.dataArray = arr;
-    //    [self.navigationController pushViewController:dvc animated:YES];
+    MWNATSubModel *model = self.viewModel.listArray[indexPath.row];
+    
+    MWNATSubTabBarController * tab = [[MWNATSubTabBarController alloc] init];
+    tab.model = model;
+    [self.navigationController pushViewController:tab animated:YES];
 }
 
 

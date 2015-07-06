@@ -1295,6 +1295,44 @@
             </objects>
             <point key="canvasLocation" x="2446" y="1677"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="RI8-9B-XCG">
+            <objects>
+                <viewController id="pkz-Ks-3Hz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CFR-zv-5HQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="dmo-cD-oUK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="psc-qb-wGB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="tdV-ZV-7zQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lnl-56-QcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4788" y="1925"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="VNL-fq-bbH">
+            <objects>
+                <viewController id="MiN-Ih-pHu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JRA-B3-cNB"/>
+                        <viewControllerLayoutGuide type="bottom" id="C8x-Kt-GzB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dpE-6D-lOR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Qs4-aI-bsN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0a-sp-opU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4788" y="863"/>
+        </scene>
         <!--进出口税则商品及品目注释-->
         <scene sceneID="fs2-H9-6dh">
             <objects>
