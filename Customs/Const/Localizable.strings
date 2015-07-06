@@ -45,6 +45,12 @@
 "sub_annotation" = "子目注释";
 "relate_content" = "相关内容";
 // 归类决定
+"correlation_number" = "相关编号";
+"tariff_decision" = "决定税号";
+
+"eng_name" = "英文名称";
+"other_name" = "其他名称";
+
 // 归类裁定
 // 化验状态
 // 公用

@@ -7,7 +7,19 @@
 //
 
 #import "MWGLJDViewModel.h"
+#import "MWGLJDListModel.h"
+
+
+@interface MWGLJDViewModel ()
+@property (nonatomic,strong) NSArray *source;
+@end
 
 @implementation MWGLJDViewModel
-
+- (instancetype)initWithInputViewArray:(NSArray *)arr{
+    
+    if ( self = [super init]) {
+        self.source = arr;
+    }
+    return self;
+}
 @end

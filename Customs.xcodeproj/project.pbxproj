@@ -33,6 +33,10 @@
 		2A148DF91B4AB2A3009ED904 /* MWNATSubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DF81B4AB2A3009ED904 /* MWNATSubTabBarController.m */; };
 		2A148DFC1B4AB397009ED904 /* MWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148DFB1B4AB397009ED904 /* MWWebViewController.m */; };
 		2A148DFE1B4AB68B009ED904 /* MWWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A148DFD1B4AB68B009ED904 /* MWWebViewController.xib */; };
+		2A148E041B4ACDB9009ED904 /* MWGLJDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E031B4ACDB9009ED904 /* MWGLJDViewController.m */; };
+		2A148E071B4AD3E0009ED904 /* MWGLJDViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E061B4AD3E0009ED904 /* MWGLJDViewModel.m */; };
+		2A148E0A1B4AD438009ED904 /* MWGLJDReqModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E091B4AD438009ED904 /* MWGLJDReqModel.m */; };
+		2A148E0D1B4AD603009ED904 /* MWGLJDListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E0C1B4AD603009ED904 /* MWGLJDListModel.m */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -131,6 +135,14 @@
 		2A148DFA1B4AB397009ED904 /* MWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWWebViewController.h; sourceTree = "<group>"; };
 		2A148DFB1B4AB397009ED904 /* MWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWWebViewController.m; sourceTree = "<group>"; };
 		2A148DFD1B4AB68B009ED904 /* MWWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWWebViewController.xib; sourceTree = "<group>"; };
+		2A148E021B4ACDB9009ED904 /* MWGLJDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWGLJDViewController.h; sourceTree = "<group>"; };
+		2A148E031B4ACDB9009ED904 /* MWGLJDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDViewController.m; sourceTree = "<group>"; };
+		2A148E051B4AD3E0009ED904 /* MWGLJDViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWGLJDViewModel.h; sourceTree = "<group>"; };
+		2A148E061B4AD3E0009ED904 /* MWGLJDViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDViewModel.m; sourceTree = "<group>"; };
+		2A148E081B4AD438009ED904 /* MWGLJDReqModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWGLJDReqModel.h; sourceTree = "<group>"; };
+		2A148E091B4AD438009ED904 /* MWGLJDReqModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDReqModel.m; sourceTree = "<group>"; };
+		2A148E0B1B4AD603009ED904 /* MWGLJDListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWGLJDListModel.h; sourceTree = "<group>"; };
+		2A148E0C1B4AD603009ED904 /* MWGLJDListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDListModel.m; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -271,6 +283,29 @@
 				2A148DF01B4A6CFB009ED904 /* MWKCDetailTableViewController.m */,
 			);
 			name = "重点商品";
+			sourceTree = "<group>";
+		};
+		2A148DFF1B4AC11D009ED904 /* 归类决定 */ = {
+			isa = PBXGroup;
+			children = (
+				2A148E021B4ACDB9009ED904 /* MWGLJDViewController.h */,
+				2A148E031B4ACDB9009ED904 /* MWGLJDViewController.m */,
+			);
+			name = "归类决定";
+			sourceTree = "<group>";
+		};
+		2A148E001B4AC126009ED904 /* 归类裁定 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "归类裁定";
+			sourceTree = "<group>";
+		};
+		2A148E011B4AC13E009ED904 /* 化验状态 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "化验状态";
 			sourceTree = "<group>";
 		};
 		2A3B83F61B42BF88008EDCD5 /* Category */ = {
@@ -446,6 +481,8 @@
 				2A148DCD1B4671B8009ED904 /* MWNATSubViewModel.m */,
 				2A148DD61B468DF6009ED904 /* MWKeyCommoditiesViewModel.h */,
 				2A148DD71B468DF6009ED904 /* MWKeyCommoditiesViewModel.m */,
+				2A148E051B4AD3E0009ED904 /* MWGLJDViewModel.h */,
+				2A148E061B4AD3E0009ED904 /* MWGLJDViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -463,6 +500,9 @@
 				2AA6AB271B452114006D7942 /* 税则商品及品目注释 */,
 				2A148DCF1B468038009ED904 /* 重点商品 */,
 				2A148DC81B466F08009ED904 /* 本国子目 */,
+				2A148DFF1B4AC11D009ED904 /* 归类决定 */,
+				2A148E001B4AC126009ED904 /* 归类裁定 */,
+				2A148E011B4AC13E009ED904 /* 化验状态 */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -525,6 +565,10 @@
 				2A148DD41B468D13009ED904 /* MWKeyCommoditiesModel.m */,
 				2A148DDF1B4A100B009ED904 /* MWNATSubModel.h */,
 				2A148DE01B4A100B009ED904 /* MWNATSubModel.m */,
+				2A148E081B4AD438009ED904 /* MWGLJDReqModel.h */,
+				2A148E091B4AD438009ED904 /* MWGLJDReqModel.m */,
+				2A148E0B1B4AD603009ED904 /* MWGLJDListModel.h */,
+				2A148E0C1B4AD603009ED904 /* MWGLJDListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -692,6 +736,7 @@
 				2AA6AB231B44DC59006D7942 /* MWIAETDetailViewController.m in Sources */,
 				2A148DCE1B4671B8009ED904 /* MWNATSubViewModel.m in Sources */,
 				2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */,
+				2A148E071B4AD3E0009ED904 /* MWGLJDViewModel.m in Sources */,
 				2A95A71C1B29881C00F29E04 /* MWEntranceViewModel.m in Sources */,
 				2A95A7191B295C4200F29E04 /* MWHomeButton.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
@@ -707,6 +752,7 @@
 				2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
 				2A148DE41B4A247F009ED904 /* MWNATSubTableViewController.m in Sources */,
+				2A148E0A1B4AD438009ED904 /* MWGLJDReqModel.m in Sources */,
 				2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */,
 				2A148DF11B4A6CFB009ED904 /* MWKCDetailTableViewController.m in Sources */,
 				2AA6AB331B4537FB006D7942 /* MWTCINListDateModel.m in Sources */,
@@ -726,6 +772,7 @@
 				2A148DC61B4667D4009ED904 /* MWListCell.m in Sources */,
 				2A148DF31B4A78DE009ED904 /* MWConstString.m in Sources */,
 				2A148DED1B4A28B2009ED904 /* MW2TableViewCell.m in Sources */,
+				2A148E041B4ACDB9009ED904 /* MWGLJDViewController.m in Sources */,
 				2A148DDB1B4690DD009ED904 /* MWKCTableViewController.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
 				2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */,
@@ -737,6 +784,7 @@
 				2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */,
 				2A3B83FF1B42DAA5008EDCD5 /* NSError+MWErrorString.m in Sources */,
 				2A148DD81B468DF6009ED904 /* MWKeyCommoditiesViewModel.m in Sources */,
+				2A148E0D1B4AD603009ED904 /* MWGLJDListModel.m in Sources */,
 				2A95A6DA1B26F0AD00F29E04 /* main.m in Sources */,
 				2A060F931B43FDC0009F9EC7 /* MWDetailTextViewController.m in Sources */,
 				2AA6AB261B451B11006D7942 /* MWAppDelegateConfig.m in Sources */,
