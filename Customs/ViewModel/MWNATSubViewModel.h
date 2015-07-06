@@ -7,7 +7,7 @@
 //
 
 #import "RVMViewModel.h"
-
+///本国子目
 @interface MWNATSubViewModel : RVMViewModel
 ///用于存储列表页数据
 @property (nonatomic,strong) NSArray *listArray;

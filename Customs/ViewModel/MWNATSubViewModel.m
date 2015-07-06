@@ -7,7 +7,7 @@
 //
 
 #import "MWNATSubViewModel.h"
-
+#import "MWNATSubModel.h"
 @interface MWNATSubViewModel ()
 
 @property (nonatomic ,strong) NSString *nat;
@@ -41,10 +41,7 @@
     
 }
 - (NSArray *)modelArrayWithArray:(NSArray *)arr{
-//    return [MWTCINListDateModel arrayOfModelsFromDictionaries:arr];
-    return nil;
-#warning TODO  create model!!!!
-    
+    return [MWNATSubModel arrayOfModelsFromDictionaries:arr];
 }
 
 @end
