@@ -23,6 +23,7 @@
 /// 重点商品
 + (NSString *)goodsKeyURL;
 /// 归类决定
++ (NSString *)GLJDListURL;
 /// 归类裁定
 /// 化验状态
 

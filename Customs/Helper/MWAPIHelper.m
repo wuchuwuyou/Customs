@@ -27,6 +27,10 @@
 }
 
 
++(NSString *)GLJDListURL{
+    return [[self baseURL] stringByAppendingString:nil];
+}
+
 
 + (NSString *)goodsKeyURL{
     return [[self baseURL] stringByAppendingString:MWGoodsKeyPath];

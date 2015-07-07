@@ -21,6 +21,7 @@ UIKIT_EXTERN NSString *const MWNativeSubItemPath;
 UIKIT_EXTERN NSString *const MWGoodsKeyPath;
 UIKIT_EXTERN NSString *const MWGoodsDetailPath;
 /// 归类决定
+UIKIT_EXTERN NSString *const MWGLJDListPath;
 /// 归类裁定
 /// 化验状态
 

@@ -7,7 +7,8 @@
 //
 
 #import "MWGLJDViewController.h"
-
+#import "MWGLJDTableViewController.h"
+#import "MWGLJDViewModel.h"
 @interface MWGLJDViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *bgScrollView;
 @property (weak, nonatomic) IBOutlet MWInputView *codeInputView;
@@ -19,7 +20,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollBottomHeight;
 @property (weak, nonatomic) IBOutlet MWInputViewButton *searchButton;
 @property (weak, nonatomic) IBOutlet MWInputViewButton *resetButton;
-@property (strong,nonatomic) NSMutableArray * inputViewArray;
+@property (strong, nonatomic) NSMutableArray * inputViewArray;
+@property (strong, nonatomic) MWGLJDViewModel *viewModel;
 @end
 
 @implementation MWGLJDViewController
@@ -33,7 +35,7 @@
     
     [self initViews];
     
-//    self.tariffViewModel = [[MWTariffViewModel alloc] initWithMWInputViewArray:self.inputViewArray];
+    self.viewModel = [[MWGLJDViewModel alloc] initWithInputViewArray:self.inputViewArray];
     
     [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
     [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
@@ -70,11 +72,10 @@
     //    for (MWInputView *v in self.inputViewArray) {
     //        NSLog(@"%@",v.inputText);
     //    }
-//    NSLog(@"%@",[self.tariffViewModel.model toDictionary]);
-//    
-//    MWIAETTableViewController *tbvc = [self.storyboard instantiateViewControllerWithIdentifier:@"IAETTableViewController"];
-//    tbvc.model = self.tariffViewModel.model;
-//    [self.navigationController pushViewController:tbvc animated:YES];
+    NSLog(@"%@",[self.viewModel.reqModel toDictionary]);
+    MWGLJDTableViewController *tbVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MWGLJDTableViewController"];
+    tbVC.viewModel = self.viewModel;
+    [self.navigationController pushViewController:tbVC animated:YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
