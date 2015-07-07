@@ -50,6 +50,8 @@
 
 "eng_name" = "英文名称";
 "other_name" = "其他名称";
+"issue_number" = "签发编号";
+
 
 // 归类裁定
 // 化验状态

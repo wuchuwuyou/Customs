@@ -14,26 +14,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5L-DV-C7x">
-                        <rect key="frame" x="0.0" y="0.0" width="143.5" height="43.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="x5L-DV-C7x">
+                        <rect key="frame" x="10" y="0.0" width="133.5" height="43.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-dj-76W">
-                        <rect key="frame" x="143.5" y="0.0" width="143.5" height="43.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-dj-76W">
+                        <rect key="frame" x="153.5" y="0.0" width="133.5" height="43.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ofa-dj-76W" firstAttribute="leading" secondItem="x5L-DV-C7x" secondAttribute="trailing" id="6kc-ng-89e"/>
+                    <constraint firstItem="ofa-dj-76W" firstAttribute="leading" secondItem="x5L-DV-C7x" secondAttribute="trailing" constant="10" id="6kc-ng-89e"/>
                     <constraint firstAttribute="trailing" secondItem="ofa-dj-76W" secondAttribute="trailing" id="8PY-RY-OaP"/>
-                    <constraint firstItem="ofa-dj-76W" firstAttribute="leading" secondItem="x5L-DV-C7x" secondAttribute="trailing" id="D3T-fB-IU3"/>
+                    <constraint firstItem="ofa-dj-76W" firstAttribute="leading" secondItem="x5L-DV-C7x" secondAttribute="trailing" constant="10" id="D3T-fB-IU3"/>
                     <constraint firstItem="x5L-DV-C7x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hPw-XX-ikE"/>
                     <constraint firstItem="ofa-dj-76W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="i42-f4-vZJ"/>
-                    <constraint firstItem="x5L-DV-C7x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rSa-dB-OiO"/>
+                    <constraint firstItem="x5L-DV-C7x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rSa-dB-OiO"/>
                     <constraint firstAttribute="bottom" secondItem="ofa-dj-76W" secondAttribute="bottom" id="ssB-Re-4W7"/>
                     <constraint firstAttribute="bottom" secondItem="x5L-DV-C7x" secondAttribute="bottom" id="yuZ-8f-jDx"/>
                     <constraint firstItem="ofa-dj-76W" firstAttribute="width" secondItem="x5L-DV-C7x" secondAttribute="width" id="zry-JF-DsC"/>

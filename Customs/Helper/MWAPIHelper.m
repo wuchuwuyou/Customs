@@ -28,7 +28,7 @@
 
 
 +(NSString *)GLJDListURL{
-    return [[self baseURL] stringByAppendingString:nil];
+    return [[self baseURL] stringByAppendingString:MWGLJDListPath];
 }
 
 
