@@ -32,11 +32,24 @@
     //    self.inputCode.text = @"相关编号";
     //    self.inputCode.isShow = YES;
     
+    switch (self.type) {
+        case MWGLSearchTypeJD:
+            self.title = NSLocalizedString(@"gljd_search", @"");
+
+            break;
+        case MWGLSearchTypeCD:
+            self.title = NSLocalizedString(@"glcd_search", @"");
+
+            break;
+        default:
+            break;
+    }
+   
     
     [self initViews];
     
     self.viewModel = [[MWGLJDViewModel alloc] initWithInputViewArray:self.inputViewArray];
-    
+    self.viewModel.type = self.type;
     [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
     [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
     
@@ -75,6 +88,7 @@
     NSLog(@"%@",[self.viewModel.reqModel toDictionary]);
     MWGLJDTableViewController *tbVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MWGLJDTableViewController"];
     tbVC.viewModel = self.viewModel;
+    tbVC.type = self.type;
     [self.navigationController pushViewController:tbVC animated:YES];
 }
 

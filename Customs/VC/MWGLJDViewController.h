@@ -8,6 +8,9 @@
 
 #import "MWBaseViewController.h"
 
+
 @interface MWGLJDViewController : MWBaseViewController
+
+@property (nonatomic,assign) MWGLSearchType type;
 
 @end

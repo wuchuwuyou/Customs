@@ -19,7 +19,20 @@
     // Do any additional setup after loading the view.
     
     self.tableView.tableFooterView = [UIView new];
-    self.title = NSLocalizedString(@"gljd_result", @"归类决定查询结果");
+//    self.title = NSLocalizedString(@"gljd_result", @"归类决定查询结果");
+    switch (self.type) {
+        case MWGLSearchTypeJD:
+            self.title = NSLocalizedString(@"gljd_result", @"");
+            
+            break;
+        case MWGLSearchTypeCD:
+            self.title = NSLocalizedString(@"glcd_result", @"");
+            
+            break;
+        default:
+            break;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,7 +93,20 @@
     MWCommonModel *model = self.dataArray[indexPath.row];
     if (model.isMore) {
         MWDetailTextViewController *textVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWDetailTextViewController"];
-        textVC.title = NSLocalizedString(@"gljd_result", @"归类决定查询结果");
+//        textVC.title = NSLocalizedString(@"gljd_result", @"归类决定查询结果");
+        switch (self.type) {
+            case MWGLSearchTypeJD:
+                textVC.title = NSLocalizedString(@"gljd_result", @"");
+                
+                break;
+            case MWGLSearchTypeCD:
+                textVC.title = NSLocalizedString(@"glcd_result", @"");
+                
+                break;
+            default:
+                break;
+        }
+
         [textVC configViewWittTitle:model.name detailText:model.content];
         [self.navigationController pushViewController:textVC animated:YES];
         

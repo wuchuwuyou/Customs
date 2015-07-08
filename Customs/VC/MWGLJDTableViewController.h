@@ -12,4 +12,6 @@
 
 @property (nonatomic,strong) MWGLJDViewModel *viewModel;
 
+@property (nonatomic,assign) MWGLSearchType type;
+
 @end

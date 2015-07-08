@@ -7,7 +7,7 @@
 //
 
 #import "MWHomeViewController.h"
-
+#import "MWGLJDViewController.h"
 @interface MWHomeViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *panelViewHeight;
 
@@ -26,6 +26,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)GLJDSearchAction:(UIButton *)sender {
+    
+    MWGLJDViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWGLJDViewController"];
+
+    if (sender.tag == 1001) {
+        vc.type = MWGLSearchTypeJD;
+    }else if(sender.tag == 1002){
+        vc.type = MWGLSearchTypeCD;
+    }
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 /*

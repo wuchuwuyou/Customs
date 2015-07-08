@@ -9,5 +9,5 @@
 #import "MWDetailTableViewController.h"
 
 @interface MWGLJDDetailViewController : MWDetailTableViewController
-
+@property (nonatomic,assign) MWGLSearchType type;
 @end

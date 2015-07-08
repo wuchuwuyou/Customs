@@ -19,6 +19,8 @@
 /// 是否能加载更多
 @property (nonatomic,assign) BOOL canLoadMore;
 
+@property (nonatomic,assign) MWGLSearchType type;
+
 
 @property (nonatomic,strong,readonly) MWGLJDReqModel *reqModel;
 

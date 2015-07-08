@@ -56,8 +56,10 @@
 "other_name" = "商品名称（其他）";
 "classified_opinion" = "归类意见";
 "gljd_result" = "归类决定查询结果";
-
+"gljd_search" = "归类决定查询";
 // 归类裁定
+"glcd_search" = "归类裁定查询";
+"glcd_result" = "归类裁定查询结果";
 // 化验状态
 // 公用
 "reset" = "重置";

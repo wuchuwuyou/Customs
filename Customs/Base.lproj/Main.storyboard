@@ -45,7 +45,7 @@
                                                     <segue destination="BTD-bk-wbz" kind="push" id="iv9-bF-QWd"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-lY-Ir0">
+                                            <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-lY-Ir0">
                                                 <rect key="frame" x="10" y="500" width="285" height="153.5"/>
                                                 <color key="backgroundColor" red="0.36862745098039218" green="0.54117647058823526" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -60,6 +60,9 @@
                                                         <exclude reference="LhF-cX-V2d"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="GLJDSearchAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wuZ-oC-obU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lV-CK-vSP">
                                                 <rect key="frame" x="10" y="337" width="285" height="153.5"/>
@@ -118,7 +121,7 @@
                                                     <segue destination="TqS-CL-zTG" kind="push" id="F0n-7z-3wE"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOR-HT-Fdy">
+                                            <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOR-HT-Fdy">
                                                 <rect key="frame" x="305" y="337" width="285" height="153.5"/>
                                                 <color key="backgroundColor" red="0.20784313725490197" green="0.68235294117647061" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -134,7 +137,7 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
-                                                    <segue destination="BCg-Tz-9IA" kind="show" id="upO-Li-tb5"/>
+                                                    <action selector="GLJDSearchAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yzb-1y-uaq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sN3-fP-OSD">
@@ -1093,11 +1096,11 @@
                         <viewControllerLayoutGuide type="bottom" id="pH4-Mz-bLR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pAE-rj-ccD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vj8-p7-pER">
-                                <rect key="frame" x="0.0" y="64" width="600" height="936"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="son-kn-4VO" userLabel="space view">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
@@ -1357,7 +1360,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="MWGLJDTableViewController" title="归类决定查询结果" id="Co5-zW-HN4" customClass="MWGLJDTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gIk-fE-G2Q">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

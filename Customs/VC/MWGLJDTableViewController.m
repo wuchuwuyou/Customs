@@ -61,6 +61,19 @@
     [self.headerView setLeftTitle:NSLocalizedString(@"issue_number", @"签发编号") right:NSLocalizedString(@"goods_name_1",@"商品名称")];
     [self.tableView.header beginRefreshing];
     
+    switch (self.type) {
+        case MWGLSearchTypeJD:
+            self.title = NSLocalizedString(@"gljd_result", @"");
+            
+            break;
+        case MWGLSearchTypeCD:
+            self.title = NSLocalizedString(@"glcd_result", @"");
+            
+            break;
+        default:
+            break;
+    }
+    
 }
 
 - (void)loadData{
@@ -122,6 +135,7 @@
     NSArray *arr = [[MWCommonDataHelper sharedManager] GLJDListWithModel:self.viewModel.listArray[indexPath.row]];
     MWGLJDDetailViewController *dvc = [[MWGLJDDetailViewController alloc] init];
     dvc.dataArray = arr;
+    dvc.type = self.type;
     [self.navigationController pushViewController:dvc animated:YES];
 }
 

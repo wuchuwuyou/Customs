@@ -74,6 +74,19 @@ typedef enum {
     
     NSMutableDictionary *data = [NSMutableDictionary dictionaryWithDictionary:[self.reqModel toDictionary]];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    switch (self.type) {
+        case MWGLSearchTypeJD:
+            [data setValue:@"D" forKey:@"dataSourceType"];
+            
+            break;
+        case MWGLSearchTypeCD:
+            [data setValue:@"R" forKey:@"dataSourceType"];
+            break;
+        default:
+            break;
+    }
+    
     [params setValue:[data getJSONString] forKey:@"jsonParams"];
     [params setValue:@"CLS00002" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];

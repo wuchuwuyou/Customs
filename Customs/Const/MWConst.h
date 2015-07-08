@@ -23,4 +23,11 @@
 
 #define PAGESIZE  20
 
+
+typedef enum : NSUInteger {
+    MWGLSearchTypeJD,
+    MWGLSearchTypeCD,
+} MWGLSearchType;
+
+
 #endif
