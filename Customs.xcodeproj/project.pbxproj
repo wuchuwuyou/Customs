@@ -38,6 +38,7 @@
 		2A148E0A1B4AD438009ED904 /* MWGLJDReqModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E091B4AD438009ED904 /* MWGLJDReqModel.m */; };
 		2A148E0D1B4AD603009ED904 /* MWGLJDListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E0C1B4AD603009ED904 /* MWGLJDListModel.m */; };
 		2A148E101B4B6E72009ED904 /* MWGLJDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E0F1B4B6E72009ED904 /* MWGLJDTableViewController.m */; };
+		2A148E221B4D5919009ED904 /* MWGLJDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E211B4D5919009ED904 /* MWGLJDDetailViewController.m */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -146,6 +147,8 @@
 		2A148E0C1B4AD603009ED904 /* MWGLJDListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDListModel.m; sourceTree = "<group>"; };
 		2A148E0E1B4B6E72009ED904 /* MWGLJDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWGLJDTableViewController.h; sourceTree = "<group>"; };
 		2A148E0F1B4B6E72009ED904 /* MWGLJDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDTableViewController.m; sourceTree = "<group>"; };
+		2A148E201B4D5919009ED904 /* MWGLJDDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWGLJDDetailViewController.h; sourceTree = "<group>"; };
+		2A148E211B4D5919009ED904 /* MWGLJDDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDDetailViewController.m; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				2A148E031B4ACDB9009ED904 /* MWGLJDViewController.m */,
 				2A148E0E1B4B6E72009ED904 /* MWGLJDTableViewController.h */,
 				2A148E0F1B4B6E72009ED904 /* MWGLJDTableViewController.m */,
+				2A148E201B4D5919009ED904 /* MWGLJDDetailViewController.h */,
+				2A148E211B4D5919009ED904 /* MWGLJDDetailViewController.m */,
 			);
 			name = "归类决定";
 			sourceTree = "<group>";
@@ -748,6 +753,7 @@
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
 				2A148DE71B4A2801009ED904 /* MW2TableViewHeaderView.m in Sources */,
+				2A148E221B4D5919009ED904 /* MWGLJDDetailViewController.m in Sources */,
 				2A148DCB1B466F78009ED904 /* MWNATSubViewController.m in Sources */,
 				2A148DDE1B496737009ED904 /* MWTCINDetailViewController.m in Sources */,
 				2A3B83E41B39A741008EDCD5 /* MWListHeaderView.m in Sources */,

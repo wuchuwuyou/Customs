@@ -10,6 +10,8 @@
 #import "MW2TableViewCell.h"
 #import "MW2TableViewHeaderView.h"
 #import "MWGLJDListModel.h"
+#import "MWGLJDDetailViewController.h"
+#import "MWCommonDataHelper.h"
 @interface MWGLJDTableViewController ()
 @property (nonatomic,strong)  MW2TableViewHeaderView *headerView;
 
@@ -117,10 +119,10 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSArray *arr = [[MWCommonDataHelper sharedManager] tariffListWithModel:self.viewModel.listArray[indexPath.row]];
-//    MWIAETDetailViewController *dvc = [[MWIAETDetailViewController alloc] init];
-//    dvc.dataArray = arr;
-//    [self.navigationController pushViewController:dvc animated:YES];
+    NSArray *arr = [[MWCommonDataHelper sharedManager] GLJDListWithModel:self.viewModel.listArray[indexPath.row]];
+    MWGLJDDetailViewController *dvc = [[MWGLJDDetailViewController alloc] init];
+    dvc.dataArray = arr;
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 
 /*

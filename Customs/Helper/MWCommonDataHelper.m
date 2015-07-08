@@ -118,4 +118,55 @@
     return data;
 
 }
+
+- (NSArray *)GLJDListWithModel:(MWGLJDListModel *)model{
+    NSMutableArray *data = [NSMutableArray array];
+    
+    NSInteger num = [model toDictionary].allKeys.count;
+    
+    for (NSInteger i = 0; i<num ; i++) {
+        
+        MWCommonModel *m = [[MWCommonModel alloc] init];
+        
+        switch (i) {
+            case 0:
+                m.name = NSLocalizedString(@"correlation_number", @"相关编号");
+                m.content = model.SOURCE_NO;
+                break;
+            case 1:
+                m.name = NSLocalizedString(@"tariff_decision", @"决定税号");
+                m.content = model.CODE_TS;
+                break;
+            case 2:
+                m.name = NSLocalizedString(@"specification_model", @"规格型号");
+                m.content = model.G_MODEL;
+                break;
+            case 3:
+                m.name = NSLocalizedString(@"cn_name", nil);
+                m.content = model.G_NAME;
+                break;
+            case 4:
+                m.name = NSLocalizedString(@"eng_name", nil);
+                m.content = model.G_NAME_EN;
+                break;
+            case 5:
+                m.name = NSLocalizedString(@"other_name", nil);
+                m.content = model.G_NAME_OTHER;
+                break;
+            case 6:
+                m.name = NSLocalizedString(@"goods_description", nil);
+                m.content = model.G_DESCRIPTION;
+                break;
+            case 7:
+                m.name = NSLocalizedString(@"classified_opinion", nil);
+                m.content = model.CLASSIFY_ADJUST;
+                break;
+            default:
+                break;
+        }
+        
+        [data addObject:m];
+    }
+    return data;
+}
 @end

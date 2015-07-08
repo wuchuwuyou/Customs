@@ -10,6 +10,8 @@
 #import "MWTariffListDataModel.h"
 
 #import "MWKeyCommoditiesModel.h"
+
+#import "MWGLJDListModel.h"
 @interface MWCommonDataHelper : NSObject
 
 + (instancetype)sharedManager;
@@ -17,4 +19,6 @@
 - (NSArray *)tariffListWithModel:(MWTariffListDataModel*)model;
 
 - (NSArray *)keyCommoditiesListWithModel:(MWKeyCommoditiesModel *)model;
+
+- (NSArray *)GLJDListWithModel:(MWGLJDListModel *)model;
 @end

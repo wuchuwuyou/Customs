@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWDetailListTableViewCell.h"
 
 @interface MWBaseTableViewController : UITableViewController
 
