@@ -1097,7 +1097,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vj8-p7-pER">
-                                <rect key="frame" x="0.0" y="64" width="600" height="872"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="son-kn-4VO" userLabel="space view">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
@@ -1289,7 +1289,7 @@
                                     <constraint firstItem="8VQ-9z-pTR" firstAttribute="height" secondItem="rlQ-N6-C0a" secondAttribute="height" id="f1X-TC-O7w"/>
                                     <constraint firstItem="son-kn-4VO" firstAttribute="top" secondItem="vj8-p7-pER" secondAttribute="top" id="f4t-ei-ngx"/>
                                     <constraint firstItem="GxY-wO-1GL" firstAttribute="height" secondItem="8VQ-9z-pTR" secondAttribute="height" id="fO9-CV-bbl"/>
-                                    <constraint firstAttribute="bottom" secondItem="aPn-Wc-Njq" secondAttribute="bottom" constant="516" id="gAB-z6-Sf8"/>
+                                    <constraint firstAttribute="bottom" secondItem="aPn-Wc-Njq" secondAttribute="bottom" constant="20" id="gAB-z6-Sf8"/>
                                     <constraint firstItem="ehC-y0-vuO" firstAttribute="width" secondItem="tOe-d0-ouz" secondAttribute="width" id="ga7-qw-r5b"/>
                                     <constraint firstItem="420-cn-pgP" firstAttribute="top" secondItem="aPn-Wc-Njq" secondAttribute="top" id="imC-0o-gLD"/>
                                     <constraint firstItem="8VQ-9z-pTR" firstAttribute="top" secondItem="rlQ-N6-C0a" secondAttribute="bottom" constant="20" id="j58-Kt-x2L"/>
@@ -1323,7 +1323,7 @@
                             <constraint firstItem="vj8-p7-pER" firstAttribute="leading" secondItem="pAE-rj-ccD" secondAttribute="leading" id="Yuu-q5-jp2"/>
                             <constraint firstItem="vj8-p7-pER" firstAttribute="top" secondItem="pAE-rj-ccD" secondAttribute="top" id="tN9-oH-Mm3"/>
                             <constraint firstItem="vj8-p7-pER" firstAttribute="top" secondItem="OFI-Iy-zT8" secondAttribute="top" id="x4j-TN-dXj"/>
-                            <constraint firstItem="pH4-Mz-bLR" firstAttribute="top" secondItem="vj8-p7-pER" secondAttribute="bottom" constant="64" id="xpH-km-Y5T"/>
+                            <constraint firstItem="pH4-Mz-bLR" firstAttribute="top" secondItem="vj8-p7-pER" secondAttribute="bottom" id="xpH-km-Y5T"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
