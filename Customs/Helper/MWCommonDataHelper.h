@@ -12,6 +12,8 @@
 #import "MWKeyCommoditiesModel.h"
 
 #import "MWGLJDListModel.h"
+#import "MWLabModel.h"
+
 @interface MWCommonDataHelper : NSObject
 
 + (instancetype)sharedManager;
@@ -21,4 +23,6 @@
 - (NSArray *)keyCommoditiesListWithModel:(MWKeyCommoditiesModel *)model;
 
 - (NSArray *)GLJDListWithModel:(MWGLJDListModel *)model;
+
+- (NSArray *)labStatusWithModel:(MWLabModel *)model;
 @end

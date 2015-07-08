@@ -169,4 +169,42 @@
     }
     return data;
 }
+- (NSArray *)labStatusWithModel:(MWLabModel *)model{
+    NSMutableArray *data = [NSMutableArray array];
+    
+    NSInteger num = [model toDictionary].allKeys.count;
+    
+    for (NSInteger i = 0; i<num ; i++) {
+        
+        MWCommonModel *m = [[MWCommonModel alloc] init];
+        
+        switch (i) {
+            case 0:
+                m.name = NSLocalizedString(@"order_no", @"化验单号");
+                m.content = model.APPLICATIONID;
+                break;
+            case 1:
+                m.name = NSLocalizedString(@"lab_no", @"报关单号");
+                m.content = model.ENTRYID;
+                break;
+            case 2:
+                m.name = NSLocalizedString(@"cargo_name", @"货物名称");
+                m.content = model.APPNAME;
+                break;
+            case 3:
+                m.name = NSLocalizedString(@"lab_status", @"化验状态");
+                m.content = model.APPSTATUS;
+                break;
+            case 4:
+                m.name = NSLocalizedString(@"update_time", @"更新时间");
+                m.content = model.UPDATETIME;
+                break;
+            default:
+                break;
+        }
+        
+        [data addObject:m];
+    }
+    return data;
+}
 @end

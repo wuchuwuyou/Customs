@@ -24,7 +24,7 @@ UIKIT_EXTERN NSString *const MWGoodsDetailPath;
 UIKIT_EXTERN NSString *const MWGLJDListPath;
 /// 归类裁定
 /// 化验状态
-
+UIKIT_EXTERN NSString *const MWLabStatusPath;
 /// 通用
 
 UIKIT_EXTERN NSString *const HOST_NAME;

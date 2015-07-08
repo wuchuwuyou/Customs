@@ -36,7 +36,9 @@
     return [[self baseURL] stringByAppendingString:MWGoodsKeyPath];
 }
 
-
++ (NSString *)labStatusURL{
+    return [[self baseURL] stringByAppendingString:MWLabStatusPath];
+}
 
 + (NSString *)baseURL{
 //    NSString *host = HOST_NAME;

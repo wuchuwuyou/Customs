@@ -22,9 +22,9 @@
 + (NSString *)nativeSubItemURL;
 /// 重点商品
 + (NSString *)goodsKeyURL;
-/// 归类决定
+/// 归类查询
 + (NSString *)GLJDListURL;
-/// 归类裁定
-/// 化验状态
 
+/// 化验状态
++ (NSString *)labStatusURL;
 @end

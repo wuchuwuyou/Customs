@@ -61,6 +61,15 @@
 "glcd_search" = "归类裁定查询";
 "glcd_result" = "归类裁定查询结果";
 // 化验状态
+
+"lab_state_search" = "化验状态查询";
+"order_no" = "化验单号";
+"lab_no" = "报关单号";
+"cargo_name" = "货物名称";
+"lab_status" = "化验状态";
+"update_time" = "更新时间";
+"lab_status_result" = "化验状态查询结果";
+
 // 公用
 "reset" = "重置";
 "search" = "查询";

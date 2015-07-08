@@ -39,6 +39,10 @@
 		2A148E0D1B4AD603009ED904 /* MWGLJDListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E0C1B4AD603009ED904 /* MWGLJDListModel.m */; };
 		2A148E101B4B6E72009ED904 /* MWGLJDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E0F1B4B6E72009ED904 /* MWGLJDTableViewController.m */; };
 		2A148E221B4D5919009ED904 /* MWGLJDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E211B4D5919009ED904 /* MWGLJDDetailViewController.m */; };
+		2A148E251B4D71D5009ED904 /* MWLaboratoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E241B4D71D5009ED904 /* MWLaboratoryViewController.m */; };
+		2A148E281B4D7379009ED904 /* MWLabViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E271B4D7379009ED904 /* MWLabViewModel.m */; };
+		2A148E2B1B4D7587009ED904 /* MWLabModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E2A1B4D7587009ED904 /* MWLabModel.m */; };
+		2A148E2E1B4D79A2009ED904 /* MWLabTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A148E2D1B4D79A2009ED904 /* MWLabTableViewController.m */; };
 		2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */; };
 		2A3B83CE1B3705A7008EDCD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */; };
 		2A3B83D11B384E3F008EDCD5 /* MWTariffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B83D01B384E3F008EDCD5 /* MWTariffModel.m */; };
@@ -149,6 +153,14 @@
 		2A148E0F1B4B6E72009ED904 /* MWGLJDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDTableViewController.m; sourceTree = "<group>"; };
 		2A148E201B4D5919009ED904 /* MWGLJDDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWGLJDDetailViewController.h; sourceTree = "<group>"; };
 		2A148E211B4D5919009ED904 /* MWGLJDDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWGLJDDetailViewController.m; sourceTree = "<group>"; };
+		2A148E231B4D71D5009ED904 /* MWLaboratoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLaboratoryViewController.h; sourceTree = "<group>"; };
+		2A148E241B4D71D5009ED904 /* MWLaboratoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLaboratoryViewController.m; sourceTree = "<group>"; };
+		2A148E261B4D7379009ED904 /* MWLabViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLabViewModel.h; sourceTree = "<group>"; };
+		2A148E271B4D7379009ED904 /* MWLabViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLabViewModel.m; sourceTree = "<group>"; };
+		2A148E291B4D7587009ED904 /* MWLabModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLabModel.h; sourceTree = "<group>"; };
+		2A148E2A1B4D7587009ED904 /* MWLabModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLabModel.m; sourceTree = "<group>"; };
+		2A148E2C1B4D79A2009ED904 /* MWLabTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLabTableViewController.h; sourceTree = "<group>"; };
+		2A148E2D1B4D79A2009ED904 /* MWLabTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLabTableViewController.m; sourceTree = "<group>"; };
 		2A3B83CA1B370484008EDCD5 /* MWInputViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputViewButton.h; sourceTree = "<group>"; };
 		2A3B83CB1B370484008EDCD5 /* MWInputViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputViewButton.m; sourceTree = "<group>"; };
 		2A3B83CD1B3705A7008EDCD5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -291,7 +303,7 @@
 			name = "重点商品";
 			sourceTree = "<group>";
 		};
-		2A148DFF1B4AC11D009ED904 /* 归类决定 */ = {
+		2A148DFF1B4AC11D009ED904 /* 归类查询 */ = {
 			isa = PBXGroup;
 			children = (
 				2A148E021B4ACDB9009ED904 /* MWGLJDViewController.h */,
@@ -301,19 +313,16 @@
 				2A148E201B4D5919009ED904 /* MWGLJDDetailViewController.h */,
 				2A148E211B4D5919009ED904 /* MWGLJDDetailViewController.m */,
 			);
-			name = "归类决定";
-			sourceTree = "<group>";
-		};
-		2A148E001B4AC126009ED904 /* 归类裁定 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "归类裁定";
+			name = "归类查询";
 			sourceTree = "<group>";
 		};
 		2A148E011B4AC13E009ED904 /* 化验状态 */ = {
 			isa = PBXGroup;
 			children = (
+				2A148E231B4D71D5009ED904 /* MWLaboratoryViewController.h */,
+				2A148E241B4D71D5009ED904 /* MWLaboratoryViewController.m */,
+				2A148E2C1B4D79A2009ED904 /* MWLabTableViewController.h */,
+				2A148E2D1B4D79A2009ED904 /* MWLabTableViewController.m */,
 			);
 			name = "化验状态";
 			sourceTree = "<group>";
@@ -493,6 +502,8 @@
 				2A148DD71B468DF6009ED904 /* MWKeyCommoditiesViewModel.m */,
 				2A148E051B4AD3E0009ED904 /* MWGLJDViewModel.h */,
 				2A148E061B4AD3E0009ED904 /* MWGLJDViewModel.m */,
+				2A148E261B4D7379009ED904 /* MWLabViewModel.h */,
+				2A148E271B4D7379009ED904 /* MWLabViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -510,8 +521,7 @@
 				2AA6AB271B452114006D7942 /* 税则商品及品目注释 */,
 				2A148DCF1B468038009ED904 /* 重点商品 */,
 				2A148DC81B466F08009ED904 /* 本国子目 */,
-				2A148DFF1B4AC11D009ED904 /* 归类决定 */,
-				2A148E001B4AC126009ED904 /* 归类裁定 */,
+				2A148DFF1B4AC11D009ED904 /* 归类查询 */,
 				2A148E011B4AC13E009ED904 /* 化验状态 */,
 			);
 			path = VC;
@@ -579,6 +589,8 @@
 				2A148E091B4AD438009ED904 /* MWGLJDReqModel.m */,
 				2A148E0B1B4AD603009ED904 /* MWGLJDListModel.h */,
 				2A148E0C1B4AD603009ED904 /* MWGLJDListModel.m */,
+				2A148E291B4D7587009ED904 /* MWLabModel.h */,
+				2A148E2A1B4D7587009ED904 /* MWLabModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -747,12 +759,15 @@
 				2A148DCE1B4671B8009ED904 /* MWNATSubViewModel.m in Sources */,
 				2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */,
 				2A148E071B4AD3E0009ED904 /* MWGLJDViewModel.m in Sources */,
+				2A148E2E1B4D79A2009ED904 /* MWLabTableViewController.m in Sources */,
 				2A95A71C1B29881C00F29E04 /* MWEntranceViewModel.m in Sources */,
 				2A95A7191B295C4200F29E04 /* MWHomeButton.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
+				2A148E251B4D71D5009ED904 /* MWLaboratoryViewController.m in Sources */,
 				2A148DE71B4A2801009ED904 /* MW2TableViewHeaderView.m in Sources */,
+				2A148E2B1B4D7587009ED904 /* MWLabModel.m in Sources */,
 				2A148E221B4D5919009ED904 /* MWGLJDDetailViewController.m in Sources */,
 				2A148DCB1B466F78009ED904 /* MWNATSubViewController.m in Sources */,
 				2A148DDE1B496737009ED904 /* MWTCINDetailViewController.m in Sources */,
@@ -794,6 +809,7 @@
 				2A95A7081B27030600F29E04 /* MWBaseViewController.m in Sources */,
 				2A95A70B1B27032E00F29E04 /* MWNetworking.m in Sources */,
 				2A95A7051B27021700F29E04 /* MWBaseNavigationController.m in Sources */,
+				2A148E281B4D7379009ED904 /* MWLabViewModel.m in Sources */,
 				2A3B83FF1B42DAA5008EDCD5 /* NSError+MWErrorString.m in Sources */,
 				2A148DD81B468DF6009ED904 /* MWKeyCommoditiesViewModel.m in Sources */,
 				2A148E0D1B4AD603009ED904 /* MWGLJDListModel.m in Sources */,
