@@ -11,7 +11,7 @@
 @interface MWHomeViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *panelViewHeight;
 
-@property (weak, nonatomic) IBOutlet UIView *bannerView;
+@property (weak, nonatomic) IBOutlet UIImageView *bannerView;
 @property (weak, nonatomic) IBOutlet UIView *panelView;
 
 @end
@@ -21,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIButton *btn ;
+
+
 }
 
 - (void)didReceiveMemoryWarning {
