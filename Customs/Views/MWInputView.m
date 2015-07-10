@@ -9,10 +9,14 @@
 #import "MWInputView.h"
 #import "MWSingleTextField.h"
 
+static CGFloat promptWith = 60.0;
 
 @interface MWInputView () <UITextFieldDelegate>
+@property (nonatomic,strong) UILabel *promptLabel;
 
 @property (nonatomic,strong) MWSingleTextField *stf;
+@property (nonatomic,strong) UIImage *inputImage;
+@property (nonatomic,strong) UIImage *noInputImage;
 @end
 
 @implementation MWInputView
@@ -33,16 +37,49 @@
 }
 - (void)configView{
     
+    CGFloat labelWidth = promptWith;
+    
+    if (!self.text || self.text.length == 0) {
+        labelWidth = 0;
+    }
+    
     self.stf = [[MWSingleTextField alloc] initWithPromptText:self.text];
+    UILabel*label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelWidth, self.bounds.size.height)];
+    self.promptLabel = label;
+    self.promptLabel.backgroundColor = INPUT_FIELD_COLOR;
+    self.promptLabel.font = [MWFontHelper titleFont];
+    self.promptLabel.text = self.text;
+    self.promptLabel.numberOfLines = 2;
+    self.promptLabel.lineBreakMode = NSLineBreakByCharWrapping;
+    self.promptLabel.textAlignment = NSTextAlignmentCenter;
+    
+    //    self.promptLabel.frame = CGRectMake(0, self.bounds.origin.y, labelWidth, self.bounds.size.height);
+    self.promptLabel.textColor = [UIColor whiteColor];
+    self.backgroundColor = INPUT_BACKGROUND_COLOR;
     self.stf.delegate = self;
-    self.stf.frame = self.bounds;
+    self.stf.frame = CGRectMake(labelWidth+10, self.bounds.origin.y, self.bounds.size.width-labelWidth-10, self.bounds.size.height);
+//    self.stf.frame =self.bounds;
     [self addSubview:self.stf];
+    
+    
+    
+    [self addSubview:self.promptLabel];
     //传入参数 object 制定对应的对象
+    
+    
+    
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:self.stf];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEndEditing:) name:UITextFieldTextDidEndEditingNotification object:self.stf];
     
     self.inputTextSignal = self.stf.rac_textSignal;
     
+    self.inputImage = [UIImage imageNamed:@"input"];
+    self.noInputImage = [UIImage imageNamed:@"no_input"];
+    self.inputImage = [self.inputImage resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5) resizingMode:UIImageResizingModeTile];
+    self.noInputImage = [self.noInputImage resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5) resizingMode:UIImageResizingModeTile];
+    
+    self.stf.background = self.noInputImage;
     [self.stf.rac_textSignal subscribeNext:^(NSString *text) {
         _inputText = text;
     }];
@@ -50,9 +87,21 @@
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.stf.frame = self.bounds;
+//    self.stf.frame = self.bounds;
+    
+    CGFloat labelWidth = promptWith;
+    
+    if (!self.text || self.text.length == 0) {
+        labelWidth = 0;
+    }
+    
+    self.stf.frame = CGRectMake(labelWidth+5, self.bounds.origin.y, self.bounds.size.width-labelWidth-10, self.bounds.size.height);
+    self.promptLabel.frame = CGRectMake(0, self.bounds.origin.y, labelWidth, self.bounds.size.height);
+
 }
 - (void)titleText:(NSString *)text {
+    self.text = text;
+    self.promptLabel.text = text;
     [self.stf titleText:text];
 }
 - (void)setIsShow:(BOOL)isShow{
@@ -74,13 +123,13 @@
 /// notification  textfield
 //在下面添加输入框背景变化
 - (void)didBeginEditing:(NSNotification *)noti{
-//    ((MWInputView*)(noti.object)).stf.backgroundColor = [UIColor redColor];
-    ((UITextField *)noti.object).backgroundColor = [UIColor redColor];
+    //    ((MWInputView*)(noti.object)).stf.backgroundColor = [UIColor redColor];
+    ((UITextField *)noti.object).background = self.inputImage;
     NSLog(@"出现焦点");
 }
 - (void)didEndEditing:(NSNotification *)noti{
-//   ((MWInputView*)(noti.object)).stf.backgroundColor = [UIColor greenColor];
-    ((UITextField *)noti.object).backgroundColor = [UIColor greenColor];
+    //   ((MWInputView*)(noti.object)).stf.backgroundColor = [UIColor greenColor];
+    ((UITextField *)noti.object).background = self.noInputImage;
     NSLog(@"失去焦点");
 }
 - (void)dealloc{
@@ -88,11 +137,11 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidEndEditingNotification object:nil];
 }
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

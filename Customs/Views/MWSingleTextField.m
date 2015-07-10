@@ -36,16 +36,16 @@ static CGFloat promptWith = 60.0;
 - (void)layoutViews{
     CGFloat width = promptWith;
     
-    UILabel*label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, self.frame.size.height)];
-    self.promptLabel = label;
-    self.promptLabel.backgroundColor = INPUT_FIELD_COLOR;
-    self.promptLabel.font = [MWFontHelper titleFont];
-    self.promptLabel.text = self.promptName;
-    self.promptLabel.numberOfLines = 2;
-    self.promptLabel.lineBreakMode = NSLineBreakByCharWrapping;
-    self.promptLabel.textAlignment = NSTextAlignmentCenter;
-    self.leftView = self.promptLabel;
-
+//    UILabel*label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, self.frame.size.height)];
+//    self.promptLabel = label;
+//    self.promptLabel.backgroundColor = INPUT_FIELD_COLOR;
+//    self.promptLabel.font = [MWFontHelper titleFont];
+//    self.promptLabel.text = self.promptName;
+//    self.promptLabel.numberOfLines = 2;
+//    self.promptLabel.lineBreakMode = NSLineBreakByCharWrapping;
+//    self.promptLabel.textAlignment = NSTextAlignmentCenter;
+//    self.leftView = self.promptLabel;
+    
     self.promptLabel.textColor = [UIColor whiteColor];
     self.textColor = [UIColor whiteColor];
     self.leftViewMode = UITextFieldViewModeAlways;
@@ -53,7 +53,7 @@ static CGFloat promptWith = 60.0;
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.promptLabel.frame = CGRectMake(0, 0, promptWith, self.frame.size.height);
+//    self.promptLabel.frame = CGRectMake(0, 0, promptWith, self.frame.size.height);
     
 }
 - (void)titleText:(NSString *)text{
@@ -62,6 +62,10 @@ static CGFloat promptWith = 60.0;
     }else {
         self.leftView = nil;
     }
+}
+
+- (CGRect)editingRectForBounds:(CGRect)bounds{
+    return CGRectMake(bounds.origin.x + 5, bounds.origin.y, bounds.size.width - 10, bounds.size.height);
 }
 //- (void)setPromptName:(NSString *)promptName{
 //    if (_promptName != promptName) {

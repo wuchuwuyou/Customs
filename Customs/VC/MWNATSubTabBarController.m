@@ -20,14 +20,18 @@
     // Do any additional setup after loading the view.
     self.subVC = [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
 //    self.subVC.content = self.model.CODE_ARTICLE;
-    self.subVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"sub_annotation", @"子目注释") image:[UIImage imageNamed:@"zimu"] selectedImage:[UIImage imageNamed:@"zimuhover"]];
+//    self.subVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"sub_annotation", @"子目注释") image:[UIImage imageNamed:@"zimu"] selectedImage:[UIImage imageNamed:@"zimuhover"]];
+    self.subVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"sub_annotation", @"子目注释") image:[UIImage imageNamed:@"zimu"] selectedImage:nil];
 
 //    self.subVC.title = NSLocalizedString(@"sub_annotation", @"子目注释");
     self.relateVC = [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
 //    self.relateVC.content  = self.model.PERT_CONTENT;
-    self.relateVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"relate_content", @"相关内容") image:[UIImage imageNamed:@"neirong"] selectedImage:[UIImage imageNamed:@"neironghover"]];
+    self.relateVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"relate_content", @"相关内容") image:[UIImage imageNamed:@"neirong"] selectedImage:nil];
+
+//    self.relateVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"relate_content", @"相关内容") image:[UIImage imageNamed:@"neirong"] selectedImage:[UIImage imageNamed:@"neironghover"]];
 
 //    self.relateVC.title = NSLocalizedString(@"relate_content", @"相关内容");
+    
     self.viewControllers = @[self.subVC,self.relateVC];
     self.selectedIndex = 0;
     
