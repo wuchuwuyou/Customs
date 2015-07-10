@@ -7,8 +7,12 @@
 //
 
 #import "MWBaseViewController.h"
-
-@interface MWTCINDetailViewController : MWBaseViewController
+/*!
+ *  @author Murphy, 2015-07-10 10:07:04
+ *
+ *  @brief  已废弃 不再使用此类
+ */
+@interface MWTCINDetailViewController : MWBaseViewController 
 
 @property (nonatomic,strong) NSString *tariffNo;
 

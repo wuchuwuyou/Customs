@@ -11,6 +11,9 @@
 #import "MWListCell.h"
 #import "MWTCINListDateModel.h"
 #import "MWTCINDetailViewController.h"
+
+#import "MWTCINTabBarViewController.h"
+
 @interface MWTCINTableViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
@@ -124,12 +127,41 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MWTCINDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINDetailViewController"];
+//    MWTCINDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINDetailViewController"];
     MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
-    detail.tariffNo = model.TARIFF_NO;
-    [self.navigationController pushViewController:detail animated:YES];
+//    detail.tariffNo = model.TARIFF_NO;
+//    [self.navigationController pushViewController:detail animated:YES];
+    
+    [self loadDetailDataWithModel:model];
+    
     
 }
+
+- (void)loadDetailDataWithModel:(MWTCINListDateModel *)model{
+    
+    [SVProgressHUD show];
+    
+    [[MWTCINViewModel loadDetailData:model.TARIFF_NO] subscribeNext:^(RACTuple *value) {
+        NSArray *arr  = value.first;
+        NSDictionary *dict = [arr lastObject];
+        NSError *error;
+        MWTCINDetailDataModel *detailModel = [[MWTCINDetailDataModel alloc] initWithDictionary:dict error:&error];
+        if (error) {
+            NSLog(@"解析错误%@",[error errorString]);
+            [SVProgressHUD showErrorWithStatus:[error errorString]];
+        }else
+        {
+            MWTCINTabBarViewController *vc = [[MWTCINTabBarViewController alloc] init];
+            vc.model = detailModel;
+            [self.navigationController pushViewController:vc animated:YES];
+            [SVProgressHUD dismiss];
+        }
+        
+    } error:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error errorString]];
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

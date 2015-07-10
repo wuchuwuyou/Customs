@@ -82,6 +82,7 @@
 		2AA6AB2D1B453165006D7942 /* MWTCINTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB2C1B453165006D7942 /* MWTCINTableViewController.m */; };
 		2AA6AB301B4532B9006D7942 /* MWTCINViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB2F1B4532B9006D7942 /* MWTCINViewModel.m */; };
 		2AA6AB331B4537FB006D7942 /* MWTCINListDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6AB321B4537FB006D7942 /* MWTCINListDateModel.m */; };
+		2AE3B1BB1B4F55C1001AABB5 /* MWTCINTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B1BA1B4F55C1001AABB5 /* MWTCINTabBarViewController.m */; };
 		2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC8A951B33EBFD0010E557 /* MWInputView.m */; };
 		2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC8A9A1B35BEA00010E557 /* MWListDataModel.m */; };
 /* End PBXBuildFile section */
@@ -245,6 +246,8 @@
 		2AA6AB2F1B4532B9006D7942 /* MWTCINViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINViewModel.m; sourceTree = "<group>"; };
 		2AA6AB311B4537FB006D7942 /* MWTCINListDateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINListDateModel.h; sourceTree = "<group>"; };
 		2AA6AB321B4537FB006D7942 /* MWTCINListDateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINListDateModel.m; sourceTree = "<group>"; };
+		2AE3B1B91B4F55C1001AABB5 /* MWTCINTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINTabBarViewController.h; sourceTree = "<group>"; };
+		2AE3B1BA1B4F55C1001AABB5 /* MWTCINTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINTabBarViewController.m; sourceTree = "<group>"; };
 		2AEC8A941B33EBFD0010E557 /* MWInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInputView.h; sourceTree = "<group>"; };
 		2AEC8A951B33EBFD0010E557 /* MWInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInputView.m; sourceTree = "<group>"; };
 		2AEC8A971B33FFCB0010E557 /* MWHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWHelper.h; sourceTree = "<group>"; };
@@ -562,6 +565,8 @@
 				2AA6AB291B4521A5006D7942 /* MWTCINViewController.m */,
 				2AA6AB2B1B453165006D7942 /* MWTCINTableViewController.h */,
 				2AA6AB2C1B453165006D7942 /* MWTCINTableViewController.m */,
+				2AE3B1B91B4F55C1001AABB5 /* MWTCINTabBarViewController.h */,
+				2AE3B1BA1B4F55C1001AABB5 /* MWTCINTabBarViewController.m */,
 				2A148DDC1B496737009ED904 /* MWTCINDetailViewController.h */,
 				2A148DDD1B496737009ED904 /* MWTCINDetailViewController.m */,
 			);
@@ -761,6 +766,7 @@
 				2A148E071B4AD3E0009ED904 /* MWGLJDViewModel.m in Sources */,
 				2A148E2E1B4D79A2009ED904 /* MWLabTableViewController.m in Sources */,
 				2A95A71C1B29881C00F29E04 /* MWEntranceViewModel.m in Sources */,
+				2AE3B1BB1B4F55C1001AABB5 /* MWTCINTabBarViewController.m in Sources */,
 				2A95A7191B295C4200F29E04 /* MWHomeButton.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,

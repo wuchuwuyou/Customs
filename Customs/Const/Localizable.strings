@@ -34,6 +34,10 @@
 "keywords" = "关键字";
 "chapter" = "章节";
 "sub_clause" = "子目条文";
+"classAnnotation" = "类注释";
+"chapterAnnotation" = "章注释";
+"itemAnnotation" = "品目注释";
+
 // 本国子目
 
 "national_subheadings" = "本国子目";
