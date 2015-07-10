@@ -22,14 +22,19 @@
     // Do any additional setup after loading the view.
     self.vc1 = [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
     //    self.subVC.content = self.model.CODE_ARTICLE;
-    self.vc1.title = NSLocalizedString(@"classAnnotation", @"类注释");
+    self.vc1.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"classAnnotation", @"类注释") image:[UIImage imageNamed:@"leizhu"] selectedImage:[UIImage imageNamed:@"leizhuhover"]];
+//    self.vc1.title = NSLocalizedString(@"classAnnotation", @"类注释");
     self.vc2 = [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
     //    self.relateVC.content  = self.model.PERT_CONTENT;
-    self.vc2.title = NSLocalizedString(@"chapterAnnotation", @"章注释");
+    self.vc2.tabBarItem = [[UITabBarItem alloc] initWithTitle: NSLocalizedString(@"chapterAnnotation", @"章注释") image:[UIImage imageNamed:@"zhangzhu"] selectedImage:[UIImage imageNamed:@"zhangzhuhover"]];
+
+//    self.vc2.title = NSLocalizedString(@"chapterAnnotation", @"章注释");
     
     self.vc3 = [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
     //    self.relateVC.content  = self.model.PERT_CONTENT;
-    self.vc3.title = NSLocalizedString(@"itemAnnotation", @"品目注释");
+    self.vc3.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"itemAnnotation", @"品目注释") image:[UIImage imageNamed:@"pinmu"] selectedImage:[UIImage imageNamed:@"pinmuhover"]];
+
+//    self.vc3.title = NSLocalizedString(@"itemAnnotation", @"品目注释");
     self.viewControllers = @[self.vc1,self.vc2,self.vc3];
     self.selectedIndex = 0;
     
