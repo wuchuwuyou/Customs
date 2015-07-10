@@ -54,6 +54,13 @@
         }else{
             [self.tableView.footer resetNoMoreData];
         }
+        
+        if (self.viewModel.listArray.count == 0) {
+            self.tableView.footer.hidden = YES;
+        }else{
+            self.tableView.footer.hidden = NO;
+        }
+        
     }];
     
     [self.headerView setLeftTitle:NSLocalizedString(@"goods_name_1", nil) mid:NSLocalizedString(@"goods_no", nil) right:NSLocalizedString(@"specification_model", nil)];

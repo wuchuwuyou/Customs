@@ -58,6 +58,13 @@
         }else{
             [self.tableView.footer resetNoMoreData];
         }
+        
+        if (self.viewModel.listArray.count == 0) {
+            self.tableView.footer.hidden = YES;
+        }else{
+            self.tableView.footer.hidden = NO;
+        }
+        
     }];
     
     [self.headerView setLeftTitle:NSLocalizedString(@"chapter", nil) mid:NSLocalizedString(@"tariff_item", nil) right:NSLocalizedString(@"sub_clause", nil)];

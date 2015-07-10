@@ -28,7 +28,7 @@
     
     self.tableView.tableHeaderView = self.headerView;
     
-
+//    self.tableView.footer.hidden = YES;
     
     self.viewModel = [[MWTariffListViewModel alloc] initWithModel:self.model];
     @weakify(self);
@@ -54,10 +54,17 @@
         [self.tableView reloadData];
     }];
     [RACObserve(self.viewModel, canLoadMore) subscribeNext:^(NSNumber *canLoadMore) {
+        
         if (!canLoadMore.boolValue) {
             [self.tableView.footer noticeNoMoreData];
         }else{
             [self.tableView.footer resetNoMoreData];
+        }
+        
+        if (self.viewModel.listArray.count == 0) {
+            self.tableView.footer.hidden = YES;
+        }else{
+            self.tableView.footer.hidden = NO;
         }
     }];
     

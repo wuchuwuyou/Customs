@@ -56,6 +56,13 @@
         }else{
             [self.tableView.footer resetNoMoreData];
         }
+        
+        if (self.viewModel.listArray.count == 0) {
+            self.tableView.footer.hidden = YES;
+        }else{
+            self.tableView.footer.hidden = NO;
+        }
+        
     }];
     
     [self.headerView setLeftTitle:NSLocalizedString(@"issue_number", @"签发编号") right:NSLocalizedString(@"goods_name_1",@"商品名称")];
