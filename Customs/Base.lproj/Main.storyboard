@@ -466,6 +466,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="01u-6Z-UDi"/>
                                             <constraint firstAttribute="bottom" secondItem="dBL-0z-lrr" secondAttribute="bottom" id="6Fx-Ix-r0e"/>
