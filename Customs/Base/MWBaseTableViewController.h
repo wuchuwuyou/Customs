@@ -10,5 +10,6 @@
 #import "MWDetailListTableViewCell.h"
 
 @interface MWBaseTableViewController : UITableViewController
-
+- (void)endRefresh;
+- (void)showError:(NSError *)error;
 @end

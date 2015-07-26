@@ -103,14 +103,11 @@
         [self endRefresh];
     } error:^(NSError *error) {
         @strongify(self);
-        [self endRefresh];
-        [SVProgressHUD showErrorWithStatus:[error errorString]];
+        [self performSelectorOnMainThread:@selector(showError:) withObject:error waitUntilDone:YES];
+
     }];
 }
-- (void)endRefresh{
-    [self.tableView.header endRefreshing];
-    [self.tableView.footer endRefreshing];
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -28,7 +28,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)showError:(NSError *)error{
+    [self endRefresh];
+    [SVProgressHUD showErrorWithStatus:[error errorString]];
+}
+- (void)endRefresh{
+    [self.tableView.footer endRefreshing];
+    [self.tableView.header endRefreshing];
+}
+/*
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -52,7 +60,7 @@
     return cell;
 }
 */
-
+*/
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
