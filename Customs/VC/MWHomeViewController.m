@@ -8,10 +8,11 @@
 
 #import "MWHomeViewController.h"
 #import "MWGLJDViewController.h"
-@interface MWHomeViewController ()
+#import <SDCycleScrollView.h>
+@interface MWHomeViewController () <SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *panelViewHeight;
 
-@property (weak, nonatomic) IBOutlet UIImageView *bannerView;
+@property (weak, nonatomic) IBOutlet SDCycleScrollView *bannerView;
 @property (weak, nonatomic) IBOutlet UIView *panelView;
 
 @end
@@ -21,9 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *btn ;
-
-
+    
+    
+    NSArray *imagesURLStrings = @[[UIImage imageNamed:@"login_bg_01"],[UIImage imageNamed:@"login_bg_02"],[UIImage imageNamed:@"login_bg_03"]];
+    
+//    SDCycleScrollView *sdCycleScrollView = [[SDCycleScrollView alloc] initWithFrame:self.bannerView.bounds];
+    
+    self.bannerView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+    self.bannerView.delegate = self;
+    self.bannerView.localizationImagesGroup = imagesURLStrings;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +50,10 @@
     
 }
 
+// SDCycleScrollView delegate
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    
+}
 /*
 #pragma mark - Navigation
 

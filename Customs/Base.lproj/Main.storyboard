@@ -25,20 +25,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQd-Yw-pn5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXA-nN-CtN" userLabel="banner view" customClass="UIImageView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXA-nN-CtN" userLabel="banner view" customClass="SDCycleScrollView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="L77-FW-NtO">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
-                                            </imageView>
-                                        </subviews>
                                         <color key="backgroundColor" red="0.38535156920000002" green="1" blue="0.23609817120000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="L77-FW-NtO" secondAttribute="bottom" id="Iwc-4y-51S"/>
                                             <constraint firstAttribute="width" secondItem="tXA-nN-CtN" secondAttribute="height" multiplier="2.25" id="YMw-HU-9kS"/>
-                                            <constraint firstItem="L77-FW-NtO" firstAttribute="top" secondItem="tXA-nN-CtN" secondAttribute="top" id="ctz-7K-qeD"/>
-                                            <constraint firstAttribute="trailing" secondItem="L77-FW-NtO" secondAttribute="trailing" id="llz-hu-AnH"/>
-                                            <constraint firstItem="L77-FW-NtO" firstAttribute="leading" secondItem="tXA-nN-CtN" secondAttribute="leading" id="sjI-QO-e8M"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ow4-DN-OwM" userLabel="panel view">
@@ -458,7 +449,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="tOJ-Cl-FLW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view tag="1004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-cb-T8Y" customClass="MWInputView">
@@ -504,7 +495,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="j9K-Ud-73M"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view tag="1006" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-8E-taF" customClass="MWInputView">
@@ -551,7 +542,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="OVJ-5v-YYz"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view tag="1008" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61j-OB-nvO" customClass="MWInputView">
@@ -598,7 +589,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="tX9-QJ-Fmr"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view tag="1012" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4s-Wa-srn" customClass="MWInputView">
@@ -645,7 +636,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="reb-Fs-Rj4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view tag="1014" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCc-ll-Q4Y" customClass="MWInputView">
@@ -700,7 +691,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="t0w-Cb-bWB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view tag="1010" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-ZX-oL6" customClass="MWInputView">
@@ -1251,7 +1242,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="is6-JI-UPp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view tag="1008" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MG3-ge-wgX" customClass="MWInputView">
@@ -2049,7 +2040,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhj-bF-MLM">
                                 <rect key="frame" x="11" y="6" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q32-l3-gib">
@@ -2059,7 +2050,7 @@
                                     <constraint firstAttribute="height" constant="50" id="fSZ-uo-bJX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMw-He-Rk7">
@@ -2125,6 +2116,5 @@
         <image name="btn_05" width="95" height="49"/>
         <image name="btn_06" width="95" height="49"/>
         <image name="btn_07" width="95" height="49"/>
-        <image name="login_bg" width="320" height="150"/>
     </resources>
 </document>
