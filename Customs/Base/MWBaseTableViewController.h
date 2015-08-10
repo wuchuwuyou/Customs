@@ -12,4 +12,6 @@
 @interface MWBaseTableViewController : UITableViewController
 - (void)endRefresh;
 - (void)showError:(NSError *)error;
+- (void)back:(UIButton *)sender;
+
 @end

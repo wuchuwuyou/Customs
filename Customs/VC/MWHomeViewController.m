@@ -30,6 +30,7 @@
     
     self.bannerView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     self.bannerView.delegate = self;
+    self.bannerView.autoScrollTimeInterval = 4.0f;
     self.bannerView.localizationImagesGroup = imagesURLStrings;
 }
 

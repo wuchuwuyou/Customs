@@ -12,4 +12,6 @@
 
 @interface MWBaseViewController : UIViewController
 
+- (void)back:(UIButton *)sender;
+
 @end
