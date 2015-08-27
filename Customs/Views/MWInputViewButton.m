@@ -13,12 +13,16 @@
     [self initView];
 }
 - (void)initView{
-    self.backgroundColor = INPUT_FIELD_COLOR;
+//    self.backgroundColor = INPUT_FIELD_COLOR;
     self.layer.cornerRadius = BUTTON_CORNERRADIUS;
 //    self.titleLabel.textColor = [UIColor whiteColor];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+
     self.titleLabel.font = [MWFontHelper buttonFont];
     
+    [self setBackgroundImage:[UIImage imageNamed:@"bg_btn"] forState:UIControlStateNormal];
+    [self setBackgroundImage:[UIImage imageNamed:@"bg_btn_pressed"] forState:UIControlStateHighlighted];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -1,4 +1,4 @@
-platform :ios, '6.0'
+platform :ios, '7.0'
 inhibit_all_warnings!
 
 pod 'AFNetworking', '~>2.5.4'
@@ -9,6 +9,7 @@ pod 'ReactiveViewModel', '~>0.3'
 pod 'JSONModel', '~>1.1.0'
 pod 'Mantle', '~> 2.0'
 #pod 'Objection', '~> 1.5'
+pod 'UIDevice+HardwareName', '~> 6.0.0'
 
 
 pod 'MJRefresh', '~> 1.4.7'

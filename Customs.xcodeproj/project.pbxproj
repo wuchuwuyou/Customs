@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2782FC1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2782FB1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m */; };
 		0F79F24082A58FCB29F117AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE101881797890B33C32F13B /* libPods.a */; };
 		2A060F901B43E8BA009F9EC7 /* MWTariffListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */; };
 		2A060F931B43FDC0009F9EC7 /* MWDetailTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F921B43FDC0009F9EC7 /* MWDetailTextViewController.m */; };
@@ -98,6 +99,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2782FA1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MWBGImage.h"; sourceTree = "<group>"; };
+		0D2782FB1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MWBGImage.m"; sourceTree = "<group>"; };
 		2A060F8E1B43E8BA009F9EC7 /* MWTariffListDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTariffListDataModel.h; sourceTree = "<group>"; };
 		2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffListDataModel.m; sourceTree = "<group>"; };
 		2A060F911B43FDC0009F9EC7 /* MWDetailTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailTextViewController.h; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				2A3B83FB1B42D59D008EDCD5 /* NSDictionary+MWJSONTransform.m */,
 				2A3B83FD1B42DAA5008EDCD5 /* NSError+MWErrorString.h */,
 				2A3B83FE1B42DAA5008EDCD5 /* NSError+MWErrorString.m */,
+				0D2782FA1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.h */,
+				0D2782FB1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -784,6 +789,7 @@
 				2A148DFC1B4AB397009ED904 /* MWWebViewController.m in Sources */,
 				2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
+				0D2782FC1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m in Sources */,
 				2A148DE41B4A247F009ED904 /* MWNATSubTableViewController.m in Sources */,
 				2A148E0A1B4AD438009ED904 /* MWGLJDReqModel.m in Sources */,
 				2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */,

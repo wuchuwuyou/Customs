@@ -34,4 +34,5 @@
 #import "NSDictionary+MWGetURLString.h"
 #import "NSDictionary+MWJSONTransform.h"
 #import "NSError+MWErrorString.h"
+#import "UIImage+MWBGImage.h"
 #endif

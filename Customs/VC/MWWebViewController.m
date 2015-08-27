@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.bgWebView.backgroundColor = [UIColor clearColor];
     @weakify(self);
     [RACObserve(self, content) subscribeNext:^(NSString *value) {
         @strongify(self);

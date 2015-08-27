@@ -22,6 +22,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage getBGImage]];
+    [imageview setFrame:self.view.frame];
+    imageview.contentMode = UIViewContentModeScaleToFill;
+    [self.tableView setBackgroundView:imageview];
+
     [self initValue];
 }
 #pragma  mark - Private Methods

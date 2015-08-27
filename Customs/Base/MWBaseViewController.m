@@ -18,7 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = BACKGROUND_COLOR;
+
+
+
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage getBGImage]];
+    CGSize size = [[UIScreen mainScreen] bounds].size;
+    [backgroundImage setFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, size.width, size.height - 64)];
+    backgroundImage.contentMode = UIViewContentModeScaleToFill;
+    [self.view addSubview:backgroundImage];
+    [self.view sendSubviewToBack:backgroundImage];
     [self initValue];
 }
 #pragma  mark - Private Methods

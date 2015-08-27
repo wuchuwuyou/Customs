@@ -23,7 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+//    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]];
+//    [backgroundImage setFrame:self.view.frame];
+//    [self.tableView.backgroundView addSubview:backgroundImage];
+//    [self.tableView.backgroundView sendSubviewToBack:backgroundImage];
+
     self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"MWListHeaderView" owner:nil options:nil] lastObject];
     
     self.tableView.tableHeaderView = self.headerView;

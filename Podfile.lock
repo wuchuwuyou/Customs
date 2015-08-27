@@ -23,11 +23,11 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - iCarousel (1.8.1)
+  - iCarousel (1.8.2)
   - JSONModel (1.1.0)
-  - Mantle (2.0.2):
-    - Mantle/extobjc (= 2.0.2)
-  - Mantle/extobjc (2.0.2)
+  - Mantle (2.0.4):
+    - Mantle/extobjc (= 2.0.4)
+  - Mantle/extobjc (2.0.4)
   - MJRefresh (1.4.7)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -40,6 +40,7 @@ PODS:
     - ReactiveCocoa (~> 2.4)
   - SDCycleScrollView (1.3)
   - SVProgressHUD (1.1.3)
+  - UIDevice+HardwareName (6.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
@@ -52,17 +53,19 @@ DEPENDENCIES:
   - ReactiveViewModel (~> 0.3)
   - SDCycleScrollView (~> 1.3)
   - SVProgressHUD (~> 1.1.3)
+  - UIDevice+HardwareName (~> 6.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   AFNetworking-RACExtensions: a043c6b492fa892395ceb9d20bc4c94e96e08a57
-  iCarousel: dace1cb858e3f4dc2614bee3201041247f82feda
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
-  Mantle: 967fd31ea0220890b2e76589198996b534bb3fb1
+  Mantle: 6bee68168423948be0c0c5924832bf3af188e099
   MJRefresh: 6b140993028fa30f1fcb88e82925a7c7911415cf
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
   SDCycleScrollView: 90e43636fcc8e6a7f74e8b64d87418a8e96549b4
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  UIDevice+HardwareName: 6b98c1855f304ec8fc7a1ad72fddaed8523b75ad
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.38.2

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -13,25 +13,35 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mw-qq-PzO" userLabel="space view">
                     <rect key="frame" x="567" y="0.0" width="33" height="60"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="33" id="fgb-Zn-N8f"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlL-KP-KSQ">
                     <rect key="frame" x="0.0" y="0.0" width="283.5" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uve-CW-Xfq">
-                    <rect key="frame" x="283.5" y="0.0" width="283.5" height="60"/>
+                    <rect key="frame" x="283" y="0.0" width="283.5" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sCg-db-he7">
+                    <rect key="frame" x="0.0" y="59" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.7843137255" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="SY1-d5-0F0"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="k0t-9s-seM"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="3mw-qq-PzO" secondAttribute="bottom" id="BaS-0Z-KIA"/>
                 <constraint firstItem="Uve-CW-Xfq" firstAttribute="top" secondItem="KVp-WD-QBz" secondAttribute="top" id="Dfq-vh-o0n"/>
@@ -42,9 +52,12 @@
                 <constraint firstItem="hlL-KP-KSQ" firstAttribute="top" secondItem="KVp-WD-QBz" secondAttribute="top" id="cRY-Kh-ahr"/>
                 <constraint firstItem="Uve-CW-Xfq" firstAttribute="width" secondItem="hlL-KP-KSQ" secondAttribute="width" id="dhP-Ga-sfo"/>
                 <constraint firstItem="3mw-qq-PzO" firstAttribute="top" secondItem="KVp-WD-QBz" secondAttribute="top" id="fLk-zw-sAW"/>
+                <constraint firstItem="sCg-db-he7" firstAttribute="leading" secondItem="KVp-WD-QBz" secondAttribute="leading" id="iA9-jq-MSz"/>
                 <constraint firstAttribute="bottom" secondItem="hlL-KP-KSQ" secondAttribute="bottom" id="m4h-oF-lOw"/>
                 <constraint firstItem="Uve-CW-Xfq" firstAttribute="leading" secondItem="hlL-KP-KSQ" secondAttribute="trailing" id="pI0-sJ-UIf"/>
+                <constraint firstAttribute="trailing" secondItem="sCg-db-he7" secondAttribute="trailing" id="sJM-Ok-YCO"/>
                 <constraint firstItem="3mw-qq-PzO" firstAttribute="leading" secondItem="Uve-CW-Xfq" secondAttribute="trailing" id="uGg-98-pAT"/>
+                <constraint firstAttribute="bottom" secondItem="sCg-db-he7" secondAttribute="bottom" id="yxa-Lz-x0k"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

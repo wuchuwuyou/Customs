@@ -9,7 +9,7 @@
 #import "MWInputView.h"
 #import "MWSingleTextField.h"
 
-static CGFloat promptWith = 60.0;
+static CGFloat promptWith = 100.0;
 
 @interface MWInputView () <UITextFieldDelegate>
 @property (nonatomic,strong) UILabel *promptLabel;
@@ -49,10 +49,10 @@ static CGFloat promptWith = 60.0;
     self.promptLabel.backgroundColor = INPUT_FIELD_COLOR;
     self.promptLabel.font = [MWFontHelper titleFont];
     self.promptLabel.text = self.text;
-    self.promptLabel.numberOfLines = 2;
+    self.promptLabel.numberOfLines = 1;
     self.promptLabel.lineBreakMode = NSLineBreakByCharWrapping;
     self.promptLabel.textAlignment = NSTextAlignmentCenter;
-    
+//    self.promptLabel.minimumScaleFactor = 0.2;
     //    self.promptLabel.frame = CGRectMake(0, self.bounds.origin.y, labelWidth, self.bounds.size.height);
     self.promptLabel.textColor = [UIColor whiteColor];
     self.backgroundColor = INPUT_BACKGROUND_COLOR;
