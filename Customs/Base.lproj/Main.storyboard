@@ -1590,7 +1590,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="PG6-NH-0bF" firstAttribute="leading" secondItem="WAb-FE-GbQ" secondAttribute="leading" constant="60" id="TJh-7Z-OYS"/>
                                 <constraint firstAttribute="centerY" secondItem="PG6-NH-0bF" secondAttribute="centerY" id="fv0-kN-Saa"/>

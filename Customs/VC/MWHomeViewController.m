@@ -9,6 +9,8 @@
 #import "MWHomeViewController.h"
 #import "MWGLJDViewController.h"
 #import <SDCycleScrollView.h>
+#import "MWLaboratoryListViewController.h"
+#import "MWLocalStorage.h"
 @interface MWHomeViewController () <SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *panelViewHeight;
 
@@ -32,8 +34,26 @@
     self.bannerView.delegate = self;
     self.bannerView.autoScrollTimeInterval = 4.0f;
     self.bannerView.localizationImagesGroup = imagesURLStrings;
-}
+    
 
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setBackgroundImage:[UIImage imageNamed:@"attention"] forState:UIControlStateNormal];
+    btn.frame = CGRectMake(0, 0, 65, 30);
+    [btn addTarget:self action:@selector(showAttention:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+- (void)showAttention:(id)sender {
+    NSArray *arr =  [MWLocalStorage allAttentions];
+    
+    if (arr.count == 0) {
+        [SVProgressHUD showInfoWithStatus:@"暂无关注"];
+        return;
+    }
+    MWLaboratoryListViewController *list = [[MWLaboratoryListViewController alloc] init];
+    list.dataArray = arr;
+    [self.navigationController pushViewController:list animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
