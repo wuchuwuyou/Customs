@@ -38,7 +38,7 @@
 
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundImage:[UIImage imageNamed:@"attention"] forState:UIControlStateNormal];
-    btn.frame = CGRectMake(0, 0, 65, 30);
+    btn.frame = CGRectMake(0, 0, 60, 30);
     [btn addTarget:self action:@selector(showAttention:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     self.navigationItem.rightBarButtonItem = rightItem;
