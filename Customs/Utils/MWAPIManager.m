@@ -16,10 +16,20 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [self manager];
+        AFHTTPRequestSerializer * requestSerializer = [AFHTTPRequestSerializer serializer];
+//        [requestSerializer setValue:@"your user agent" forHTTPHeaderField:@"User-Agent"];
+        instance.requestSerializer = requestSerializer;
+        instance.responseSerializer = [AFHTTPResponseSerializer new];
+
+//        instance.responseSerializer = [AFXMLParserResponseSerializer serializer];
+//        instance.requestSerializer = [AFHTTPRequestSerializer serializer];
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",@"text/xml",@"application/soap+xml",@"application/xml",nil];
+        
     });
     return instance;
 }
 - (RACSignal *)requestWithPath:(NSString *)path andParameters:(NSDictionary *)params{
     return [self rac_POST:path parameters:params];
+//    return [self rac_GET:path parameters:params];
 }
 @end

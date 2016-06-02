@@ -10,6 +10,7 @@ pod 'JSONModel', '~>1.1.0'
 pod 'Mantle', '~> 2.0'
 #pod 'Objection', '~> 1.5'
 pod 'UIDevice+HardwareName', '~> 6.0.0'
+pod 'XMLDictionary', '~> 1.4'
 
 
 pod 'MJRefresh', '~> 1.4.7'

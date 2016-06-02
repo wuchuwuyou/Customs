@@ -10,6 +10,7 @@
 #import "MWLabViewModel.h"
 #import "MWLabTableViewController.h"
 #import "MWCommonDataHelper.h"
+#import "MWXMLParse.h"
 @interface MWLaboratoryViewController ()
 @property (weak, nonatomic) IBOutlet MWInputView *orderNoInputView;
 @property (weak, nonatomic) IBOutlet MWInputViewButton *resetBtn;
@@ -47,19 +48,28 @@
     //        NSLog(@"%@",v.inputText);
     //    }
     
+ 
+#if DEBUG
+    //010120080018573681
+    MWLabViewModel *viewModel = [[MWLabViewModel alloc] initWithOrderNo:@"010120080018573681"];
+
+#else
     if (self.orderNoInputView.inputText.length == 0) {
         [SVProgressHUD showErrorWithStatus:@"请输入要查询的报关单号!"];
         return;
     }
-
+    
     MWLabViewModel *viewModel = [[MWLabViewModel alloc] initWithOrderNo:self.orderNoInputView.inputText];
+#endif
     
     [SVProgressHUD show];
     @weakify(self);
     [[viewModel requestData] subscribeNext:^(RACTuple *value) {
         @strongify(self);
+    
+      
         
-        NSDictionary *dict = value.first;
+        NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
         NSDictionary *data  = [dict objectForKey:@"Labssisvlaue"];
         
         NSError *error = nil;

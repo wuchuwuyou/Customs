@@ -41,6 +41,7 @@ PODS:
   - SDCycleScrollView (1.3)
   - SVProgressHUD (1.1.3)
   - UIDevice+HardwareName (6.0.0)
+  - XMLDictionary (1.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - SDCycleScrollView (~> 1.3)
   - SVProgressHUD (~> 1.1.3)
   - UIDevice+HardwareName (~> 6.0.0)
+  - XMLDictionary (~> 1.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
@@ -67,5 +69,6 @@ SPEC CHECKSUMS:
   SDCycleScrollView: 90e43636fcc8e6a7f74e8b64d87418a8e96549b4
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   UIDevice+HardwareName: 6b98c1855f304ec8fc7a1ad72fddaed8523b75ad
+  XMLDictionary: f9f51601ba76678b594ab485f2b00ec1fed23724
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

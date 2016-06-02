@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D2782FC1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2782FB1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m */; };
+		0D2A24881D000D7900A8BE42 /* NSData+MWXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A24871D000D7900A8BE42 /* NSData+MWXML.m */; };
+		0D2A248B1D00135900A8BE42 /* MWXMLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A248A1D00135900A8BE42 /* MWXMLParse.m */; };
 		0F79F24082A58FCB29F117AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE101881797890B33C32F13B /* libPods.a */; };
 		2A060F901B43E8BA009F9EC7 /* MWTariffListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */; };
 		2A060F931B43FDC0009F9EC7 /* MWDetailTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F921B43FDC0009F9EC7 /* MWDetailTextViewController.m */; };
@@ -101,6 +103,10 @@
 /* Begin PBXFileReference section */
 		0D2782FA1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MWBGImage.h"; sourceTree = "<group>"; };
 		0D2782FB1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MWBGImage.m"; sourceTree = "<group>"; };
+		0D2A24861D000D7900A8BE42 /* NSData+MWXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MWXML.h"; sourceTree = "<group>"; };
+		0D2A24871D000D7900A8BE42 /* NSData+MWXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MWXML.m"; sourceTree = "<group>"; };
+		0D2A24891D00135900A8BE42 /* MWXMLParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWXMLParse.h; sourceTree = "<group>"; };
+		0D2A248A1D00135900A8BE42 /* MWXMLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWXMLParse.m; sourceTree = "<group>"; };
 		2A060F8E1B43E8BA009F9EC7 /* MWTariffListDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTariffListDataModel.h; sourceTree = "<group>"; };
 		2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffListDataModel.m; sourceTree = "<group>"; };
 		2A060F911B43FDC0009F9EC7 /* MWDetailTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailTextViewController.h; sourceTree = "<group>"; };
@@ -344,6 +350,8 @@
 				2A3B83FE1B42DAA5008EDCD5 /* NSError+MWErrorString.m */,
 				0D2782FA1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.h */,
 				0D2782FB1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m */,
+				0D2A24861D000D7900A8BE42 /* NSData+MWXML.h */,
+				0D2A24871D000D7900A8BE42 /* NSData+MWXML.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -546,6 +554,8 @@
 				2A3B83EF1B418E6F008EDCD5 /* MWAPIHelper.m */,
 				2AA6AB191B443958006D7942 /* MWCommonDataHelper.h */,
 				2AA6AB1A1B443958006D7942 /* MWCommonDataHelper.m */,
+				0D2A24891D00135900A8BE42 /* MWXMLParse.h */,
+				0D2A248A1D00135900A8BE42 /* MWXMLParse.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -634,6 +644,7 @@
 				2A95A6D11B26F0AD00F29E04 /* Frameworks */,
 				2A95A6D21B26F0AD00F29E04 /* Resources */,
 				A8366230144A1EE98A7ED95D /* Copy Pods Resources */,
+				0C994CAF82DF4DBF49B3D0A8 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -729,6 +740,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C994CAF82DF4DBF49B3D0A8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A8366230144A1EE98A7ED95D /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -769,6 +795,7 @@
 				2AA6AB231B44DC59006D7942 /* MWIAETDetailViewController.m in Sources */,
 				2A148DCE1B4671B8009ED904 /* MWNATSubViewModel.m in Sources */,
 				2AEC8A9B1B35BEA00010E557 /* MWListDataModel.m in Sources */,
+				0D2A248B1D00135900A8BE42 /* MWXMLParse.m in Sources */,
 				2A148E071B4AD3E0009ED904 /* MWGLJDViewModel.m in Sources */,
 				2A148E2E1B4D79A2009ED904 /* MWLabTableViewController.m in Sources */,
 				2A95A71C1B29881C00F29E04 /* MWEntranceViewModel.m in Sources */,
@@ -794,6 +821,7 @@
 				2A148E0A1B4AD438009ED904 /* MWGLJDReqModel.m in Sources */,
 				2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */,
 				2A148DF11B4A6CFB009ED904 /* MWKCDetailTableViewController.m in Sources */,
+				0D2A24881D000D7900A8BE42 /* NSData+MWXML.m in Sources */,
 				2AA6AB331B4537FB006D7942 /* MWTCINListDateModel.m in Sources */,
 				2AA6AB2D1B453165006D7942 /* MWTCINTableViewController.m in Sources */,
 				2AA6AB1B1B443958006D7942 /* MWCommonDataHelper.m in Sources */,
