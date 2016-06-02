@@ -11,5 +11,5 @@
 @interface MWLabViewModel : RVMViewModel
 - (instancetype) initWithOrderNo:(NSString *)orderNo;
 - (RACSignal *)requestData;
-
+- (BOOL)attention:(BOOL)status;
 @end

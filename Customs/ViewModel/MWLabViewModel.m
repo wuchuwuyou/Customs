@@ -7,7 +7,7 @@
 //
 
 #import "MWLabViewModel.h"
-
+#import "MWLocalStorage.h"
 @interface MWLabViewModel ()
 @property (nonatomic,strong) NSString *orderNo;
 @end
@@ -27,5 +27,12 @@
     [data setValue:self.orderNo forKey:@"entryId"];
     [data setValue:@"status" forKey:@"flag"];
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper labStatusURL] andParameters:data];
+}
+- (BOOL)attention:(BOOL)status {
+    if (status) {
+      return [MWLocalStorage addAttentionWithEntryID:self.orderNo];
+    }else {
+        return [MWLocalStorage removeAttentionWithEntryID:self.orderNo];
+    }
 }
 @end

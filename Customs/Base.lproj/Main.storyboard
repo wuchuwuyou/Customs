@@ -1411,7 +1411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lky-Sx-gJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="4064"/>
+            <point key="canvasLocation" x="1098" y="4571"/>
         </scene>
         <!--Laboratory View Controller-->
         <scene sceneID="AlF-Vj-Z8U">
@@ -1571,7 +1571,7 @@
                             <rect key="frame" x="0.0" y="66" width="600" height="55"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG6-NH-0bF" customClass="MWInputViewButton">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG6-NH-0bF" customClass="MWInputViewButton">
                                     <rect key="frame" x="60" y="7.5" width="480" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="PG6-NH-0bF" secondAttribute="height" multiplier="7:1" id="UeB-rc-Q6S"/>
@@ -1646,7 +1646,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvw-5Y-weR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2482" y="4079"/>
+            <point key="canvasLocation" x="1894" y="4611"/>
         </scene>
         <!--重点商品查询结果-->
         <scene sceneID="3kB-YR-10t">

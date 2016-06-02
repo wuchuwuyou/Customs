@@ -8,8 +8,15 @@
 
 #import "MWLabTableViewController.h"
 #import "MWCommonModel.h"
+#import "MWLabViewModel.h"
+#import "MWXMLParse.h"
+#import "MWLabModel.h"
+#import "MWCommonDataHelper.h"
+#import "MWLocalStorage.h"
+
 @interface MWLabTableViewController ()
 @property (weak, nonatomic) IBOutlet MWInputViewButton *attentionBtn;
+@property (nonatomic,strong) MWLabViewModel *viewModel;
 
 @end
 
@@ -19,10 +26,61 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+#if DEBUG
+    //010120080018573681
+    self.orderID = @"010120080018573681";
+    
+#else
+
+#endif
+    
     self.title = NSLocalizedString(@"lab_status", @"化验状态");
     [self.attentionBtn setTitle:@"关注" forState:UIControlStateNormal];
+    [self.attentionBtn setTitle:@"取消关注" forState:UIControlStateSelected];
+    self.attentionBtn.selected = [MWLocalStorage isAttentioned:self.orderID];
+    [self loadData];
 }
+- (void)loadData {
+    
+    self.viewModel = [[MWLabViewModel alloc] initWithOrderNo:self.orderID];
+    
+    [SVProgressHUD show];
+    @weakify(self);
+    [[self.viewModel requestData] subscribeNext:^(RACTuple *value) {
+        @strongify(self);
+        
+        
+        
+        NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
+        NSDictionary *data  = [dict objectForKey:@"Labssisvlaue"];
+        
+        NSError *error = nil;
+        
+        NSInteger code = [[dict objectForKey:@"status"] integerValue];
+        NSString *msg = [dict objectForKey:@"errormsg"];
+        
+        if (code != 0) {
+            [SVProgressHUD showErrorWithStatus:msg];
+            return ;
+        }
+        
+        MWLabModel *model = [[MWLabModel alloc] initWithDictionary:data error:&error];
+        
+        if (error) {
+            NSAssert(error, @"化验状态解析错误");
+            return;
+        }
+        self.dataArray = [[MWCommonDataHelper sharedManager] labStatusWithModel:model];
+        [self.tableView reloadData];
+        [SVProgressHUD dismiss];
+    } error:^(NSError *error) {
+        @strongify(self);
+        [SVProgressHUD showErrorWithStatus:[error errorString]];
+    }];
+    
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -89,7 +147,10 @@
     }
 }
 - (IBAction)attentOrder:(MWInputViewButton *)sender {
-#warning TODO: 推送通知
+    
+    sender.selected = !sender.selected;
+    
+    [self.viewModel attention:sender.selected];
 }
 /*
 #pragma mark - Navigation

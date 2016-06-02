@@ -7,11 +7,9 @@
 //
 
 #import "MWLaboratoryViewController.h"
-#import "MWLabViewModel.h"
 #import "MWLabTableViewController.h"
-#import "MWCommonDataHelper.h"
-#import "MWXMLParse.h"
-@interface MWLaboratoryViewController ()
+
+@interface MWLaboratoryViewController () <MWLaboratoryDelegate>
 @property (weak, nonatomic) IBOutlet MWInputView *orderNoInputView;
 @property (weak, nonatomic) IBOutlet MWInputViewButton *resetBtn;
 @property (weak, nonatomic) IBOutlet MWInputViewButton *searchBtn;
@@ -51,55 +49,18 @@
  
 #if DEBUG
     //010120080018573681
-    MWLabViewModel *viewModel = [[MWLabViewModel alloc] initWithOrderNo:@"010120080018573681"];
-
+   
 #else
     if (self.orderNoInputView.inputText.length == 0) {
         [SVProgressHUD showErrorWithStatus:@"请输入要查询的报关单号!"];
         return;
     }
-    
-    MWLabViewModel *viewModel = [[MWLabViewModel alloc] initWithOrderNo:self.orderNoInputView.inputText];
 #endif
     
-    [SVProgressHUD show];
-    @weakify(self);
-    [[viewModel requestData] subscribeNext:^(RACTuple *value) {
-        @strongify(self);
     
-      
-        
-        NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
-        NSDictionary *data  = [dict objectForKey:@"Labssisvlaue"];
-        
-        NSError *error = nil;
-        
-        NSInteger code = [[dict objectForKey:@"status"] integerValue];
-        NSString *msg = [dict objectForKey:@"errormsg"];
-        
-        if (code != 0) {
-            [SVProgressHUD showErrorWithStatus:msg];
-            return ;
-        }
-        
-        MWLabModel *model = [[MWLabModel alloc] initWithDictionary:data error:&error];
-        
-        if (error) {
-            NSAssert(error, @"化验状态解析错误");
-        }
-        MWLabTableViewController *lab = [self.storyboard instantiateViewControllerWithIdentifier:@"MWLabTableViewController"];
-
-        lab.dataArray = [[MWCommonDataHelper sharedManager] labStatusWithModel:model];
-        [self.navigationController pushViewController:lab animated:YES];
-        [SVProgressHUD dismiss];
-    } error:^(NSError *error) {
-        @strongify(self);
-        [SVProgressHUD showErrorWithStatus:[error errorString]];
-    }];
-
-
-    
-    
+    MWLabTableViewController *lab = [self.storyboard instantiateViewControllerWithIdentifier:@"MWLabTableViewController"];
+    lab.orderID = self.orderNoInputView.inputText;
+    [self.navigationController pushViewController:lab animated:YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
@@ -145,6 +106,7 @@
     } completion:nil];
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

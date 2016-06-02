@@ -7,7 +7,7 @@
 //
 
 #import "MWAppDelegateConfig.h"
-
+#import "MWLocalStorage.h"
 @implementation MWAppDelegateConfig
 +(instancetype)shared{
     static MWAppDelegateConfig  *instance ;
@@ -19,7 +19,7 @@
 }
 - (void)config{
 //    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
-    
+    [MWLocalStorage registerDefaultParams];
 
 }
 @end

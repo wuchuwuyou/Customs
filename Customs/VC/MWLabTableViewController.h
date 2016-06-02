@@ -8,6 +8,8 @@
 
 #import "MWDetailTableViewController.h"
 
-@interface MWLabTableViewController : MWDetailTableViewController
 
+#import "MWLaboratoryDelegate.h"
+@interface MWLabTableViewController : MWDetailTableViewController
+@property (nonatomic,copy) NSString *orderID;
 @end

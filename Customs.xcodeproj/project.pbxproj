@@ -10,6 +10,7 @@
 		0D2782FC1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2782FB1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m */; };
 		0D2A24881D000D7900A8BE42 /* NSData+MWXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A24871D000D7900A8BE42 /* NSData+MWXML.m */; };
 		0D2A248B1D00135900A8BE42 /* MWXMLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A248A1D00135900A8BE42 /* MWXMLParse.m */; };
+		0D2A248F1D00199C00A8BE42 /* MWLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A248E1D00199C00A8BE42 /* MWLocalStorage.m */; };
 		0F79F24082A58FCB29F117AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE101881797890B33C32F13B /* libPods.a */; };
 		2A060F901B43E8BA009F9EC7 /* MWTariffListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */; };
 		2A060F931B43FDC0009F9EC7 /* MWDetailTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F921B43FDC0009F9EC7 /* MWDetailTextViewController.m */; };
@@ -107,6 +108,9 @@
 		0D2A24871D000D7900A8BE42 /* NSData+MWXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MWXML.m"; sourceTree = "<group>"; };
 		0D2A24891D00135900A8BE42 /* MWXMLParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWXMLParse.h; sourceTree = "<group>"; };
 		0D2A248A1D00135900A8BE42 /* MWXMLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWXMLParse.m; sourceTree = "<group>"; };
+		0D2A248C1D00170A00A8BE42 /* MWLaboratoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLaboratoryDelegate.h; sourceTree = "<group>"; };
+		0D2A248D1D00199C00A8BE42 /* MWLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLocalStorage.h; sourceTree = "<group>"; };
+		0D2A248E1D00199C00A8BE42 /* MWLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLocalStorage.m; sourceTree = "<group>"; };
 		2A060F8E1B43E8BA009F9EC7 /* MWTariffListDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTariffListDataModel.h; sourceTree = "<group>"; };
 		2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffListDataModel.m; sourceTree = "<group>"; };
 		2A060F911B43FDC0009F9EC7 /* MWDetailTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailTextViewController.h; sourceTree = "<group>"; };
@@ -335,6 +339,7 @@
 				2A148E241B4D71D5009ED904 /* MWLaboratoryViewController.m */,
 				2A148E2C1B4D79A2009ED904 /* MWLabTableViewController.h */,
 				2A148E2D1B4D79A2009ED904 /* MWLabTableViewController.m */,
+				0D2A248C1D00170A00A8BE42 /* MWLaboratoryDelegate.h */,
 			);
 			name = "化验状态";
 			sourceTree = "<group>";
@@ -453,6 +458,8 @@
 				2A3B83E91B418B62008EDCD5 /* MWAPIManager.m */,
 				2AA6AB241B451B11006D7942 /* MWAppDelegateConfig.h */,
 				2AA6AB251B451B11006D7942 /* MWAppDelegateConfig.m */,
+				0D2A248D1D00199C00A8BE42 /* MWLocalStorage.h */,
+				0D2A248E1D00199C00A8BE42 /* MWLocalStorage.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -835,6 +842,7 @@
 				2A95A7231B29C17B00F29E04 /* MWFontHelper.m in Sources */,
 				2A148DF91B4AB2A3009ED904 /* MWNATSubTabBarController.m in Sources */,
 				2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */,
+				0D2A248F1D00199C00A8BE42 /* MWLocalStorage.m in Sources */,
 				2AA6AB301B4532B9006D7942 /* MWTCINViewModel.m in Sources */,
 				2A148DC61B4667D4009ED904 /* MWListCell.m in Sources */,
 				2A148DF31B4A78DE009ED904 /* MWConstString.m in Sources */,
