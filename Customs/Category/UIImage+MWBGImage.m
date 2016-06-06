@@ -35,7 +35,8 @@
 
             break;
         case UIDevice6PlusiPhone:
-            return [UIImage imageNamed:@"bg_1080_1920"];
+            return [UIImage imageNamed:@"bg_1242_2208"];
+
             break;
         default:
             return [UIImage imageNamed:@"bg"];
