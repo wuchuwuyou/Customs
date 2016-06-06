@@ -24,6 +24,7 @@
         @strongify(self);
         [self.tableView reloadData];
     }];
+    self.title = @"我的关注";
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return  1;
