@@ -11,6 +11,8 @@
 #import "MW2TableViewHeaderView.h"
 #import "MWNATSubModel.h"
 #import "MWNATSubTabBarController.h"
+#import "MWXMLParse.h"
+
 @interface MWNATSubTableViewController ()
 @property (nonatomic,strong)  MW2TableViewHeaderView *headerView;
 
@@ -35,7 +37,8 @@
         @strongify(self);
         if (!self.viewModel.canLoadMore) {
             [self endRefresh];
-            
+            [self.tableView.footer noticeNoMoreData];
+            return ;
         }
         if (self.viewModel.listArray.count != 0) {
             self.viewModel.page_index++;
@@ -75,7 +78,8 @@
     [[self.viewModel queryNATSub] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         
-        NSDictionary *dict = value.first;
+//        NSDictionary *dict = value.first;
+        NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
         NSArray *array  = [dict objectForKey:@"CLS00005"];
         if (self.viewModel.page_index == 1) {
             self.viewModel.listArray = nil;
