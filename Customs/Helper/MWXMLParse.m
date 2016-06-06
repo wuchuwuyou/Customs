@@ -10,7 +10,7 @@
 #import <XMLDictionary.h>
 
 @implementation MWXMLParse
-+ (NSDictionary *)dictForXMLData:(NSData *)data {
++ (id)dictForXMLData:(NSData *)data {
     NSDictionary *dict = [NSDictionary dictionaryWithXMLData:data];
     NSString *str = [dict innerText];
     if (!str) {
@@ -18,7 +18,7 @@
     }
     NSData *resp = [str dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error ;
-    NSDictionary * respDict = [NSJSONSerialization JSONObjectWithData:resp options:NSJSONReadingAllowFragments error:&error];
+    id  respDict= [NSJSONSerialization JSONObjectWithData:resp options:NSJSONReadingAllowFragments error:&error];
     if (error) {
         NSAssert(error, @"json 解析错误");
         return nil;

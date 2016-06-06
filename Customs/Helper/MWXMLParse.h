@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface MWXMLParse : NSObject
-+ (NSDictionary *)dictForXMLData:(NSData *)data;
++ (id)dictForXMLData:(NSData *)data;
 @end
