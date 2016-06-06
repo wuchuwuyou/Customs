@@ -13,6 +13,9 @@
 + (NSDictionary *)dictForXMLData:(NSData *)data {
     NSDictionary *dict = [NSDictionary dictionaryWithXMLData:data];
     NSString *str = [dict innerText];
+    if (!str) {
+        return nil;
+    }
     NSData *resp = [str dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error ;
     NSDictionary * respDict = [NSJSONSerialization JSONObjectWithData:resp options:NSJSONReadingAllowFragments error:&error];
