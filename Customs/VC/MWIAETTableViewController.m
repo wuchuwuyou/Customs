@@ -13,6 +13,7 @@
 #import "MWTariffListDataModel.h"
 #import "MWCommonDataHelper.h"
 #import "MWIAETDetailViewController.h"
+#import "MWXMLParse.h"
 @interface MWIAETTableViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 @property (nonatomic,strong) MWTariffListViewModel *viewModel;
@@ -45,6 +46,8 @@
         @strongify(self);
         if (!self.viewModel.canLoadMore) {
             [self endRefresh];
+            [self.tableView.footer noticeNoMoreData];
+            return ;
         }
         if (self.viewModel.listArray.count != 0) {
             self.viewModel.page_index++;
@@ -83,18 +86,19 @@
     @weakify(self);
     [[self.viewModel queryMWTariff] subscribeNext:^(RACTuple *value) {
         @strongify(self);
-        
-        NSDictionary *dict = value.first;
+        NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
+//        NSDictionary *dict = value.first;
         NSArray *array  = [dict objectForKey:@"CLS00003"];
         if (self.viewModel.page_index == 1) {
             self.viewModel.listArray = nil;
         }
-
+        
         NSMutableArray *arr = [NSMutableArray arrayWithArray: self.viewModel.listArray];
         [arr addObjectsFromArray:[self.viewModel modelArrayWithArray:array]];
         self.viewModel.listArray = arr;
         NSInteger count = [[[[dict objectForKey:@"CLS000031"] lastObject] objectForKey:@"rows"] integerValue];
         self.viewModel.canLoadMore = self.viewModel.listArray.count<count?YES:NO;
+        
         [self endRefresh];
     } error:^(NSError *error) {
         @strongify(self);
