@@ -15,6 +15,7 @@
 - (void)initView{
 //    self.backgroundColor = INPUT_FIELD_COLOR;
     self.layer.cornerRadius = BUTTON_CORNERRADIUS;
+    self.layer.masksToBounds = YES;
 //    self.titleLabel.textColor = [UIColor whiteColor];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
