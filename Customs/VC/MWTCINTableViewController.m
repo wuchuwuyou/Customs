@@ -13,6 +13,8 @@
 #import "MWTCINDetailViewController.h"
 
 #import "MWTCINTabBarViewController.h"
+#import "MWXMLParse.h"
+
 
 @interface MWTCINTableViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
@@ -40,6 +42,8 @@
         @strongify(self);
         if (!self.viewModel.canLoadMore) {
             [self endRefresh];
+            [self.tableView.footer noticeNoMoreData];
+            return ;
         }
         if (self.viewModel.listArray.count != 0) {
             self.viewModel.page_index++;
@@ -78,8 +82,8 @@
     @weakify(self);
     [[self.viewModel queryTCIN] subscribeNext:^(RACTuple *value) {
         @strongify(self);
-        
-        NSDictionary *dict = value.first;
+        NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
+
         NSArray *array  = [dict objectForKey:@"CLS00004"];
         
         if (self.viewModel.page_index == 1) {
@@ -145,7 +149,9 @@
     [SVProgressHUD show];
     
     [[MWTCINViewModel loadDetailData:model.TARIFF_NO] subscribeNext:^(RACTuple *value) {
-        NSArray *arr  = value.first;
+        NSArray *arr = [MWXMLParse dictForXMLData:value.first];
+
+//        NSArray *arr  = value.first;
         NSDictionary *dict = [arr lastObject];
         NSError *error;
         MWTCINDetailDataModel *detailModel = [[MWTCINDetailDataModel alloc] initWithDictionary:dict error:&error];
