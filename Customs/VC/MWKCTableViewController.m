@@ -12,6 +12,9 @@
 #import "MWKeyCommoditiesModel.h"
 #import "MWKCDetailTableViewController.h"
 #import "MWCommonDataHelper.h"
+#import "MWXMLParse.h"
+
+
 @interface MWKCTableViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
@@ -36,6 +39,8 @@
         @strongify(self);
         if (!self.viewModel.canLoadMore) {
             [self endRefresh];
+            [self.tableView.footer noticeNoMoreData];
+            return ;
         }
         if (self.viewModel.listArray.count != 0) {
             self.viewModel.page_index++;
@@ -74,7 +79,9 @@
     [[self.viewModel queryKC] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         
-        NSDictionary *dict = value.first;
+//        NSDictionary *dict = value.first;
+        NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
+
         NSArray *array  = [dict objectForKey:@"CLS00006"];
         if (self.viewModel.page_index == 1) {
             self.viewModel.listArray = nil;
