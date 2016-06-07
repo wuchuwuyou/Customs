@@ -38,6 +38,15 @@ typedef enum {
     }
     return self;
 }
+- (instancetype)initWithModel:(MWGLJDReqModel *)model {
+    if (self = [super init]) {
+        _reqModel = model;
+        self.page_index = 1;
+        self.page_size = PAGESIZE;
+        self.canLoadMore = YES;
+    }
+    return self;
+}
 - (void)configModel{
     for (MWInputView *iView in self.source) {
         

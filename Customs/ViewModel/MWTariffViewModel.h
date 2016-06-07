@@ -11,4 +11,5 @@
 @interface MWTariffViewModel : RVMViewModel
 @property (nonatomic,strong,readonly) MWTariffModel *model;
 - (instancetype)initWithMWInputViewArray:(NSArray *)arr;
+- (instancetype)initWithModel:(MWTariffModel *)model;
 @end

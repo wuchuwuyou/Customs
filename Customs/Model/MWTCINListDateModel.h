@@ -25,13 +25,13 @@
 @interface MWTCINDetailDataModel : JSONModel
 
 ///-- classAnnotation 类注释
-@property (nonatomic,strong) NSString *classAnnotation;
+@property (nonatomic,strong) NSString <Optional>*classAnnotation;
 
 ///-- chapterAnnotation 章注释
-@property (nonatomic,strong) NSString *chapterAnnotation;
+@property (nonatomic,strong) NSString <Optional>*chapterAnnotation;
 
 ///-- itemAnnotation 品目注释
-@property (nonatomic,strong) NSString *itemAnnotation;
+@property (nonatomic,strong) NSString <Optional>*itemAnnotation;
 
 
 @end

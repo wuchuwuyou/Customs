@@ -9,6 +9,9 @@
 
 /// 首页
 
+/// 搜索查询接口
+UIKIT_EXTERN NSString *const MWSearchPath;
+
 /// 进出口税则查询
 UIKIT_EXTERN NSString *const MWTariffListPath;
 

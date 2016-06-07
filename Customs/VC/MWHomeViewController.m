@@ -11,11 +11,15 @@
 #import <SDCycleScrollView.h>
 #import "MWLaboratoryListViewController.h"
 #import "MWLocalStorage.h"
+#import "MWSearchResultTableViewController.h"
 @interface MWHomeViewController () <SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *panelViewHeight;
 
 @property (weak, nonatomic) IBOutlet SDCycleScrollView *bannerView;
 @property (weak, nonatomic) IBOutlet UIView *panelView;
+
+@property (weak, nonatomic) IBOutlet UIButton *searchBtn;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @end
 
@@ -42,6 +46,18 @@
     [btn addTarget:self action:@selector(showAttention:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     self.navigationItem.rightBarButtonItem = rightItem;
+    [self.searchBtn addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+}
+- (void)goSearch:(id)sender {
+    NSString *keyword = self.searchTextField.text;
+    if (keyword.length == 0) {
+        [SVProgressHUD showInfoWithStatus:@"请输入要搜索的关键字"];
+        return;
+    }
+    [self.view endEditing:YES];
+    MWSearchResultTableViewController *search = [[MWSearchResultTableViewController alloc] init];
+    search.keyword = keyword;
+    [self.navigationController pushViewController:search animated:YES];
 }
 - (void)showAttention:(id)sender {
     NSArray *arr =  [MWLocalStorage allAttentions];

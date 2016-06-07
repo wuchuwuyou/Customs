@@ -26,7 +26,7 @@
 
 
 - (instancetype) initWithInputViewArray:(NSArray *)arr;
-
+- (instancetype) initWithModel:(MWGLJDReqModel *)model;
 ///字典数组 －> 模型数组
 - (NSArray *)modelArrayWithArray:(NSArray *)arr;
 

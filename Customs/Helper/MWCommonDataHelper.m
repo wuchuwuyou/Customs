@@ -81,10 +81,11 @@
 
 - (NSArray *)keyCommoditiesListWithModel:(MWKeyCommoditiesModel *)model{
     NSMutableArray *data = [NSMutableArray array];
+    NSDictionary *dict = [model toDictionary];
+    NSArray *array = dict.allKeys;
+    NSInteger num = array.count;
     
-    NSInteger num = [model toDictionary].allKeys.count;
-    
-    for (NSInteger i = 0; i<num ; i++) {
+    for (NSInteger i = 0; i<5; i++) {
         
         MWCommonModel *m = [[MWCommonModel alloc] init];
         

@@ -38,6 +38,12 @@ typedef enum {
     [self configModel];
     return [self init];
 }
+- (instancetype)initWithModel:(MWTariffModel *)model {
+    if (self = [super init]) {
+        _model = model;
+    }
+    return self;
+}
 - (void)configModel{
     
     for (MWInputView *iView in self.source) {

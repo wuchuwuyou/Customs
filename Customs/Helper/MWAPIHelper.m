@@ -39,7 +39,9 @@
 + (NSString *)labStatusURL{
     return [[self baseURL] stringByAppendingString:MWLabStatusPath];
 }
-
++ (NSString *)searchURL {
+    return [[self baseURL] stringByAppendingString:MWSearchPath];
+}
 + (NSString *)baseURL{
 //    NSString *host = HOST_NAME;
     return [NSString stringWithFormat:@"%@:%zd",HOST_NAME,PORT];

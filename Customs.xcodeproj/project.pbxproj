@@ -12,6 +12,9 @@
 		0D2A248B1D00135900A8BE42 /* MWXMLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A248A1D00135900A8BE42 /* MWXMLParse.m */; };
 		0D2A248F1D00199C00A8BE42 /* MWLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A248E1D00199C00A8BE42 /* MWLocalStorage.m */; };
 		0D2A24921D0084FD00A8BE42 /* MWLaboratoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A24911D0084FD00A8BE42 /* MWLaboratoryListViewController.m */; };
+		0DFEB1611D06B133002F6446 /* MWSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1601D06B133002F6446 /* MWSearchViewModel.m */; };
+		0DFEB1641D06B6AE002F6446 /* MWSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1631D06B6AE002F6446 /* MWSearchResultTableViewController.m */; };
+		0DFEB1671D06BF35002F6446 /* MWSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1661D06BF35002F6446 /* MWSearchResultModel.m */; };
 		0F79F24082A58FCB29F117AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE101881797890B33C32F13B /* libPods.a */; };
 		2A060F901B43E8BA009F9EC7 /* MWTariffListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */; };
 		2A060F931B43FDC0009F9EC7 /* MWDetailTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060F921B43FDC0009F9EC7 /* MWDetailTextViewController.m */; };
@@ -114,6 +117,12 @@
 		0D2A248E1D00199C00A8BE42 /* MWLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLocalStorage.m; sourceTree = "<group>"; };
 		0D2A24901D0084FD00A8BE42 /* MWLaboratoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLaboratoryListViewController.h; sourceTree = "<group>"; };
 		0D2A24911D0084FD00A8BE42 /* MWLaboratoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLaboratoryListViewController.m; sourceTree = "<group>"; };
+		0DFEB15F1D06B133002F6446 /* MWSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchViewModel.h; sourceTree = "<group>"; };
+		0DFEB1601D06B133002F6446 /* MWSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSearchViewModel.m; sourceTree = "<group>"; };
+		0DFEB1621D06B6AE002F6446 /* MWSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchResultTableViewController.h; sourceTree = "<group>"; };
+		0DFEB1631D06B6AE002F6446 /* MWSearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSearchResultTableViewController.m; sourceTree = "<group>"; };
+		0DFEB1651D06BF35002F6446 /* MWSearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchResultModel.h; sourceTree = "<group>"; };
+		0DFEB1661D06BF35002F6446 /* MWSearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSearchResultModel.m; sourceTree = "<group>"; };
 		2A060F8E1B43E8BA009F9EC7 /* MWTariffListDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTariffListDataModel.h; sourceTree = "<group>"; };
 		2A060F8F1B43E8BA009F9EC7 /* MWTariffListDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTariffListDataModel.m; sourceTree = "<group>"; };
 		2A060F911B43FDC0009F9EC7 /* MWDetailTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailTextViewController.h; sourceTree = "<group>"; };
@@ -532,6 +541,8 @@
 				2A148E061B4AD3E0009ED904 /* MWGLJDViewModel.m */,
 				2A148E261B4D7379009ED904 /* MWLabViewModel.h */,
 				2A148E271B4D7379009ED904 /* MWLabViewModel.m */,
+				0DFEB15F1D06B133002F6446 /* MWSearchViewModel.h */,
+				0DFEB1601D06B133002F6446 /* MWSearchViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -545,6 +556,8 @@
 				2A060F921B43FDC0009F9EC7 /* MWDetailTextViewController.m */,
 				2A060F941B43FDEB009F9EC7 /* MWDetailTableViewController.h */,
 				2A060F951B43FDEB009F9EC7 /* MWDetailTableViewController.m */,
+				0DFEB1621D06B6AE002F6446 /* MWSearchResultTableViewController.h */,
+				0DFEB1631D06B6AE002F6446 /* MWSearchResultTableViewController.m */,
 				2A95A7271B29C80900F29E04 /* 进出口税则 */,
 				2AA6AB271B452114006D7942 /* 税则商品及品目注释 */,
 				2A148DCF1B468038009ED904 /* 重点商品 */,
@@ -623,6 +636,8 @@
 				2A148E0C1B4AD603009ED904 /* MWGLJDListModel.m */,
 				2A148E291B4D7587009ED904 /* MWLabModel.h */,
 				2A148E2A1B4D7587009ED904 /* MWLabModel.m */,
+				0DFEB1651D06BF35002F6446 /* MWSearchResultModel.h */,
+				0DFEB1661D06BF35002F6446 /* MWSearchResultModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -697,7 +712,7 @@
 				TargetAttributes = {
 					2A95A6D31B26F0AD00F29E04 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = YR5KUHB9LN;
+						DevelopmentTeam = EKPGXD2B5Z;
 					};
 					2A95A6EC1B26F0AD00F29E04 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -847,15 +862,18 @@
 				2A95A7231B29C17B00F29E04 /* MWFontHelper.m in Sources */,
 				2A148DF91B4AB2A3009ED904 /* MWNATSubTabBarController.m in Sources */,
 				2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */,
+				0DFEB1641D06B6AE002F6446 /* MWSearchResultTableViewController.m in Sources */,
 				0D2A248F1D00199C00A8BE42 /* MWLocalStorage.m in Sources */,
 				2AA6AB301B4532B9006D7942 /* MWTCINViewModel.m in Sources */,
 				2A148DC61B4667D4009ED904 /* MWListCell.m in Sources */,
 				2A148DF31B4A78DE009ED904 /* MWConstString.m in Sources */,
+				0DFEB1671D06BF35002F6446 /* MWSearchResultModel.m in Sources */,
 				2A148DED1B4A28B2009ED904 /* MW2TableViewCell.m in Sources */,
 				0D2A24921D0084FD00A8BE42 /* MWLaboratoryListViewController.m in Sources */,
 				2A148E041B4ACDB9009ED904 /* MWGLJDViewController.m in Sources */,
 				2A148DDB1B4690DD009ED904 /* MWKCTableViewController.m in Sources */,
 				2A95A7161B295B8700F29E04 /* MWHomeViewController.m in Sources */,
+				0DFEB1611D06B133002F6446 /* MWSearchViewModel.m in Sources */,
 				2A3B83EA1B418B62008EDCD5 /* MWAPIManager.m in Sources */,
 				2A148DD51B468D13009ED904 /* MWKeyCommoditiesModel.m in Sources */,
 				2A3B83CC1B370484008EDCD5 /* MWInputViewButton.m in Sources */,

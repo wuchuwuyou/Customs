@@ -27,4 +27,6 @@
 
 /// 化验状态
 + (NSString *)labStatusURL;
+/// 搜索查询接口
++ (NSString *)searchURL;
 @end
