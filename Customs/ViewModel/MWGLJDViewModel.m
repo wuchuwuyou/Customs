@@ -91,7 +91,7 @@ typedef enum {
     [params setValue:@"CLS00002" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
-    [params setValue:@"1" forKey:@"orderType"];
+    [params setValue:@"SOURCE_NO" forKey:@"orderType"];
 
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper GLJDListURL] andParameters:params];
 }

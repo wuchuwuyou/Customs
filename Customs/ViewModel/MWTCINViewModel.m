@@ -36,7 +36,7 @@
     [params setValue:@"CLS00004" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
-    [params setValue:@"1" forKey:@"orderType"];
+    [params setValue:@"TARIFF_NO" forKey:@"orderType"];
 
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper goodsTariffItemURL] andParameters:params];
 }
