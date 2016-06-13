@@ -23,18 +23,18 @@
     self.navigationBar.barTintColor = [UIColor colorWithRed:0.106 green:0.412 blue:0.733 alpha:1.00];
     self.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil];
    
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault]; // Takes out title
-    //
-    UIImage *backButtonImage = [UIImage imageNamed:@"btn_back"];
-    
-    if ([UINavigationBar instancesRespondToSelector:@selector(setBackIndicatorImage:)]) {
-        [[UINavigationBar appearance] setBackIndicatorImage:backButtonImage];
-        [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:backButtonImage];
-    } else {
-        int imageSize = backButtonImage.size.width; // REPLACE WITH YOUR IMAGE WIDTH
-        
-        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[backButtonImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, imageSize, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    }
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault]; // Takes out title
+//    //
+//    UIImage *backButtonImage = [UIImage imageNamed:@"btn_back"];
+//    
+//    if ([UINavigationBar instancesRespondToSelector:@selector(setBackIndicatorImage:)]) {
+//        [[UINavigationBar appearance] setBackIndicatorImage:backButtonImage];
+//        [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:backButtonImage];
+//    } else {
+////        int imageSize = backButtonImage.size.width; // REPLACE WITH YOUR IMAGE WIDTH
+//        
+//        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[backButtonImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    }
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];

@@ -18,6 +18,7 @@
 #import "MWTCINClassViewModel.h"
 #import "MWTCINClassViewController.h"
 #import "MWTCINSearchViewController.h"
+#import "MWErrorAlert.h"
 @interface MWSearchResultTableViewController ()
 @property (nonatomic,strong) MWSearchViewModel *searchViewModel;
 @end
@@ -53,6 +54,10 @@
     [[self.searchViewModel requestSearchData] subscribeNext:^(RACTuple *value) {
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
         NSLog(@"%@",dict);
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            
+            return ;
+        }
         NSArray *array  = [dict objectForKey:@"ds"];
         
         [self.searchViewModel modelArrayFromDataArray:array];

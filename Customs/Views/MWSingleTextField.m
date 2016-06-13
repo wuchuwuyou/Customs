@@ -49,7 +49,8 @@ static CGFloat promptWith = 60.0;
     self.promptLabel.textColor = [UIColor whiteColor];
     self.textColor = [UIColor colorWithRed:0.000 green:0.000 blue:0.000 alpha:1.00];
     self.leftViewMode = UITextFieldViewModeAlways;
-    self.backgroundColor = INPUT_BACKGROUND_COLOR;
+//    self.backgroundColor = INPUT_BACKGROUND_COLOR;
+    self.backgroundColor = [UIColor clearColor];
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -65,8 +66,12 @@ static CGFloat promptWith = 60.0;
 }
 
 - (CGRect)editingRectForBounds:(CGRect)bounds{
-    return CGRectMake(bounds.origin.x + 5, bounds.origin.y, bounds.size.width - 10, bounds.size.height);
+    return CGRectMake(bounds.origin.x + 10, bounds.origin.y, bounds.size.width - 10, bounds.size.height);
 }
+- (CGRect)textRectForBounds:(CGRect)bounds {
+    return CGRectMake(bounds.origin.x + 10, bounds.origin.y, bounds.size.width - 10, bounds.size.height);
+}
+
 //- (void)setPromptName:(NSString *)promptName{
 //    if (_promptName != promptName) {
 //        _promptName = promptName;

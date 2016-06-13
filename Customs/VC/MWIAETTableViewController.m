@@ -14,6 +14,7 @@
 #import "MWCommonDataHelper.h"
 #import "MWIAETDetailViewController.h"
 #import "MWXMLParse.h"
+#import "MWErrorAlert.h"
 @interface MWIAETTableViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 @property (nonatomic,strong) MWTariffListViewModel *viewModel;
@@ -88,6 +89,10 @@
         @strongify(self);
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
 //        NSDictionary *dict = value.first;
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            [self endRefresh];
+            return ;
+        }
         NSArray *array  = [dict objectForKey:@"CLS00003"];
         if (self.viewModel.page_index == 1) {
             self.viewModel.listArray = nil;

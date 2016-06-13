@@ -12,6 +12,7 @@
 #import "MWLaboratoryListViewController.h"
 #import "MWLocalStorage.h"
 #import "MWSearchResultTableViewController.h"
+#import "MWSearchTextField.h"
 @interface MWHomeViewController () <SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *panelViewHeight;
 
@@ -19,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *panelView;
 
 @property (weak, nonatomic) IBOutlet UIButton *searchBtn;
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet MWSearchTextField *searchTextField;
 
 @end
 

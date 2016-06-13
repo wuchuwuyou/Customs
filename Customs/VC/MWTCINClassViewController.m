@@ -13,6 +13,7 @@
 #import "MWTCINListDateModel.h"
 #import "MWTCINChapterViewModel.h"
 #import "MWTCINChapterViewController.h"
+#import "MWErrorAlert.h"
 @interface MWTCINClassViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
@@ -78,7 +79,10 @@
     [[self.viewModel queryTCIN] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
-        
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            [self endRefresh];
+            return ;
+        }
         NSArray *array  = [dict objectForKey:@"CLS00004"];
         
         if (self.viewModel.page_index == 1) {

@@ -13,7 +13,7 @@
 #import "MWLabModel.h"
 #import "MWCommonDataHelper.h"
 #import "MWLocalStorage.h"
-
+#import "MWErrorAlert.h"
 @interface MWLabTableViewController ()
 @property (weak, nonatomic) IBOutlet MWInputViewButton *attentionBtn;
 @property (nonatomic,strong) MWLabViewModel *viewModel;
@@ -53,6 +53,10 @@
         
         
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            
+            return ;
+        }
         NSDictionary *data  = [dict objectForKey:@"Labssisvlaue"];
         
         NSError *error = nil;
@@ -149,8 +153,14 @@
 - (IBAction)attentOrder:(MWInputViewButton *)sender {
     
     sender.selected = !sender.selected;
-    
-    [self.viewModel attention:sender.selected];
+   
+    if ([self.viewModel attention:sender.selected]) {
+        if (sender.selected == YES) {
+            [SVProgressHUD showInfoWithStatus:@"关注成功"];
+        }else {
+            [SVProgressHUD showInfoWithStatus:@"取消关注成功"];
+        }
+    }
 }
 /*
 #pragma mark - Navigation

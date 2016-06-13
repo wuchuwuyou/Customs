@@ -12,7 +12,7 @@
 #import "MWNATSubModel.h"
 #import "MWNATSubTabBarController.h"
 #import "MWXMLParse.h"
-
+#import "MWErrorAlert.h"
 @interface MWNATSubTableViewController ()
 @property (nonatomic,strong)  MW2TableViewHeaderView *headerView;
 
@@ -80,6 +80,10 @@
         
 //        NSDictionary *dict = value.first;
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            [self endRefresh];
+            return ;
+        }
         NSArray *array  = [dict objectForKey:@"CLS00005"];
         if (self.viewModel.page_index == 1) {
             self.viewModel.listArray = nil;

@@ -13,7 +13,7 @@
 #import "MWGLJDDetailViewController.h"
 #import "MWCommonDataHelper.h"
 #import "MWXMLParse.h"
-
+#import "MWErrorAlert.h"
 @interface MWGLJDTableViewController ()
 @property (nonatomic,strong)  MW2TableViewHeaderView *headerView;
 
@@ -95,7 +95,10 @@
         
 //        NSDictionary *dict = value.first;
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
-
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            [self endRefresh];
+            return ;
+        }
         NSArray *array  = [dict objectForKey:@"CLS00002"];
         if (self.viewModel.page_index == 1) {
             self.viewModel.listArray = nil;

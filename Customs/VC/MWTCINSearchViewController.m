@@ -14,7 +14,7 @@
 #import "MWTCINChapterViewModel.h"
 #import "MWTCINChapterViewController.h"
 #import "MWTCINTabBarViewController.h"
-
+#import "MWErrorAlert.h"
 @interface MWTCINSearchViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
@@ -80,7 +80,10 @@
     [[self.viewModel queryTCIN] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
-        
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            [self endRefresh];
+            return ;
+        }
         NSArray *array  = [dict objectForKey:@"CLS00004"];
         
         if (self.viewModel.page_index == 1) {
@@ -149,6 +152,10 @@
 
         //        NSArray *arr  = value.first;
         NSDictionary *dict = [arr lastObject];
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            
+            return ;
+        }
         NSError *error;
         MWTCINDetailDataModel *detailModel = [[MWTCINDetailDataModel alloc] initWithDictionary:dict error:&error];
         if (error) {

@@ -22,8 +22,9 @@
 
     self.titleLabel.font = [MWFontHelper buttonFont];
     
-    [self setBackgroundImage:[UIImage imageNamed:@"bg_btn"] forState:UIControlStateNormal];
-    [self setBackgroundImage:[UIImage imageNamed:@"bg_btn_pressed"] forState:UIControlStateHighlighted];
+//    [self setBackgroundImage:[UIImage imageNamed:@"bg_btn"] forState:UIControlStateNormal];
+//    [self setBackgroundImage:[UIImage imageNamed:@"bg_btn_pressed"] forState:UIControlStateHighlighted];
+    [self setBackgroundColor:[UIColor colorWithRed:0.071 green:0.431 blue:0.624 alpha:1.00]];
 }
 /*
 // Only override drawRect: if you perform custom drawing.
