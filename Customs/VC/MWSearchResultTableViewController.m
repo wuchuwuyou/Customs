@@ -15,6 +15,9 @@
 #import "MWNATSubTableViewController.h"
 #import "MWKCTableViewController.h"
 #import "MWGLJDTableViewController.h"
+#import "MWTCINClassViewModel.h"
+#import "MWTCINClassViewController.h"
+#import "MWTCINSearchViewController.h"
 @interface MWSearchResultTableViewController ()
 @property (nonatomic,strong) MWSearchViewModel *searchViewModel;
 @end
@@ -181,15 +184,10 @@
         case 96:
         {
             MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-            [vm subtitle:@"" keyword:key];
-//            [vm subtitle:key keyword:key];
-//            [vm subtitle:key keyword:@""];
-
-            MWTCINTableViewController  *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+            [vm subtitle:@"" keyword:@"" name:key];
+            MWTCINSearchViewController  *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWTCINSearchViewController"];
             vc.viewModel = vm;
             [self.navigationController pushViewController:vc animated: YES];
-//            targetVC = vc;
-
         }
             break;
         default:

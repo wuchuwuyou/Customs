@@ -8,6 +8,7 @@
 
 #import "MWBaseTableViewController.h"
 #import "MWTCINViewModel.h"
+
 @interface MWTCINTableViewController : MWBaseTableViewController
 @property (nonatomic, strong) MWTCINViewModel *viewModel;
 @end

@@ -12,6 +12,11 @@
 		0D2A248B1D00135900A8BE42 /* MWXMLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A248A1D00135900A8BE42 /* MWXMLParse.m */; };
 		0D2A248F1D00199C00A8BE42 /* MWLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A248E1D00199C00A8BE42 /* MWLocalStorage.m */; };
 		0D2A24921D0084FD00A8BE42 /* MWLaboratoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A24911D0084FD00A8BE42 /* MWLaboratoryListViewController.m */; };
+		0D3266D01D0C142F00458E73 /* MWTCINClassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3266CF1D0C142F00458E73 /* MWTCINClassViewModel.m */; };
+		0D3266D31D0C144F00458E73 /* MWTCINChapterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3266D21D0C144F00458E73 /* MWTCINChapterViewModel.m */; };
+		0D3266F71D0D939D00458E73 /* MWTCINClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3266F61D0D939D00458E73 /* MWTCINClassViewController.m */; };
+		0D3266FA1D0D93F900458E73 /* MWTCINChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3266F91D0D93F900458E73 /* MWTCINChapterViewController.m */; };
+		0D32673C1D0E9BFF00458E73 /* MWTCINSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32673B1D0E9BFF00458E73 /* MWTCINSearchViewController.m */; };
 		0DFEB1611D06B133002F6446 /* MWSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1601D06B133002F6446 /* MWSearchViewModel.m */; };
 		0DFEB1641D06B6AE002F6446 /* MWSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1631D06B6AE002F6446 /* MWSearchResultTableViewController.m */; };
 		0DFEB1671D06BF35002F6446 /* MWSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1661D06BF35002F6446 /* MWSearchResultModel.m */; };
@@ -117,6 +122,16 @@
 		0D2A248E1D00199C00A8BE42 /* MWLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLocalStorage.m; sourceTree = "<group>"; };
 		0D2A24901D0084FD00A8BE42 /* MWLaboratoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLaboratoryListViewController.h; sourceTree = "<group>"; };
 		0D2A24911D0084FD00A8BE42 /* MWLaboratoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLaboratoryListViewController.m; sourceTree = "<group>"; };
+		0D3266CE1D0C142F00458E73 /* MWTCINClassViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINClassViewModel.h; sourceTree = "<group>"; };
+		0D3266CF1D0C142F00458E73 /* MWTCINClassViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINClassViewModel.m; sourceTree = "<group>"; };
+		0D3266D11D0C144F00458E73 /* MWTCINChapterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINChapterViewModel.h; sourceTree = "<group>"; };
+		0D3266D21D0C144F00458E73 /* MWTCINChapterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINChapterViewModel.m; sourceTree = "<group>"; };
+		0D3266F51D0D939D00458E73 /* MWTCINClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINClassViewController.h; sourceTree = "<group>"; };
+		0D3266F61D0D939D00458E73 /* MWTCINClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINClassViewController.m; sourceTree = "<group>"; };
+		0D3266F81D0D93F900458E73 /* MWTCINChapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINChapterViewController.h; sourceTree = "<group>"; };
+		0D3266F91D0D93F900458E73 /* MWTCINChapterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINChapterViewController.m; sourceTree = "<group>"; };
+		0D32673A1D0E9BFF00458E73 /* MWTCINSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTCINSearchViewController.h; sourceTree = "<group>"; };
+		0D32673B1D0E9BFF00458E73 /* MWTCINSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTCINSearchViewController.m; sourceTree = "<group>"; };
 		0DFEB15F1D06B133002F6446 /* MWSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchViewModel.h; sourceTree = "<group>"; };
 		0DFEB1601D06B133002F6446 /* MWSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSearchViewModel.m; sourceTree = "<group>"; };
 		0DFEB1621D06B6AE002F6446 /* MWSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchResultTableViewController.h; sourceTree = "<group>"; };
@@ -533,6 +548,10 @@
 				2A3B83E61B418588008EDCD5 /* MWTariffListViewModel.m */,
 				2AA6AB2E1B4532B9006D7942 /* MWTCINViewModel.h */,
 				2AA6AB2F1B4532B9006D7942 /* MWTCINViewModel.m */,
+				0D3266CE1D0C142F00458E73 /* MWTCINClassViewModel.h */,
+				0D3266CF1D0C142F00458E73 /* MWTCINClassViewModel.m */,
+				0D3266D11D0C144F00458E73 /* MWTCINChapterViewModel.h */,
+				0D3266D21D0C144F00458E73 /* MWTCINChapterViewModel.m */,
 				2A148DCC1B4671B8009ED904 /* MWNATSubViewModel.h */,
 				2A148DCD1B4671B8009ED904 /* MWNATSubViewModel.m */,
 				2A148DD61B468DF6009ED904 /* MWKeyCommoditiesViewModel.h */,
@@ -603,8 +622,14 @@
 			children = (
 				2AA6AB281B4521A5006D7942 /* MWTCINViewController.h */,
 				2AA6AB291B4521A5006D7942 /* MWTCINViewController.m */,
+				0D3266F51D0D939D00458E73 /* MWTCINClassViewController.h */,
+				0D3266F61D0D939D00458E73 /* MWTCINClassViewController.m */,
+				0D3266F81D0D93F900458E73 /* MWTCINChapterViewController.h */,
+				0D3266F91D0D93F900458E73 /* MWTCINChapterViewController.m */,
 				2AA6AB2B1B453165006D7942 /* MWTCINTableViewController.h */,
 				2AA6AB2C1B453165006D7942 /* MWTCINTableViewController.m */,
+				0D32673A1D0E9BFF00458E73 /* MWTCINSearchViewController.h */,
+				0D32673B1D0E9BFF00458E73 /* MWTCINSearchViewController.m */,
 				2AE3B1B91B4F55C1001AABB5 /* MWTCINTabBarViewController.h */,
 				2AE3B1BA1B4F55C1001AABB5 /* MWTCINTabBarViewController.m */,
 				2A148DDC1B496737009ED904 /* MWTCINDetailViewController.h */,
@@ -707,7 +732,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MW;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Murphy;
 				TargetAttributes = {
 					2A95A6D31B26F0AD00F29E04 = {
@@ -826,6 +851,7 @@
 				2A148E071B4AD3E0009ED904 /* MWGLJDViewModel.m in Sources */,
 				2A148E2E1B4D79A2009ED904 /* MWLabTableViewController.m in Sources */,
 				2A95A71C1B29881C00F29E04 /* MWEntranceViewModel.m in Sources */,
+				0D3266F71D0D939D00458E73 /* MWTCINClassViewController.m in Sources */,
 				2AE3B1BB1B4F55C1001AABB5 /* MWTCINTabBarViewController.m in Sources */,
 				2A95A7191B295C4200F29E04 /* MWHomeButton.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
@@ -843,8 +869,10 @@
 				2A148DFC1B4AB397009ED904 /* MWWebViewController.m in Sources */,
 				2AA6AB181B443888006D7942 /* MWCommonModel.m in Sources */,
 				2AEC8A961B33EBFD0010E557 /* MWInputView.m in Sources */,
+				0D3266D31D0C144F00458E73 /* MWTCINChapterViewModel.m in Sources */,
 				0D2782FC1B8EEAFE00ACB1E7 /* UIImage+MWBGImage.m in Sources */,
 				2A148DE41B4A247F009ED904 /* MWNATSubTableViewController.m in Sources */,
+				0D32673C1D0E9BFF00458E73 /* MWTCINSearchViewController.m in Sources */,
 				2A148E0A1B4AD438009ED904 /* MWGLJDReqModel.m in Sources */,
 				2A060F961B43FDEB009F9EC7 /* MWDetailTableViewController.m in Sources */,
 				2A148DF11B4A6CFB009ED904 /* MWKCDetailTableViewController.m in Sources */,
@@ -857,11 +885,13 @@
 				2A148DF61B4AB26A009ED904 /* MWBaseTabBarController.m in Sources */,
 				2A148DD21B468092009ED904 /* MWKeyCommoditiesViewController.m in Sources */,
 				2A95A72D1B29CC9C00F29E04 /* MWSingleTextField.m in Sources */,
+				0D3266FA1D0D93F900458E73 /* MWTCINChapterViewController.m in Sources */,
 				2A3B83E71B418588008EDCD5 /* MWTariffListViewModel.m in Sources */,
 				2A3B83F91B42BFC2008EDCD5 /* NSDictionary+MWGetURLString.m in Sources */,
 				2A95A7231B29C17B00F29E04 /* MWFontHelper.m in Sources */,
 				2A148DF91B4AB2A3009ED904 /* MWNATSubTabBarController.m in Sources */,
 				2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */,
+				0D3266D01D0C142F00458E73 /* MWTCINClassViewModel.m in Sources */,
 				0DFEB1641D06B6AE002F6446 /* MWSearchResultTableViewController.m in Sources */,
 				0D2A248F1D00199C00A8BE42 /* MWLocalStorage.m in Sources */,
 				2AA6AB301B4532B9006D7942 /* MWTCINViewModel.m in Sources */,
@@ -955,6 +985,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1027,6 +1058,7 @@
 				INFOPLIST_FILE = Customs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangteng.customs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -1047,6 +1079,7 @@
 				INFOPLIST_FILE = Customs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangteng.customs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -1068,6 +1101,7 @@
 				);
 				INFOPLIST_FILE = CustomsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tiny.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Customs.app/Customs";
 			};
@@ -1083,6 +1117,7 @@
 				);
 				INFOPLIST_FILE = CustomsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tiny.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Customs.app/Customs";
 			};

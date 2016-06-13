@@ -18,6 +18,7 @@
 /// 税则商品及品目注释
 + (NSString *)goodsTariffItemURL;
 + (NSString *)goodsDetailURL;
++ (NSString *)CHTraiffCommentaryURL;
 /// 本国子目
 + (NSString *)nativeSubItemURL;
 /// 重点商品

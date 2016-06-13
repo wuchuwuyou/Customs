@@ -18,6 +18,9 @@
 + (NSString *)goodsTariffItemURL{
     return [[self baseURL] stringByAppendingString:MWGoodsTariffItemPath];
 }
++ (NSString *)CHTraiffCommentaryURL {
+    return [[self baseURL] stringByAppendingString:MWGoodsCHTraiffCommentary];
+}
 + (NSString *)goodsDetailURL{
     return [[self baseURL] stringByAppendingString:MWGoodsDetailPath];
 }

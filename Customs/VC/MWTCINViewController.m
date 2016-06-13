@@ -9,7 +9,14 @@
 #import "MWTCINViewController.h"
 #import "MWInputView.h"
 #import "MWInputViewButton.h"
+
 #import "MWTCINTableViewController.h"
+#import "MWTCINClassViewController.h"
+#import "MWTCINChapterViewController.h"
+
+//#import "MWTCINClassViewModel.h"
+//#import "MWTCINChapterViewModel.h"
+
 @interface MWTCINViewController ()
 
 @property (weak, nonatomic) IBOutlet  UIScrollView *bgScrollView;
@@ -66,11 +73,37 @@
     //    for (MWInputView *v in self.inputViewArray) {
     //        NSLog(@"%@",v.inputText);
     //    }
-    MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-    [vm subtitle:self.subtitle.inputText keyword:self.keyword.inputText];
-    MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
-    vc.viewModel = vm;
-    [self.navigationController pushViewController:vc animated: YES];
+    NSString *title = self.subtitle.inputText;
+    NSString *keyword = self.keyword.inputText;
+    if ((keyword == nil || keyword.length == 0 )&& (title == nil || title.length == 0)) {
+        title = @"CA";
+    }
+    if ([title.lowercaseString hasPrefix:@"ca"]) {
+        // 类
+        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
+        [vm subtitle:title keyword:keyword];
+        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+
+    }else if ([title.lowercaseString hasPrefix:@"ch"]) {
+        MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
+        [vm subtitle:title keyword:keyword];
+        MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+    }else {
+        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+        [vm subtitle:title keyword:keyword];
+        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+    }
+//    MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+//    [vm subtitle:self.subtitle.inputText keyword:self.keyword.inputText];
+//    MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+//    vc.viewModel = vm;
+//    [self.navigationController pushViewController:vc animated: YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{

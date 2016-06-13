@@ -21,6 +21,7 @@
     self.subVC = [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
 //    self.subVC.content = self.model.CODE_ARTICLE;
 //    self.subVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"sub_annotation", @"子目注释") image:[UIImage imageNamed:@"zimu"] selectedImage:[UIImage imageNamed:@"zimuhover"]];
+    
     self.subVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"sub_annotation", @"子目注释") image:[UIImage imageNamed:@"zimu"] selectedImage:nil];
 
 //    self.subVC.title = NSLocalizedString(@"sub_annotation", @"子目注释");

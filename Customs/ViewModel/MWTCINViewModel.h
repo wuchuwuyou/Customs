@@ -10,6 +10,12 @@
 
 @interface MWTCINViewModel : RVMViewModel
 
+typedef enum : NSUInteger {
+    MWTCINTypeClass = 0,
+    MWTCINTypeChapter,
+    MWTCINTypeSection
+} MWTCINType;
+
 ///用于存储列表页数据
 @property (nonatomic,strong) NSArray *listArray;
 ///页码 用于数据请求
@@ -19,11 +25,16 @@
 /// 是否能加载更多
 @property (nonatomic,assign) BOOL canLoadMore;
 
+@property (nonatomic ,readonly) NSString *subTitle;
+@property (nonatomic ,readonly) NSString *keyword;
+@property (nonatomic ,readonly) NSString *name;
+
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k;
+- (void)subtitle:(NSString *)sb keyword:(NSString *)k name:(NSString *)n;
 ///字典数组 －> 模型数组
 - (NSArray *)modelArrayWithArray:(NSArray *)arr;
 ///请求数据
 - (RACSignal *)queryTCIN;
-
+- (RACSignal *)queryTCINCH;
 + (RACSignal *)loadDetailData:(NSString *)tariffNo;
 @end

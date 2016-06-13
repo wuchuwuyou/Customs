@@ -47,7 +47,7 @@ static CGFloat promptWith = 60.0;
 //    self.leftView = self.promptLabel;
     
     self.promptLabel.textColor = [UIColor whiteColor];
-    self.textColor = [UIColor whiteColor];
+    self.textColor = [UIColor colorWithRed:0.000 green:0.000 blue:0.000 alpha:1.00];
     self.leftViewMode = UITextFieldViewModeAlways;
     self.backgroundColor = INPUT_BACKGROUND_COLOR;
 }

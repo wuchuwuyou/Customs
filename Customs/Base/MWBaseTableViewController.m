@@ -28,7 +28,7 @@
     imageview.contentMode = UIViewContentModeScaleToFill;
     [self.tableView setBackgroundView:imageview];
 
-    [self initValue];
+//    [self initValue];
 }
 #pragma  mark - Private Methods
 - (void)initValue {

@@ -47,6 +47,7 @@ static CGFloat promptWith = 100.0;
     UILabel*label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelWidth, self.bounds.size.height)];
     self.promptLabel = label;
     self.promptLabel.backgroundColor = INPUT_FIELD_COLOR;
+//    self.promptLabel.backgroundColor = [UIColor colorWithRed:0.243 green:0.243 blue:0.224 alpha:1.00];
     self.promptLabel.font = [MWFontHelper titleFont];
     self.promptLabel.text = self.text;
     self.promptLabel.numberOfLines = 1;
@@ -55,9 +56,10 @@ static CGFloat promptWith = 100.0;
 //    self.promptLabel.minimumScaleFactor = 0.2;
     //    self.promptLabel.frame = CGRectMake(0, self.bounds.origin.y, labelWidth, self.bounds.size.height);
     self.promptLabel.textColor = [UIColor whiteColor];
-    self.backgroundColor = INPUT_BACKGROUND_COLOR;
+//    self.backgroundColor = INPUT_BACKGROUND_COLOR;
+    self.backgroundColor = [UIColor clearColor];
     self.stf.delegate = self;
-    self.stf.frame = CGRectMake(labelWidth+10, self.bounds.origin.y, self.bounds.size.width-labelWidth-10, self.bounds.size.height);
+    self.stf.frame = CGRectMake(labelWidth, self.bounds.origin.y, self.bounds.size.width-labelWidth, self.bounds.size.height);
 //    self.stf.frame =self.bounds;
     [self addSubview:self.stf];
     
@@ -95,7 +97,7 @@ static CGFloat promptWith = 100.0;
         labelWidth = 0;
     }
     
-    self.stf.frame = CGRectMake(labelWidth+5, self.bounds.origin.y, self.bounds.size.width-labelWidth-10, self.bounds.size.height);
+    self.stf.frame = CGRectMake(labelWidth, self.bounds.origin.y, self.bounds.size.width-labelWidth, self.bounds.size.height);
     self.promptLabel.frame = CGRectMake(0, self.bounds.origin.y, labelWidth, self.bounds.size.height);
 
 }

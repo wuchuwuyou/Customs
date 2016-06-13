@@ -19,8 +19,8 @@
     // Do any additional setup after loading the view.
 //    self.navigationBar.tintColor = [UIColor colorWithRed:73.0/255.0 green:176.0/255.0 blue:215.0/255.0 alpha:1];
     self.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationBar.backgroundColor = INPUT_FIELD_COLOR;
-    self.navigationBar.barTintColor = INPUT_FIELD_COLOR;
+    self.navigationBar.backgroundColor = [UIColor colorWithRed:0.106 green:0.412 blue:0.733 alpha:1.00];
+    self.navigationBar.barTintColor = [UIColor colorWithRed:0.106 green:0.412 blue:0.733 alpha:1.00];
     self.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil];
    
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault]; // Takes out title

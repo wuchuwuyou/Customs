@@ -1,32 +1,30 @@
 //
-//  MWTCINTableViewController.m
+//  MWTCINSearchViewController.m
 //  Customs
 //
-//  Created by Tiny on 15/7/2.
-//  Copyright (c) 2015年 Murphy. All rights reserved.
+//  Created by Murphy on 16/6/13.
+//  Copyright © 2016年 Murphy. All rights reserved.
 //
 
-#import "MWTCINTableViewController.h"
+#import "MWTCINSearchViewController.h"
 #import "MWListHeaderView.h"
+#import "MWXMLParse.h"
 #import "MWListCell.h"
 #import "MWTCINListDateModel.h"
-#import "MWTCINDetailViewController.h"
-
+#import "MWTCINChapterViewModel.h"
+#import "MWTCINChapterViewController.h"
 #import "MWTCINTabBarViewController.h"
-#import "MWXMLParse.h"
 
-
-@interface MWTCINTableViewController ()
+@interface MWTCINSearchViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
 @end
 
-@implementation MWTCINTableViewController
+@implementation MWTCINSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     @weakify(self);
     self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"MWListHeaderView" owner:nil options:nil] lastObject];
     
@@ -34,7 +32,7 @@
     
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         @strongify(self);
-
+        
         [self loadData];
     }];
     
@@ -75,15 +73,14 @@
     
     [self.tableView.header beginRefreshing];
     
-    
 }
 - (void)loadData{
-   
+    
     @weakify(self);
-    [[self.viewModel queryTCINCH] subscribeNext:^(RACTuple *value) {
+    [[self.viewModel queryTCIN] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
-
+        
         NSArray *array  = [dict objectForKey:@"CLS00004"];
         
         if (self.viewModel.page_index == 1) {
@@ -134,24 +131,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    MWTCINDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINDetailViewController"];
+    //    MWTCINDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINDetailViewController"];
     MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
-//    detail.tariffNo = model.TARIFF_NO;
-//    [self.navigationController pushViewController:detail animated:YES];
+
     
-    [self loadDetailDataWithModel:model];
+        [self loadDetailDataWithModel:model];
     
-    
+
 }
 
 - (void)loadDetailDataWithModel:(MWTCINListDateModel *)model{
-    
+
     [SVProgressHUD show];
-    
+
     [[MWTCINViewModel loadDetailData:model.TARIFF_NO] subscribeNext:^(RACTuple *value) {
         NSArray *arr = [MWXMLParse dictForXMLData:value.first];
 
-//        NSArray *arr  = value.first;
+        //        NSArray *arr  = value.first;
         NSDictionary *dict = [arr lastObject];
         NSError *error;
         MWTCINDetailDataModel *detailModel = [[MWTCINDetailDataModel alloc] initWithDictionary:dict error:&error];
@@ -165,7 +161,7 @@
             [self.navigationController pushViewController:vc animated:YES];
             [SVProgressHUD dismiss];
         }
-        
+
     } error:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[error errorString]];
     }];
@@ -175,7 +171,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 

@@ -1,32 +1,28 @@
 //
-//  MWTCINTableViewController.m
+//  MWTCINClassViewController.m
 //  Customs
 //
-//  Created by Tiny on 15/7/2.
-//  Copyright (c) 2015年 Murphy. All rights reserved.
+//  Created by Murphy on 16/6/12.
+//  Copyright © 2016年 Murphy. All rights reserved.
 //
 
-#import "MWTCINTableViewController.h"
+#import "MWTCINClassViewController.h"
 #import "MWListHeaderView.h"
+#import "MWXMLParse.h"
 #import "MWListCell.h"
 #import "MWTCINListDateModel.h"
-#import "MWTCINDetailViewController.h"
-
-#import "MWTCINTabBarViewController.h"
-#import "MWXMLParse.h"
-
-
-@interface MWTCINTableViewController ()
+#import "MWTCINChapterViewModel.h"
+#import "MWTCINChapterViewController.h"
+@interface MWTCINClassViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
 @end
 
-@implementation MWTCINTableViewController
+@implementation MWTCINClassViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     @weakify(self);
     self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"MWListHeaderView" owner:nil options:nil] lastObject];
     
@@ -34,7 +30,7 @@
     
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         @strongify(self);
-
+        
         [self loadData];
     }];
     
@@ -74,16 +70,15 @@
     [self.headerView setLeftTitle:NSLocalizedString(@"chapter", nil) mid:NSLocalizedString(@"tariff_item", nil) right:NSLocalizedString(@"sub_clause", nil)];
     
     [self.tableView.header beginRefreshing];
-    
-    
+
 }
 - (void)loadData{
-   
+    
     @weakify(self);
-    [[self.viewModel queryTCINCH] subscribeNext:^(RACTuple *value) {
+    [[self.viewModel queryTCIN] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
-
+        
         NSArray *array  = [dict objectForKey:@"CLS00004"];
         
         if (self.viewModel.page_index == 1) {
@@ -122,7 +117,7 @@
     }
     
     MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
-    [cell configCellWithLeft:model.CHAPTER_NO mid:model.TARIFF_NO right:model.TARIFF_NAME];
+    [cell configCellWithLeft:model.TARIFF_NAME mid:model.TARIFF_NO right:model.TARIFF_NAME];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -134,43 +129,47 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    MWTCINDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINDetailViewController"];
+    //    MWTCINDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINDetailViewController"];
     MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
-//    detail.tariffNo = model.TARIFF_NO;
-//    [self.navigationController pushViewController:detail animated:YES];
+    //    detail.tariffNo = model.TARIFF_NO;
+    //    [self.navigationController pushViewController:detail animated:YES];
     
-    [self loadDetailDataWithModel:model];
+//    [self loadDetailDataWithModel:model];
     
-    
+    MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
+    [vm subtitle:model.TARIFF_NO keyword:self.viewModel.keyword];
+    MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
+    vc.viewModel = vm;
+    [self.navigationController pushViewController:vc animated: YES];
 }
-
-- (void)loadDetailDataWithModel:(MWTCINListDateModel *)model{
-    
-    [SVProgressHUD show];
-    
-    [[MWTCINViewModel loadDetailData:model.TARIFF_NO] subscribeNext:^(RACTuple *value) {
-        NSArray *arr = [MWXMLParse dictForXMLData:value.first];
-
-//        NSArray *arr  = value.first;
-        NSDictionary *dict = [arr lastObject];
-        NSError *error;
-        MWTCINDetailDataModel *detailModel = [[MWTCINDetailDataModel alloc] initWithDictionary:dict error:&error];
-        if (error) {
-            NSLog(@"解析错误%@",[error errorString]);
-            [SVProgressHUD showErrorWithStatus:[error errorString]];
-        }else
-        {
-            MWTCINTabBarViewController *vc = [[MWTCINTabBarViewController alloc] init];
-            vc.model = detailModel;
-            [self.navigationController pushViewController:vc animated:YES];
-            [SVProgressHUD dismiss];
-        }
-        
-    } error:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:[error errorString]];
-    }];
-}
-
+//
+//- (void)loadDetailDataWithModel:(MWTCINListDateModel *)model{
+//    
+//    [SVProgressHUD show];
+//    
+//    [[MWTCINViewModel loadDetailData:model.TARIFF_NO] subscribeNext:^(RACTuple *value) {
+//        NSArray *arr = [MWXMLParse dictForXMLData:value.first];
+//        
+//        //        NSArray *arr  = value.first;
+//        NSDictionary *dict = [arr lastObject];
+//        NSError *error;
+//        MWTCINDetailDataModel *detailModel = [[MWTCINDetailDataModel alloc] initWithDictionary:dict error:&error];
+//        if (error) {
+//            NSLog(@"解析错误%@",[error errorString]);
+//            [SVProgressHUD showErrorWithStatus:[error errorString]];
+//        }else
+//        {
+//            MWTCINTabBarViewController *vc = [[MWTCINTabBarViewController alloc] init];
+//            vc.model = detailModel;
+//            [self.navigationController pushViewController:vc animated:YES];
+//            [SVProgressHUD dismiss];
+//        }
+//        
+//    } error:^(NSError *error) {
+//        [SVProgressHUD showErrorWithStatus:[error errorString]];
+//    }];
+//}
+//
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

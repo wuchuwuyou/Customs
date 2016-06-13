@@ -27,24 +27,24 @@
     backgroundImage.contentMode = UIViewContentModeScaleToFill;
     [self.view addSubview:backgroundImage];
     [self.view sendSubviewToBack:backgroundImage];
-    [self initValue];
+//    [self initValue];
 }
 #pragma  mark - Private Methods
-- (void)initValue {
-    // 判断ViewController的层级
-    // 如果不是第一级界面, 显示返回按钮
-    NSInteger count = self.navigationController.viewControllers.count;
-    if (count > 1) {
-        UIButton *backBtn = [[UIButton alloc] init];
-        [backBtn setFrame:CGRectMake(0, 0, 36, 36)];
-        [backBtn setImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
-        [backBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-        [backBtn addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
-        self.navigationItem.leftBarButtonItem = backItem;
-    }
-
-}
+//- (void)initValue {
+//    // 判断ViewController的层级
+//    // 如果不是第一级界面, 显示返回按钮
+//    NSInteger count = self.navigationController.viewControllers.count;
+//    if (count > 1) {
+//        UIButton *backBtn = [[UIButton alloc] init];
+//        [backBtn setFrame:CGRectMake(0, 0, 36, 36)];
+//        [backBtn setImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
+//        [backBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+//        [backBtn addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+//        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+//        self.navigationItem.leftBarButtonItem = backItem;
+//    }
+//
+//}
 
 #pragma mark - Actions
 -(void)back:(UIButton *)sender {

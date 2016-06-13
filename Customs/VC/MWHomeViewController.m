@@ -42,7 +42,7 @@
     UIImage *image = [UIImage imageNamed:@"attention"];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundImage:image forState:UIControlStateNormal];
-    btn.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+    btn.frame = CGRectMake(0, 0, 50, 25);
     [btn addTarget:self action:@selector(showAttention:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     self.navigationItem.rightBarButtonItem = rightItem;
@@ -90,6 +90,10 @@
 // SDCycleScrollView delegate
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
 }
 /*
 #pragma mark - Navigation
