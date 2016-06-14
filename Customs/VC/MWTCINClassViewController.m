@@ -81,6 +81,8 @@
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
         if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
             [self endRefresh];
+            BOOL res =  self.viewModel.page_index == 1? :self.viewModel.page_index--;
+
             return ;
         }
         NSArray *array  = [dict objectForKey:@"CLS00004"];

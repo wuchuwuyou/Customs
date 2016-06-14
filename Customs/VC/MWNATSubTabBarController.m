@@ -42,7 +42,30 @@
         self.relateVC.content = self.model.PERT_CONTENT;
     }];
     self.title = @"本国子目查询";
+    [self initValue];
 }
+- (void)initValue {
+    // 判断ViewController的层级
+    // 如果不是第一级界面, 显示返回按钮
+//    NSInteger count = self.navigationController.viewControllers.count;
+//    if (count > 1) {
+        UIButton *backBtn = [[UIButton alloc] init];
+        [backBtn setFrame:CGRectMake(0, 0, 36, 36)];
+        [backBtn setImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
+        [backBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        [backBtn addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+        self.navigationItem.leftBarButtonItem = backItem;
+//    }
+    
+}
+
+#pragma mark - Actions
+-(void)back:(UIButton *)sender {
+    [SVProgressHUD dismiss];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

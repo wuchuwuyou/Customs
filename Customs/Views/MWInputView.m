@@ -9,7 +9,7 @@
 #import "MWInputView.h"
 #import "MWSingleTextField.h"
 
-static CGFloat promptWith = 100.0;
+static CGFloat promptWith = 110.0;
 
 @interface MWInputView () <UITextFieldDelegate>
 @property (nonatomic,strong) UILabel *promptLabel;
@@ -122,6 +122,7 @@ static CGFloat promptWith = 100.0;
 
 - (void)clearContent{
     self.stf.text = @"";
+    _inputText = @"";
 }
 
 /// notification  textfield

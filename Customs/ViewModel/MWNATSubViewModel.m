@@ -18,7 +18,7 @@
 - (instancetype)init{
     if (self = [super init]) {
         self.page_index = 1;
-        self.page_size = 10;//PAGESIZE;
+        self.page_size = PAGESIZE;
     }
     return self;
 }

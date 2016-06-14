@@ -8,7 +8,11 @@
 
 #import "MWLaboratoryViewController.h"
 #import "MWLabTableViewController.h"
-
+#import "MWLabViewModel.h"
+#import "MWXMLParse.h"
+#import "MWErrorAlert.h"
+#import "MWLabModel.h"
+#import "MWCommonDataHelper.h"
 @interface MWLaboratoryViewController () <MWLaboratoryDelegate>
 @property (weak, nonatomic) IBOutlet MWInputView *orderNoInputView;
 @property (weak, nonatomic) IBOutlet MWInputViewButton *resetBtn;
@@ -56,13 +60,57 @@
         return;
     }
 #endif
-    
-    
-    MWLabTableViewController *lab = [self.storyboard instantiateViewControllerWithIdentifier:@"MWLabTableViewController"];
-    lab.orderID = self.orderNoInputView.inputText;
-    [self.navigationController pushViewController:lab animated:YES];
+    [self loadData];
 }
+- (void)loadData {
+#if DEBUG
+    MWLabViewModel *vm = [[MWLabViewModel alloc] initWithOrderNo:@"010120080018573681"];
+#else
+    MWLabViewModel *vm = [[MWLabViewModel alloc] initWithOrderNo:self.orderNoInputView.inputText];
+#endif
+    
+    [SVProgressHUD show];
+    @weakify(self);
+    [[vm requestData] subscribeNext:^(RACTuple *value) {
+        @strongify(self);
+        
+        
+        
+        NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            
+            return ;
+        }
+        NSDictionary *data  = [dict objectForKey:@"Labssisvlaue"];
+        
+        NSError *error = nil;
+        
+        NSInteger code = [[dict objectForKey:@"status"] integerValue];
+        NSString *msg = [dict objectForKey:@"errormsg"];
+        
+        if (code != 0) {
+            [SVProgressHUD showErrorWithStatus:msg];
+            return ;
+        }
+        
+        MWLabModel *model = [[MWLabModel alloc] initWithDictionary:data error:&error];
+        
+        if (error) {
+            NSAssert(error, @"化验状态解析错误");
+            return;
+        }
+        MWLabTableViewController *lab = [self.storyboard instantiateViewControllerWithIdentifier:@"MWLabTableViewController"];
+        lab.orderID = self.orderNoInputView.inputText;
+        [self.navigationController pushViewController:lab animated:YES];
 
+        lab.dataArray = [[MWCommonDataHelper sharedManager] labStatusWithModel:model];
+
+        [SVProgressHUD dismiss];
+    } error:^(NSError *error) {
+        @strongify(self);
+        [SVProgressHUD showErrorWithStatus:[error errorString]];
+    }];
+}
 - (void)keyboardWillShow:(NSNotification *)aNotification{
     
     NSDictionary* info = [aNotification userInfo];

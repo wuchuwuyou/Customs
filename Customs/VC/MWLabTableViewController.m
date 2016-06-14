@@ -39,7 +39,8 @@
     [self.attentionBtn setTitle:@"关注" forState:UIControlStateNormal];
     [self.attentionBtn setTitle:@"取消关注" forState:UIControlStateSelected];
     self.attentionBtn.selected = [MWLocalStorage isAttentioned:self.orderID];
-    [self loadData];
+//    [self loadData];
+    self.viewModel = [[MWLabViewModel alloc] initWithOrderNo:self.orderID];
 }
 - (void)loadData {
     
@@ -82,8 +83,6 @@
         @strongify(self);
         [SVProgressHUD showErrorWithStatus:[error errorString]];
     }];
-    
-
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

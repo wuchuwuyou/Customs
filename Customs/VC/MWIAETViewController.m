@@ -66,7 +66,6 @@
 
     [self initViews];
 
-    self.tariffViewModel = [[MWTariffViewModel alloc] initWithMWInputViewArray:self.inputViewArray];
     
     [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
     [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
@@ -135,6 +134,8 @@
 //    for (MWInputView *v in self.inputViewArray) {
 //        NSLog(@"%@",v.inputText);
 //    }
+    self.tariffViewModel = [[MWTariffViewModel alloc] initWithMWInputViewArray:self.inputViewArray];
+
     NSLog(@"%@",[self.tariffViewModel.model toDictionary]);
     
     MWIAETTableViewController *tbvc = [self.storyboard instantiateViewControllerWithIdentifier:@"IAETTableViewController"];
