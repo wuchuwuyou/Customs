@@ -47,7 +47,12 @@
     [btn addTarget:self action:@selector(showAttention:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     self.navigationItem.rightBarButtonItem = rightItem;
+    UIImage *searchImage = [UIImage imageNamed:@"icon_search"];
     [self.searchBtn addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+    [self.searchBtn setImage:searchImage forState:UIControlStateNormal];
+    [self.searchBtn setTitle:@"归类查询" forState:UIControlStateNormal];
+    [self.searchBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -searchImage.size.width, 0, searchImage.size.width)];
+    [self.searchBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 70, 0, -70)];
 }
 - (void)goSearch:(id)sender {
     NSString *keyword = self.searchTextField.text;

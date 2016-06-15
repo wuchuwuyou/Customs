@@ -3,11 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="9JM-dH-6TC" customClass="MWWebViewController">
+        <viewController automaticallyAdjustsScrollViewInsets="NO" id="9JM-dH-6TC" customClass="MWWebViewController">
             <layoutGuides>
                 <viewControllerLayoutGuide type="top" id="wGH-d6-anq"/>
                 <viewControllerLayoutGuide type="bottom" id="fCo-7W-f6i"/>
@@ -25,13 +26,47 @@
                 <constraints>
                     <constraint firstItem="tcr-Ol-tkk" firstAttribute="top" secondItem="wGH-d6-anq" secondAttribute="bottom" id="0v6-Hn-Qhe"/>
                     <constraint firstAttribute="trailing" secondItem="tcr-Ol-tkk" secondAttribute="trailing" id="7n4-H7-vOY"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="centerY" secondItem="b7g-sB-00R" secondAttribute="centerY" id="9fU-nw-XXl"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tcr-Ol-tkk" secondAttribute="trailing" constant="-20" id="A2K-LW-Moq"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="leading" secondItem="b7g-sB-00R" secondAttribute="leading" id="GKF-Rm-WRJ"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="top" secondItem="wGH-d6-anq" secondAttribute="bottom" id="OlR-cd-Yqm"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="top" secondItem="wGH-d6-anq" secondAttribute="bottom" id="PWe-kH-re3"/>
+                    <constraint firstAttribute="trailing" secondItem="tcr-Ol-tkk" secondAttribute="trailing" id="Sog-9m-1YJ"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="height" secondItem="b7g-sB-00R" secondAttribute="height" id="TyL-XG-Cr6"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="centerX" secondItem="b7g-sB-00R" secondAttribute="centerX" id="Vcb-Ft-VPN"/>
+                    <constraint firstItem="fCo-7W-f6i" firstAttribute="top" secondItem="tcr-Ol-tkk" secondAttribute="bottom" id="Vlw-fi-f9J"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="top" secondItem="b7g-sB-00R" secondAttribute="top" id="clw-Qp-g3o"/>
                     <constraint firstItem="tcr-Ol-tkk" firstAttribute="leading" secondItem="b7g-sB-00R" secondAttribute="leading" id="gMc-QP-WfR"/>
+                    <constraint firstItem="fCo-7W-f6i" firstAttribute="top" secondItem="tcr-Ol-tkk" secondAttribute="bottom" id="gcC-pq-FMh"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="leading" secondItem="b7g-sB-00R" secondAttribute="leadingMargin" constant="-20" id="hQR-Jw-Wnl"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="width" secondItem="b7g-sB-00R" secondAttribute="width" id="i7v-oS-waW"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="top" secondItem="wGH-d6-anq" secondAttribute="bottom" id="lL9-qN-83N"/>
                     <constraint firstItem="tcr-Ol-tkk" firstAttribute="bottom" secondItem="fCo-7W-f6i" secondAttribute="top" id="ndj-WM-xZi"/>
+                    <constraint firstItem="tcr-Ol-tkk" firstAttribute="leading" secondItem="b7g-sB-00R" secondAttribute="leading" id="neU-Df-Noz"/>
+                    <constraint firstAttribute="trailing" secondItem="tcr-Ol-tkk" secondAttribute="trailing" id="qSe-5x-GKz"/>
                     <constraint firstAttribute="bottom" secondItem="tcr-Ol-tkk" secondAttribute="bottom" id="szP-oV-geq"/>
+                    <constraint firstItem="fCo-7W-f6i" firstAttribute="top" secondItem="tcr-Ol-tkk" secondAttribute="bottom" id="wv1-cA-ei0"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="0v6-Hn-Qhe"/>
+                        <exclude reference="7n4-H7-vOY"/>
+                        <exclude reference="9fU-nw-XXl"/>
+                        <exclude reference="A2K-LW-Moq"/>
+                        <exclude reference="GKF-Rm-WRJ"/>
+                        <exclude reference="OlR-cd-Yqm"/>
+                        <exclude reference="PWe-kH-re3"/>
+                        <exclude reference="TyL-XG-Cr6"/>
+                        <exclude reference="Vcb-Ft-VPN"/>
+                        <exclude reference="clw-Qp-g3o"/>
+                        <exclude reference="gMc-QP-WfR"/>
+                        <exclude reference="hQR-Jw-Wnl"/>
+                        <exclude reference="i7v-oS-waW"/>
+                        <exclude reference="ndj-WM-xZi"/>
+                        <exclude reference="qSe-5x-GKz"/>
                         <exclude reference="szP-oV-geq"/>
+                        <exclude reference="Vlw-fi-f9J"/>
+                        <exclude reference="wv1-cA-ei0"/>
                     </mask>
                 </variation>
             </view>

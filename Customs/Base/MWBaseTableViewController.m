@@ -24,7 +24,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage getBGImage]];
-    [imageview setFrame:self.view.frame];
+    CGSize size = [[UIScreen mainScreen] bounds].size;
+    [imageview setFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, size.width, size.height - 64)];
     imageview.contentMode = UIViewContentModeScaleToFill;
     [self.tableView setBackgroundView:imageview];
 

@@ -255,13 +255,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2C-Mq-NUO" userLabel="search view">
                                         <rect key="frame" x="0.0" y="167" width="375" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xO-eP-YTS">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xO-eP-YTS">
                                                 <rect key="frame" x="230" y="8" width="130" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="fpD-EN-3Of"/>
                                                     <constraint firstAttribute="width" constant="130" id="jFi-hb-n9Y"/>
                                                 </constraints>
-                                                <state key="normal" title="归类查询" image="icon_search" backgroundImage="button_bg_search"/>
+                                                <state key="normal" backgroundImage="button_bg_search"/>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入商品名称" textAlignment="natural" minimumFontSize="17" background="bg_textsearch" translatesAutoresizingMaskIntoConstraints="NO" id="gsl-pp-nIY" customClass="MWSearchTextField">
                                                 <rect key="frame" x="15" y="10" width="205" height="40"/>
@@ -2214,6 +2214,5 @@
         <image name="btn_6" width="83" height="45"/>
         <image name="btn_7" width="83" height="45"/>
         <image name="button_bg_search" width="259" height="80"/>
-        <image name="icon_search" width="41" height="44"/>
     </resources>
 </document>
