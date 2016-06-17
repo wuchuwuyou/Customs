@@ -76,7 +76,7 @@
 }
 - (void)initViews{
     self.inputViewArray = [NSMutableArray array];
-
+    self.bgScrollView.backgroundColor = [UIColor clearColor];
     [self.inputCode titleText:NSLocalizedString(@"tariff_no",@"税则列号")];
     [self.inputName titleText:NSLocalizedString(@"goods_name",@"货品名称")];
     [self.inputViewArray addObject:self.inputCode];

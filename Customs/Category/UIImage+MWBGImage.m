@@ -14,6 +14,7 @@
     switch (type) {
         case UIDevice4iPhone:
             return [UIImage imageNamed:@"bg_640_960"];
+            
             break;
         case UIDevice4SiPhone:
             return [UIImage imageNamed:@"bg_640_960"];

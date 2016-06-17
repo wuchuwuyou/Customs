@@ -20,8 +20,8 @@
     // Do any additional setup after loading the view.
 
 
-
-    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage getBGImage]];
+    UIImage *image = [UIImage getBGImage];
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:image];
     CGSize size = [[UIScreen mainScreen] bounds].size;
     [backgroundImage setFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, size.width, size.height - 64)];
     backgroundImage.contentMode = UIViewContentModeScaleToFill;

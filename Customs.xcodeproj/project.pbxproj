@@ -138,6 +138,7 @@
 		0D32673E1D0EE2A900458E73 /* MWErrorAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWErrorAlert.m; sourceTree = "<group>"; };
 		0D3267401D0EE9DB00458E73 /* MWSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchTextField.h; sourceTree = "<group>"; };
 		0D3267411D0EE9DB00458E73 /* MWSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSearchTextField.m; sourceTree = "<group>"; };
+		0DF3773B1D13A2EF006FC462 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		0DFEB15F1D06B133002F6446 /* MWSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchViewModel.h; sourceTree = "<group>"; };
 		0DFEB1601D06B133002F6446 /* MWSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSearchViewModel.m; sourceTree = "<group>"; };
 		0DFEB1621D06B6AE002F6446 /* MWSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchResultTableViewController.h; sourceTree = "<group>"; };
@@ -419,6 +420,7 @@
 		2A95A6D61B26F0AD00F29E04 /* Customs */ = {
 			isa = PBXGroup;
 			children = (
+				0DF3773B1D13A2EF006FC462 /* Reveal.framework */,
 				2A3B83F61B42BF88008EDCD5 /* Category */,
 				2A95A6FD1B26F2E000F29E04 /* Base */,
 				2A95A6FE1B26F2E000F29E04 /* Utils */,
@@ -1065,11 +1067,49 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Customs",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Customs/customs.pch";
 				INFOPLIST_FILE = Customs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"AFNetworking-RACExtensions\"",
+					"-l\"JSONModel\"",
+					"-l\"MJRefresh\"",
+					"-l\"Mantle\"",
+					"-l\"ReactiveCocoa\"",
+					"-l\"ReactiveViewModel\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"UIDevice+HardwareName\"",
+					"-l\"XMLDictionary\"",
+					"-l\"iCarousel\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangteng.customs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1086,11 +1126,49 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Customs",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Customs/customs.pch";
 				INFOPLIST_FILE = Customs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"AFNetworking-RACExtensions\"",
+					"-l\"JSONModel\"",
+					"-l\"MJRefresh\"",
+					"-l\"Mantle\"",
+					"-l\"ReactiveCocoa\"",
+					"-l\"ReactiveViewModel\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"UIDevice+HardwareName\"",
+					"-l\"XMLDictionary\"",
+					"-l\"iCarousel\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangteng.customs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
