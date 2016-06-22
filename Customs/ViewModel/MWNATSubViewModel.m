@@ -29,8 +29,8 @@
 
 - (RACSignal *)queryNATSub{
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
-    [data setValue:self.sub forKey:@"codeArticle"];
-    [data setValue:self.nat forKey:@"codeTS"];
+    [data setValue:self.nat forKey:@"codeArticle"];
+    [data setValue:self.sub forKey:@"codeTS"];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:[data getJSONString] forKey:@"jsonParams"];
     [params setValue:@"CLS00005" forKey:@"messageCode"];
