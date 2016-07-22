@@ -47,6 +47,6 @@
 }
 + (NSString *)baseURL{
 //    NSString *host = HOST_NAME;
-    return [NSString stringWithFormat:@"%@:%zd",HOST_NAME,PORT];
+    return [NSString stringWithFormat:@"%@",HOST_NAME];
 }
 @end
