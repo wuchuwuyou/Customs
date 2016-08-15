@@ -10,15 +10,15 @@
 
 @interface MWTCINListDateModel : JSONModel
 ///-- TARIFF_NO  ： 税则列号
-@property (nonatomic,strong) NSString *TARIFF_NO;
+@property (nonatomic,strong) NSString <Optional>*TARIFF_NO;
 ///-- TARIFF_NAME  ：子目条文
-@property (nonatomic,strong) NSString *TARIFF_NAME;
+@property (nonatomic,strong) NSString <Optional>*TARIFF_NAME;
 ///-- COMMENTARY_VIEW  ：注释
-@property (nonatomic,strong) NSString *COMMENTARY_VIEW;
+@property (nonatomic,strong) NSString <Optional>*COMMENTARY_VIEW;
 
-@property (nonatomic,strong) NSString *COMMENTARY_SEARCH;
+@property (nonatomic,strong) NSString <Optional>*COMMENTARY_SEARCH;
 
-@property (nonatomic,strong) NSString *CHAPTER_NO;
+@property (nonatomic,strong) NSString <Optional>*CHAPTER_NO;
 @end
 
 
@@ -32,6 +32,9 @@
 
 ///-- itemAnnotation 品目注释
 @property (nonatomic,strong) NSString <Optional>*itemAnnotation;
+
+///-- itemAnnotation 品目注释
+@property (nonatomic,strong) NSString <Optional>*shuimujiegou;
 
 
 @end

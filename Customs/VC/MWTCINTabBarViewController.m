@@ -37,7 +37,7 @@
 //    self.vc3.title = NSLocalizedString(@"itemAnnotation", @"品目注释");
     self.viewControllers = @[self.vc1,self.vc2,self.vc3];
     self.selectedIndex = 0;
-    
+#warning TODO: 税目结构 页面
     
     [RACObserve(self, model) subscribeNext:^(id x) {
         self.vc1.content = self.model.classAnnotation;

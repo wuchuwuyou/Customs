@@ -66,6 +66,9 @@
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper goodsDetailURL] andParameters:data];
 }
 - (NSArray *)modelArrayWithArray:(NSArray *)arr{
-    return [MWTCINListDateModel arrayOfModelsFromDictionaries:arr];
+    NSError *error ;
+    NSArray *array =  [MWTCINListDateModel arrayOfModelsFromDictionaries:arr error:&error];
+    NSLog(@"%@",error);
+    return array;
 }
 @end
