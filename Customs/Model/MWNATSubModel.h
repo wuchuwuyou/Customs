@@ -11,14 +11,14 @@
 @interface MWNATSubModel : JSONModel
 
 
-@property (nonatomic,strong) NSString *ARTICLE;
+@property (nonatomic,strong) NSString <Optional>*ARTICLE;
 
-@property (nonatomic,strong) NSString *CODE_ARTICLE;
+@property (nonatomic,strong) NSString <Optional>*CODE_ARTICLE;
 
-@property (nonatomic,strong) NSString *CODE_TS;
+@property (nonatomic,strong) NSString <Optional>*CODE_TS;
 
-@property (nonatomic,strong) NSString *CONTECT_SEARCH;
+@property (nonatomic,strong) NSString <Optional>*CONTECT_SEARCH;
 
-@property (nonatomic,strong) NSString *PERT_CONTENT;
+@property (nonatomic,strong) NSString <Optional>*PERT_CONTENT;
 
 @end

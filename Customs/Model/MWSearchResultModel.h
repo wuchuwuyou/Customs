@@ -9,8 +9,8 @@
 #import "JSONModel.h"
 
 @interface MWSearchResultModel : JSONModel
-@property (nonatomic,assign) NSInteger RESULT_COUNT;
-@property (nonatomic,copy) NSString *Sort;
+@property (nonatomic,strong) NSNumber <Optional>*RESULT_COUNT;
+@property (nonatomic,copy) NSString <Optional>*Sort;
 - (NSString *)title;
 //@property (nonatomic,copy) NSString *title;
 - (NSString *)showCount;

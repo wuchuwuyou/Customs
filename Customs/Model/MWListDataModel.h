@@ -9,7 +9,7 @@
 #import "JSONModel.h"
 
 @interface MWListDataModel : JSONModel
-@property (nonatomic,strong) NSString *source_no;
-@property (nonatomic,strong) NSString *source_name;
-@property (nonatomic,strong) NSString *source_rate;
+@property (nonatomic,strong) NSString <Optional>*source_no;
+@property (nonatomic,strong) NSString <Optional>*source_name;
+@property (nonatomic,strong) NSString <Optional>*source_rate;
 @end

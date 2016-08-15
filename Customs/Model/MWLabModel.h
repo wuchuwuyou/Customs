@@ -10,18 +10,18 @@
 
 @interface MWLabModel : JSONModel
 //"ENTRYID": "020720151123456789",
-@property (nonatomic,strong) NSString *ENTRYID;
+@property (nonatomic,strong) NSString <Optional>*ENTRYID;
 
 //"APPLICATIONID": "2015032301",
-@property (nonatomic,strong) NSString *APPLICATIONID;
+@property (nonatomic,strong) NSString <Optional>*APPLICATIONID;
 
 //"APPNAME": "具有书写或绘画面的石板、黑板",
-@property (nonatomic,strong) NSString *APPNAME;
+@property (nonatomic,strong) NSString <Optional>*APPNAME;
 
 //"APPSTATUS": "已签发",
-@property (nonatomic,strong) NSString *APPSTATUS;
+@property (nonatomic,strong) NSString <Optional>*APPSTATUS;
 
 //"UPDATETIME": "2015/5/21 11:44:36"
-@property (nonatomic,strong) NSString *UPDATETIME;
+@property (nonatomic,strong) NSString <Optional>*UPDATETIME;
 
 @end
