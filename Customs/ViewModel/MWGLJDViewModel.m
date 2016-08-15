@@ -101,7 +101,7 @@ typedef enum {
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
     [params setValue:@"SOURCE_NO" forKey:@"orderType"];
-
+    [params setValue:@"1" forKey:@"searchType"];
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper GLJDListURL] andParameters:params];
 }
 - (NSArray *)listArray{
@@ -111,6 +111,9 @@ typedef enum {
     return _listArray;
 }
 - (NSArray *)modelArrayWithArray:(NSArray *)arr{
-    return [MWGLJDListModel arrayOfModelsFromDictionaries:arr];
+    NSError *error;
+    NSArray *array = [MWGLJDListModel arrayOfModelsFromDictionaries:arr error:&error];
+    NSLog(@"error");
+    return array;
 }
 @end
