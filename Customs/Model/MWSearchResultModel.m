@@ -51,6 +51,6 @@
     return result;
 }
 - (NSString *)showCount {
-    return [NSString stringWithFormat:@"%zd条",_RESULT_COUNT];
+    return [NSString stringWithFormat:@"%@条",_RESULT_COUNT];
 }
 @end

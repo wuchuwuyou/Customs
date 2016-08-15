@@ -167,7 +167,7 @@
         case 97:
         {
             MWNATSubViewModel *vm = [[MWNATSubViewModel alloc] init];
-            [vm national:key subTitle:@""];
+            [vm national:nil subTitle:key];
             MWNATSubTableViewController  *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWNATSubTableViewController"];
             vc.viewModel = vm;
             [self.navigationController pushViewController:vc animated: YES];
