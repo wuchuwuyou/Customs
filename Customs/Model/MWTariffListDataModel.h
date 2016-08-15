@@ -10,27 +10,27 @@
 
 @interface MWTariffListDataModel : JSONModel
 ///-- G_NAME  ： 货物名称
-@property (nonatomic,strong) NSString *G_NAME;
+@property (nonatomic,strong) NSString <Optional>*G_NAME;
 ///-- CODE_TS  ： 商品编码
-@property (nonatomic,strong) NSString *CODE_TS;
+@property (nonatomic,strong) NSString <Optional>*CODE_TS;
 
 ///-- COMM_RATE  ：普通税率
-@property (nonatomic,strong) NSString *COMM_RATE;
+@property (nonatomic,strong) NSString <Optional>*COMM_RATE;
 ///-- ASEAN_RATE  ：东盟税率
-@property (nonatomic,strong) NSString *ASEAN_RATE;
+@property (nonatomic,strong) NSString <Optional>*ASEAN_RATE;
 
 ///-- HK_RATE  ： 香港税率
-@property (nonatomic,strong) NSString *HK_RATE;
+@property (nonatomic,strong) NSString <Optional>*HK_RATE;
 ///-- MACAO_RATE  ：澳门税率
-@property (nonatomic,strong) NSString *MACAO_RATE;
+@property (nonatomic,strong) NSString <Optional>*MACAO_RATE;
 
 ///-- EXPORT_RATE  ：出口税率
-@property (nonatomic,strong) NSString *EXPORT_RATE;
+@property (nonatomic,strong) NSString <Optional>*EXPORT_RATE;
 ///-- APTA_RATE   ： 亚太税率
-@property (nonatomic,strong) NSString *APTA_RATE;
+@property (nonatomic,strong) NSString <Optional>*APTA_RATE;
 
 ///-- MFN_RATE   ：最惠国税率
-@property (nonatomic,strong) NSString *MFN_RATE;
+@property (nonatomic,strong) NSString <Optional>*MFN_RATE;
 ///-- REMARK : 备注
-@property (nonatomic,strong) NSString *REMARK;
+@property (nonatomic,strong) NSString <Optional>*REMARK;
 @end
