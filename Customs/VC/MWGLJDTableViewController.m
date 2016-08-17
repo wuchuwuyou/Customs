@@ -30,6 +30,8 @@
     
     self.tableView.tableHeaderView = self.headerView;
     
+    self.viewModel.type = self.type;
+    
     @weakify(self);
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         @strongify(self);
@@ -86,7 +88,6 @@
     }
     
 }
-
 - (void)loadData{
     
     @weakify(self);

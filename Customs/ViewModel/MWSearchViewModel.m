@@ -26,8 +26,32 @@
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper searchURL] andParameters:params];
 }
 - (void)modelArrayFromDataArray:(NSArray *)array {
+    /*
+     1——归类决定
+     
+     3——归类裁定
+     
+     13——重点商品
+     
+     97——本国子目
+     
+     95——进出口税则
+     
+     96——税则品目注释
+     
+     */
     
-    NSArray * arr = [MWSearchResultModel arrayOfModelsFromDictionaries:array];
+    NSArray *list = @[@"1",@"3",@"13",@"97",@"95",@"96"];
+
+    NSMutableArray *result = [NSMutableArray array];
+    [array enumerateObjectsUsingBlock:^(NSDictionary* _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *sort = obj[@"Sort"];
+        if ([list containsObject:sort]) {
+            [result addObject:obj];
+        }
+    }];
+    NSArray * arr = [MWSearchResultModel arrayOfModelsFromDictionaries:result];
+
     self.listArray = arr;
 }
 @end

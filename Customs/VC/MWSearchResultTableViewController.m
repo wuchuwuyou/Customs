@@ -170,7 +170,7 @@
         case 97:
         {
             MWNATSubViewModel *vm = [[MWNATSubViewModel alloc] init];
-            [vm national:nil subTitle:key];
+            [vm national:key subTitle:nil];
             MWNATSubTableViewController  *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWNATSubTableViewController"];
             vc.viewModel = vm;
             vc.viewModel.searchType = @(0);

@@ -139,7 +139,7 @@
     NSLog(@"%@",[self.tariffViewModel.model toDictionary]);
     
     MWIAETTableViewController *tbvc = [self.storyboard instantiateViewControllerWithIdentifier:@"IAETTableViewController"];
-    tbvc.model = self.tariffViewModel.model;
+    tbvc.viewModel = [[MWTariffListViewModel alloc] initWithModel:self.tariffViewModel.model];
     [self.navigationController pushViewController:tbvc animated:YES];
 }
 
