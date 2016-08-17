@@ -19,6 +19,9 @@
 @property (nonatomic,strong) NSString <Optional>*COMMENTARY_SEARCH;
 
 @property (nonatomic,strong) NSString <Optional>*CHAPTER_NO;
+@property (nonatomic,copy,readonly) NSString <Ignore>*title;
+@property (nonatomic,copy,readonly) NSString <Ignore>*Chapter;
+@property (nonatomic,copy,readonly) NSString <Ignore>*Section;
 @end
 
 

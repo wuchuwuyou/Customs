@@ -37,7 +37,7 @@
 "classAnnotation" = "类注释";
 "chapterAnnotation" = "章注释";
 "itemAnnotation" = "品目注释";
-
+"shuimujiegou" = "税目结构";
 // 本国子目
 
 "national_subheadings" = "本国子目";

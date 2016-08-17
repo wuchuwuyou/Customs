@@ -8,11 +8,12 @@
 
 #import "MWTCINTabBarViewController.h"
 #import "MWWebViewController.h"
+#import "MWIAETTDataViewController.h"
 @interface MWTCINTabBarViewController ()
 @property (nonatomic,strong) MWWebViewController *vc1;
 @property (nonatomic,strong) MWWebViewController *vc2;
 @property (nonatomic,strong) MWWebViewController *vc3;
-
+@property (nonatomic,strong) MWIAETTDataViewController *vc4;
 @end
 
 @implementation MWTCINTabBarViewController
@@ -24,25 +25,51 @@
     //    self.subVC.content = self.model.CODE_ARTICLE;
     self.vc1.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"classAnnotation", @"类注释") image:[UIImage imageNamed:@"leizhu"] selectedImage:[UIImage imageNamed:@"leizhuhover"]];
 //    self.vc1.title = NSLocalizedString(@"classAnnotation", @"类注释");
+    
+    
     self.vc2 = [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
     //    self.relateVC.content  = self.model.PERT_CONTENT;
     self.vc2.tabBarItem = [[UITabBarItem alloc] initWithTitle: NSLocalizedString(@"chapterAnnotation", @"章注释") image:[UIImage imageNamed:@"zhangzhu"] selectedImage:[UIImage imageNamed:@"zhangzhuhover"]];
 
 //    self.vc2.title = NSLocalizedString(@"chapterAnnotation", @"章注释");
     
+    
+    
     self.vc3 = [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
     //    self.relateVC.content  = self.model.PERT_CONTENT;
     self.vc3.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"itemAnnotation", @"品目注释") image:[UIImage imageNamed:@"pinmu"] selectedImage:[UIImage imageNamed:@"pinmuhover"]];
+    
+    
+    
+    self.vc4 = [[MWIAETTDataViewController alloc] initWithStyle:UITableViewStylePlain];
+    self.vc4.viewModel = [[MWTariffListViewModel alloc] init];
+    self.vc4.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"shuimujiegou", @"税目结构") image:[UIImage imageNamed:@"shuimujiegou"] selectedImage:[UIImage imageNamed:@"shuimujiegouhover"]];
+
+    
+
 
 //    self.vc3.title = NSLocalizedString(@"itemAnnotation", @"品目注释");
-    self.viewControllers = @[self.vc1,self.vc2,self.vc3];
+    self.viewControllers = @[self.vc1,self.vc2,self.vc3,self.vc4];
     self.selectedIndex = 0;
-#warning TODO: 税目结构 页面
-    
+
     [RACObserve(self, model) subscribeNext:^(id x) {
+        if (!x) {
+            return ;
+        }
         self.vc1.content = self.model.classAnnotation;
         self.vc2.content = self.model.chapterAnnotation;
         self.vc3.content = self.model.itemAnnotation;
+        
+        NSString *data = self.model.shuimujiegou;
+        NSData *jsonData = [data dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *err;
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
+        if (err) {
+            NSLog(@"%@",err);
+        }else {
+            NSArray *array  = [dic objectForKey:@"CLS00003"];
+            self.vc4.viewModel.listArray = [self.vc4.viewModel modelArrayWithArray:array];
+        }
 
     }];
     self.title = @"品目注释查询";

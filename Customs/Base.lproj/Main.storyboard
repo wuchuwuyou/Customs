@@ -106,6 +106,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="shuimujiegou:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F88-FA-HbD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-lY-Ir0">
                                                 <rect key="frame" x="40" y="250" width="140" height="70"/>

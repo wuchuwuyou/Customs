@@ -22,11 +22,11 @@
 }
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k{
     _subTitle = sb;
-    _keyword = k;
+    _name = k;
 }
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k name:(NSString *)n {
     _subTitle = sb;
-    _keyword = k;
+    _name = k;
     _name = n;
 }
 - (RACSignal *)queryTCIN{

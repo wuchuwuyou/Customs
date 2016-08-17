@@ -13,6 +13,7 @@
 #import "MWLocalStorage.h"
 #import "MWSearchResultTableViewController.h"
 #import "MWSearchTextField.h"
+#import "MWSMJGClassViewController.h"
 @interface MWHomeViewController () <SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *panelViewHeight;
 
@@ -92,7 +93,14 @@
     [self.navigationController pushViewController:vc animated:YES];
     
 }
+- (IBAction)shuimujiegou:(id)sender {
+    MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
+    [vm subtitle:@"CA" keyword:nil];
+    MWSMJGClassViewController *vc = [[MWSMJGClassViewController alloc] initWithStyle:UITableViewStylePlain];
+    vc.viewModel = vm;
+    [self.navigationController pushViewController:vc animated: YES];
 
+}
 // SDCycleScrollView delegate
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     

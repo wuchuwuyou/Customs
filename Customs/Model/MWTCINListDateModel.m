@@ -9,11 +9,35 @@
 #import "MWTCINListDateModel.h"
 
 @implementation MWTCINListDateModel
-- (NSString *)CHAPTER_NO{
+- (NSString *)Chapter{
     NSInteger a = self.TARIFF_NO.integerValue;
     NSInteger cha = a/100;
     NSInteger sec = a%100;
-    return [NSString stringWithFormat:@"第%zd章第%zd节",cha,sec];
+    return [NSString stringWithFormat:@"第%zd章",cha];
+}
+- (NSString<Ignore> *)Section {
+    NSInteger a = self.TARIFF_NO.integerValue;
+    NSInteger cha = a/100;
+    NSInteger sec = a%100;
+    return [NSString stringWithFormat:@"第%zd节",sec];
+}
+- (NSString<Ignore> *)title {
+    NSString * h = _TARIFF_NO;
+    NSLog(@"h length :%zd", h.length);
+    NSLog(@"h :%@",h);
+    if ([h hasPrefix:@"CA"]) {
+        NSString *no = [h substringWithRange:NSMakeRange(2, h.length-2)];
+        NSLog(@"no :%@",no);
+
+        return [NSString stringWithFormat:@"第%@类",no];
+    }else if ([h hasPrefix:@"CH"]) {
+        NSString *no = [h substringWithRange:NSMakeRange(2, h.length-2)];
+        NSLog(@"no :%@",no);
+        return [NSString stringWithFormat:@"第%@章",no];
+    }else{
+        NSLog(@"h :%@",h);
+        return h;
+    }
 }
 @end
 

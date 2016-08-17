@@ -19,6 +19,10 @@
 		0D32673C1D0E9BFF00458E73 /* MWTCINSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32673B1D0E9BFF00458E73 /* MWTCINSearchViewController.m */; };
 		0D32673F1D0EE2A900458E73 /* MWErrorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D32673E1D0EE2A900458E73 /* MWErrorAlert.m */; };
 		0D3267421D0EE9DB00458E73 /* MWSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3267411D0EE9DB00458E73 /* MWSearchTextField.m */; };
+		0D80E0EF1D64C9E4003DFA18 /* MWIAETTDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D80E0EE1D64C9E4003DFA18 /* MWIAETTDataViewController.m */; };
+		0D80E0F31D64D446003DFA18 /* MWSMJGClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D80E0F21D64D446003DFA18 /* MWSMJGClassViewController.m */; };
+		0D80E0F61D64D455003DFA18 /* MWSMJGChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D80E0F51D64D455003DFA18 /* MWSMJGChapterViewController.m */; };
+		0D80E0F91D64D477003DFA18 /* MWSMJGSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D80E0F81D64D477003DFA18 /* MWSMJGSectionViewController.m */; };
 		0DFEB1611D06B133002F6446 /* MWSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1601D06B133002F6446 /* MWSearchViewModel.m */; };
 		0DFEB1641D06B6AE002F6446 /* MWSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1631D06B6AE002F6446 /* MWSearchResultTableViewController.m */; };
 		0DFEB1671D06BF35002F6446 /* MWSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEB1661D06BF35002F6446 /* MWSearchResultModel.m */; };
@@ -138,6 +142,14 @@
 		0D32673E1D0EE2A900458E73 /* MWErrorAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWErrorAlert.m; sourceTree = "<group>"; };
 		0D3267401D0EE9DB00458E73 /* MWSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchTextField.h; sourceTree = "<group>"; };
 		0D3267411D0EE9DB00458E73 /* MWSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSearchTextField.m; sourceTree = "<group>"; };
+		0D80E0ED1D64C9E4003DFA18 /* MWIAETTDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWIAETTDataViewController.h; sourceTree = "<group>"; };
+		0D80E0EE1D64C9E4003DFA18 /* MWIAETTDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWIAETTDataViewController.m; sourceTree = "<group>"; };
+		0D80E0F11D64D446003DFA18 /* MWSMJGClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSMJGClassViewController.h; sourceTree = "<group>"; };
+		0D80E0F21D64D446003DFA18 /* MWSMJGClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSMJGClassViewController.m; sourceTree = "<group>"; };
+		0D80E0F41D64D455003DFA18 /* MWSMJGChapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSMJGChapterViewController.h; sourceTree = "<group>"; };
+		0D80E0F51D64D455003DFA18 /* MWSMJGChapterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSMJGChapterViewController.m; sourceTree = "<group>"; };
+		0D80E0F71D64D477003DFA18 /* MWSMJGSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSMJGSectionViewController.h; sourceTree = "<group>"; };
+		0D80E0F81D64D477003DFA18 /* MWSMJGSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSMJGSectionViewController.m; sourceTree = "<group>"; };
 		0DFEB15F1D06B133002F6446 /* MWSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchViewModel.h; sourceTree = "<group>"; };
 		0DFEB1601D06B133002F6446 /* MWSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSearchViewModel.m; sourceTree = "<group>"; };
 		0DFEB1621D06B6AE002F6446 /* MWSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSearchResultTableViewController.h; sourceTree = "<group>"; };
@@ -323,6 +335,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D80E0F01D64D417003DFA18 /* 税目结构 */ = {
+			isa = PBXGroup;
+			children = (
+				0D80E0F11D64D446003DFA18 /* MWSMJGClassViewController.h */,
+				0D80E0F21D64D446003DFA18 /* MWSMJGClassViewController.m */,
+				0D80E0F41D64D455003DFA18 /* MWSMJGChapterViewController.h */,
+				0D80E0F51D64D455003DFA18 /* MWSMJGChapterViewController.m */,
+				0D80E0F71D64D477003DFA18 /* MWSMJGSectionViewController.h */,
+				0D80E0F81D64D477003DFA18 /* MWSMJGSectionViewController.m */,
+			);
+			name = "税目结构";
+			sourceTree = "<group>";
+		};
 		2A148DC81B466F08009ED904 /* 本国子目 */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +648,8 @@
 				2A3B83DA1B39A01D008EDCD5 /* MWIAETTableViewController.m */,
 				2AA6AB211B44DC59006D7942 /* MWIAETDetailViewController.h */,
 				2AA6AB221B44DC59006D7942 /* MWIAETDetailViewController.m */,
+				0D80E0ED1D64C9E4003DFA18 /* MWIAETTDataViewController.h */,
+				0D80E0EE1D64C9E4003DFA18 /* MWIAETTDataViewController.m */,
 			);
 			name = "进出口税则";
 			sourceTree = "<group>";
@@ -630,6 +657,7 @@
 		2AA6AB271B452114006D7942 /* 税则商品及品目注释 */ = {
 			isa = PBXGroup;
 			children = (
+				0D80E0F01D64D417003DFA18 /* 税目结构 */,
 				2AA6AB281B4521A5006D7942 /* MWTCINViewController.h */,
 				2AA6AB291B4521A5006D7942 /* MWTCINViewController.m */,
 				0D3266F51D0D939D00458E73 /* MWTCINClassViewController.h */,
@@ -864,10 +892,13 @@
 				0D3266F71D0D939D00458E73 /* MWTCINClassViewController.m in Sources */,
 				2AE3B1BB1B4F55C1001AABB5 /* MWTCINTabBarViewController.m in Sources */,
 				2A95A7191B295C4200F29E04 /* MWHomeButton.m in Sources */,
+				0D80E0F31D64D446003DFA18 /* MWSMJGClassViewController.m in Sources */,
+				0D80E0EF1D64C9E4003DFA18 /* MWIAETTDataViewController.m in Sources */,
 				2A95A6DD1B26F0AD00F29E04 /* AppDelegate.m in Sources */,
 				2A3B83D81B399FD2008EDCD5 /* MWBaseTableViewController.m in Sources */,
 				2A3B83F01B418E6F008EDCD5 /* MWAPIHelper.m in Sources */,
 				2A148E251B4D71D5009ED904 /* MWLaboratoryViewController.m in Sources */,
+				0D80E0F91D64D477003DFA18 /* MWSMJGSectionViewController.m in Sources */,
 				2A148DE71B4A2801009ED904 /* MW2TableViewHeaderView.m in Sources */,
 				2A148E2B1B4D7587009ED904 /* MWLabModel.m in Sources */,
 				2A148E221B4D5919009ED904 /* MWGLJDDetailViewController.m in Sources */,
@@ -903,6 +934,7 @@
 				2A148DF91B4AB2A3009ED904 /* MWNATSubTabBarController.m in Sources */,
 				2AA6AB2A1B4521A5006D7942 /* MWTCINViewController.m in Sources */,
 				0D3266D01D0C142F00458E73 /* MWTCINClassViewModel.m in Sources */,
+				0D80E0F61D64D455003DFA18 /* MWSMJGChapterViewController.m in Sources */,
 				0DFEB1641D06B6AE002F6446 /* MWSearchResultTableViewController.m in Sources */,
 				0D2A248F1D00199C00A8BE42 /* MWLocalStorage.m in Sources */,
 				2AA6AB301B4532B9006D7942 /* MWTCINViewModel.m in Sources */,
