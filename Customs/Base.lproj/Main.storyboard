@@ -71,7 +71,7 @@
                                                     <constraint firstAttribute="width" secondItem="LfE-BD-7Te" secondAttribute="height" multiplier="2:1" id="UuA-KD-e4e"/>
                                                     <constraint firstAttribute="width" secondItem="LfE-BD-7Te" secondAttribute="height" multiplier="412:196" id="db4-gf-hBe"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="btn_1">
+                                                <state key="normal" backgroundImage="8">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -96,7 +96,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Hyi-dr-ynP" secondAttribute="height" multiplier="2:1" id="vMK-pC-sqs"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="btn_1">
+                                                <state key="normal" backgroundImage="9">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -2246,8 +2246,9 @@
     </scenes>
     <resources>
         <image name="1242-2208" width="1242" height="2208"/>
+        <image name="8" width="83" height="45"/>
+        <image name="9" width="83" height="45"/>
         <image name="bg_textsearch" width="294" height="43"/>
-        <image name="btn_1" width="177" height="45"/>
         <image name="btn_2" width="83" height="45"/>
         <image name="btn_3" width="83" height="45"/>
         <image name="btn_4" width="83" height="45"/>
