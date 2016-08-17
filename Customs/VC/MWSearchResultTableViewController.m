@@ -135,6 +135,7 @@
             MWGLJDReqModel *model = [[MWGLJDReqModel alloc] init];
             model.gName = key;
             tbVC.viewModel = [[MWGLJDViewModel alloc] initWithModel:model];
+            tbVC.viewModel.searchType = @(0);
             tbVC.type = MWGLSearchTypeJD;
             [self.navigationController pushViewController:tbVC animated:YES];
 //            targetVC = tbVC;
@@ -147,6 +148,7 @@
             MWGLJDReqModel *model = [[MWGLJDReqModel alloc] init];
             model.gName = key;
             tbVC.viewModel = [[MWGLJDViewModel alloc] initWithModel:model];
+            tbVC.viewModel.searchType = @(0);
             tbVC.type = MWGLSearchTypeCD;
             [self.navigationController pushViewController:tbVC animated:YES];
 //            targetVC = tbVC;
@@ -159,6 +161,7 @@
             [vm code:@"" name:key keyword:@""];
             MWKCTableViewController *kcvc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWKCTableViewController"];
             kcvc.viewModel = vm;
+            kcvc.viewModel.searchType = @(0);
             [self.navigationController pushViewController:kcvc animated: YES];
 //            targetVC = kcvc;
 
@@ -170,6 +173,7 @@
             [vm national:nil subTitle:key];
             MWNATSubTableViewController  *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MWNATSubTableViewController"];
             vc.viewModel = vm;
+            vc.viewModel.searchType = @(0);
             [self.navigationController pushViewController:vc animated: YES];
 //            targetVC = vc;
 
@@ -181,7 +185,8 @@
             MWIAETTableViewController *tbvc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"IAETTableViewController"];
             MWTariffModel *m = [[MWTariffModel alloc] init];
             m.name = key;
-            tbvc.model = m;
+            tbvc.viewModel = [[MWTariffListViewModel alloc] initWithModel:m];
+            tbvc.viewModel.searchType = @(0);
             [self.navigationController pushViewController:tbvc animated:YES];
 //            targetVC  = tbvc;
         }

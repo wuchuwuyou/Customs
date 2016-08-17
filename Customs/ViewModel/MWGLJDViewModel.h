@@ -24,6 +24,8 @@
 
 @property (nonatomic,strong,readonly) MWGLJDReqModel *reqModel;
 
+//搜索结果页面传0 其他传1
+@property (nonatomic,strong) NSNumber *searchType;
 
 - (instancetype) initWithInputViewArray:(NSArray *)arr;
 - (instancetype) initWithModel:(MWGLJDReqModel *)model;

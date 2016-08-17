@@ -21,6 +21,9 @@
 @property (nonatomic,assign) NSInteger page_size;
 /// 是否能加载更多
 @property (nonatomic,assign) BOOL canLoadMore;
+//搜索结果页面传0 其他传1
+@property (nonatomic,strong) NSNumber *searchType;
+
 /*!
  *  @author Murphy, 2015-06-30 19:06:11
  *

@@ -37,7 +37,11 @@
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
     [params setValue:@"CODE_TS" forKey:@"orderType"];
-    [params setValue:@"1" forKey:@"searchType"];
+    if (!self.searchType) {
+        self.searchType = @(1);
+    }
+    [params setValue:self.searchType forKey:@"searchType"];
+
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper nativeSubItemURL] andParameters:params];
     
 }

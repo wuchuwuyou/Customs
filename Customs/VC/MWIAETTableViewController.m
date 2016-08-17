@@ -17,7 +17,9 @@
 #import "MWErrorAlert.h"
 @interface MWIAETTableViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
-@property (nonatomic,strong) MWTariffListViewModel *viewModel;
+///查询参数模型
+@property (nonatomic,strong) MWTariffModel *model;
+
 @end
 
 @implementation MWIAETTableViewController
@@ -36,7 +38,7 @@
     
 //    self.tableView.footer.hidden = YES;
     
-    self.viewModel = [[MWTariffListViewModel alloc] initWithModel:self.model];
+//    self.viewModel = [[MWTariffListViewModel alloc] initWithModel:self.model];
     @weakify(self);
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         @strongify(self);

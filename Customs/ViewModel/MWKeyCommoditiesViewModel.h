@@ -18,6 +18,9 @@
 /// 是否能加载更多
 @property (nonatomic,assign) BOOL canLoadMore;
 
+//搜索结果页面传0 其他传1
+@property (nonatomic,strong) NSNumber *searchType;
+
 - (void)code:(NSString *)code name:(NSString *)name keyword:(NSString *)key;
 ///字典数组 －> 模型数组
 - (NSArray *)modelArrayWithArray:(NSArray *)arr;
