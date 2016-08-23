@@ -29,6 +29,9 @@ typedef enum : NSUInteger {
 @property (nonatomic ,readonly) NSString *keyword;
 @property (nonatomic ,readonly) NSString *name;
 
+//搜索结果页面传0 其他传1
+@property (nonatomic,strong) NSNumber *searchType;
+
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k;
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k name:(NSString *)n;
 ///字典数组 －> 模型数组
@@ -36,5 +39,6 @@ typedef enum : NSUInteger {
 ///请求数据
 - (RACSignal *)queryTCIN;
 - (RACSignal *)queryTCINCH;
+- (RACSignal *)queryJG;
 + (RACSignal *)loadDetailData:(NSString *)tariffNo;
 @end

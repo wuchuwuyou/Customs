@@ -7,8 +7,8 @@
 //
 
 #import "MWWebViewController.h"
-
-@interface MWWebViewController ()
+#import <SVProgressHUD.h>
+@interface MWWebViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *bgWebView;
 
 @end
@@ -20,10 +20,31 @@
     // Do any additional setup after loading the view.
     self.bgWebView.backgroundColor = [UIColor clearColor];
     @weakify(self);
+    
     [RACObserve(self, content) subscribeNext:^(NSString *value) {
         @strongify(self);
-        [self.bgWebView loadHTMLString:value baseURL:nil];
+        if (self.content) {
+            [self.bgWebView loadHTMLString:value baseURL:nil];
+        }
     }];
+    
+    [RACObserve(self, urlString) subscribeNext:^(NSString *x) {
+        if (x) {
+            [self.bgWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:x]]];
+        }
+    }];
+    self.bgWebView.delegate = self;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [SVProgressHUD show];
+
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [SVProgressHUD dismiss];
+}
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
+    [SVProgressHUD showErrorWithStatus:[error errorString]];
 }
 
 - (void)didReceiveMemoryWarning {

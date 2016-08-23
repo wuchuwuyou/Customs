@@ -15,6 +15,7 @@
 #import "MWTCINChapterViewModel.h"
 #import "MWSMJGChapterViewController.h"
 #import "MWErrorAlert.h"
+#import "MWWebViewController.h"
 @interface MWSMJGClassViewController ()
 //@property (nonatomic,strong)  MW2TableViewHeaderView *headerView;
 
@@ -77,7 +78,7 @@
 - (void)loadData{
     
     @weakify(self);
-    [[self.viewModel queryTCIN] subscribeNext:^(RACTuple *value) {
+    [[self.viewModel queryJG] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
         if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
@@ -102,6 +103,7 @@
         @strongify(self);
         [self performSelectorOnMainThread:@selector(showError:) withObject:error waitUntilDone:YES];
     }];
+
     
 }
 
@@ -112,7 +114,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.listArray.count;
+    if (self.viewModel.listArray == 0) {
+        return 0;
+    }
+    return self.viewModel.listArray.count +1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -124,10 +129,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.backgroundColor = [UIColor clearColor];
     }
-    
-    MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
-//    [cell configCellWithLeft:model.TARIFF_NAME mid:model.TARIFF_NO right:model.TARIFF_NAME];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@  %@",model.title,model.TARIFF_NAME];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"税则归类总规则";
+    }else {
+        MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row-1];
+        //    [cell configCellWithLeft:model.TARIFF_NAME mid:model.TARIFF_NO right:model.TARIFF_NAME];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@  %@",model.title,model.TARIFF_NAME];
+    }
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -139,15 +147,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.row == 0) {
+        MWWebViewController *vc =  [[[NSBundle mainBundle] loadNibNamed:@"MWWebViewController" owner:nil options:nil] lastObject];
+        vc.urlString = SZGLZGZURL;
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
     //    MWTCINDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINDetailViewController"];
-    MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
+    MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row-1];
     //    detail.tariffNo = model.TARIFF_NO;
     //    [self.navigationController pushViewController:detail animated:YES];
     
     //    [self loadDetailDataWithModel:model];
     
     MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
-    [vm subtitle:@"CH" keyword:model.TARIFF_NO];
+    [vm subtitle:model.TARIFF_NO keyword:nil];
     MWSMJGChapterViewController *vc = [[MWSMJGChapterViewController alloc] initWithStyle:UITableViewStylePlain];
     vc.viewModel = vm;
     [self.navigationController pushViewController:vc animated: YES];

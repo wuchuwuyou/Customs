@@ -102,7 +102,7 @@ typedef enum {
     [params setValue:@(self.page_size) forKey:@"pageSize"];
     [params setValue:@"SOURCE_NO" forKey:@"orderType"];
     if (!self.searchType) {
-        self.searchType = @(1);
+        self.searchType = @(0);
     }
     [params setValue:self.searchType forKey:@"searchType"];
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper GLJDListURL] andParameters:params];

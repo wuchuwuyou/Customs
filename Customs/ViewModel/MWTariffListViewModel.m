@@ -37,14 +37,17 @@
  
  */
     NSMutableDictionary *data = [NSMutableDictionary dictionaryWithDictionary:[self.tModel toDictionary]];
+    NSMutableDictionary *d = [NSMutableDictionary dictionary];
+    [d setValue:data[@"codeTS"] forKey:@"codeTS"];
+    [d setValue:data[@"gName"] forKey:@"gName"];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setValue:[data getJSONString] forKey:@"jsonParams"];
+    [params setValue:[d getJSONString] forKey:@"jsonParams"];
     [params setValue:@"CLS00003" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
     [params setValue:@"CODE_TS_S" forKey:@"orderType"];
     if (!self.searchType) {
-        self.searchType = @(1);
+        self.searchType = @(0);
     }
     [params setValue:self.searchType forKey:@"searchType"];
 

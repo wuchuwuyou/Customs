@@ -43,7 +43,7 @@
     
     self.vc4 = [[MWIAETTDataViewController alloc] initWithStyle:UITableViewStylePlain];
     self.vc4.viewModel = [[MWTariffListViewModel alloc] init];
-    self.vc4.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"shuimujiegou", @"税目结构") image:[UIImage imageNamed:@"shuimujiegou"] selectedImage:[UIImage imageNamed:@"shuimujiegouhover"]];
+    self.vc4.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"shuimujiegou", @"税目结构") image:[UIImage imageNamed:@"1"] selectedImage:[UIImage imageNamed:@"2"]];
 
     
 

@@ -33,3 +33,8 @@ UIKIT_EXTERN NSString *const MWLabStatusPath;
 UIKIT_EXTERN NSString *const HOST_NAME;
 
 UIKIT_EXTERN NSInteger const PORT;
+
+
+/// 税则归类总规则
+
+UIKIT_EXTERN NSString *const SZGLZGZURL;

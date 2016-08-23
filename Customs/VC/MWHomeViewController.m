@@ -95,7 +95,7 @@
 }
 - (IBAction)shuimujiegou:(id)sender {
     MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
-    [vm subtitle:@"CA" keyword:nil];
+//    [vm subtitle:@"CA" keyword:nil];
     MWSMJGClassViewController *vc = [[MWSMJGClassViewController alloc] initWithStyle:UITableViewStylePlain];
     vc.viewModel = vm;
     [self.navigationController pushViewController:vc animated: YES];

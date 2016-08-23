@@ -123,7 +123,7 @@
     }
     
     MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
-    [cell configCellWithLeft:model.TARIFF_NAME mid:model.TARIFF_NO right:model.TARIFF_NAME];
+    [cell configCellWithLeft:model.title mid:model.TARIFF_NO right:model.TARIFF_NAME];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

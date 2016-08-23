@@ -11,7 +11,7 @@
 // 首页
 // 进出口税则查询
 
-"tariff_no" = "税则列号";
+"tariff_no" = "税则号列";
 "goods_name" = "货品名称";
 "MFN_tariff" = "最惠国税率";
 "general_tariff" = "普通税率";

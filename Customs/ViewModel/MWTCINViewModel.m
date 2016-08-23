@@ -22,26 +22,29 @@
 }
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k{
     _subTitle = sb;
-    _name = k;
+    _keyword = k;
 }
 - (void)subtitle:(NSString *)sb keyword:(NSString *)k name:(NSString *)n {
     _subTitle = sb;
-    _name = k;
+    _keyword = k;
     _name = n;
 }
 - (RACSignal *)queryTCIN{
     
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     [data setValue:self.subTitle forKey:@"tariffNo"];
-    [data setValue:self.keyword forKey:@"keyWord"];
-    [data setValue:self.name forKey:@"tariffName"];
+    [data setValue:self.keyword forKey:@"CommentarySearch"];
+//    [data setValue:self.name forKey:@"tariffName"];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:[data getJSONString] forKey:@"jsonParams"];
     [params setValue:@"CLS00004" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
-    [params setValue:@"TARIFF_NO" forKey:@"orderType"];
-
+    [params setValue:@"" forKey:@"orderType"];
+    if (!self.searchType) {
+        self.searchType = @(0);
+    }
+    [params setValue:self.searchType forKey:@"searchType"];
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper goodsTariffItemURL] andParameters:params];
 }
 //getCHTraiffCommentary
@@ -49,14 +52,28 @@
     
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     [data setValue:self.subTitle forKey:@"tariffNo"];
-    [data setValue:self.keyword forKey:@"keyWord"];
-    [data setValue:self.name forKey:@"TARIFF_NAME"];
+    [data setValue:self.keyword forKey:@"CommentarySearch"];
+//    [data setValue:self.name forKey:@"TARIFF_NAME"];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:[data getJSONString] forKey:@"jsonParams"];
     [params setValue:@"CLS00004" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
     [params setValue:@"TARIFF_NO" forKey:@"orderType"];
+    
+    return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper CHTraiffCommentaryURL] andParameters:params];
+}
+- (RACSignal *)queryJG {
+    NSMutableDictionary *data = [NSMutableDictionary dictionary];
+    [data setValue:self.subTitle forKey:@"tariffNo"];
+    [data setValue:self.keyword forKey:@"CommentarySearch"];
+//    [data setValue:self.name forKey:@"TARIFF_NAME"];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:[data getJSONString] forKey:@"jsonParams"];
+    [params setValue:@"CLS00004" forKey:@"messageCode"];
+    [params setValue:@(self.page_index) forKey:@"pageNo"];
+    [params setValue:@(self.page_size) forKey:@"pageSize"];
+    [params setValue:@"" forKey:@"orderType"];
     
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper CHTraiffCommentaryURL] andParameters:params];
 }

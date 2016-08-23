@@ -127,7 +127,7 @@
     
     MWKeyCommoditiesModel *m = self.viewModel.listArray[indexPath.row];
     
-    [cell configCellWithLeft:m.CODE_TS mid:m.G_NAME right:m.G_MODEL];
+    [cell configCellWithLeft:m.G_NAME mid:m.CODE_TS right:m.G_MODEL];
     
     return cell;
 }

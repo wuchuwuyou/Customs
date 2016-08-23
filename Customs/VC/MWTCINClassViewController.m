@@ -76,7 +76,7 @@
 - (void)loadData{
     
     @weakify(self);
-    [[self.viewModel queryTCIN] subscribeNext:^(RACTuple *value) {
+    [[self.viewModel queryJG] subscribeNext:^(RACTuple *value) {
         @strongify(self);
         NSDictionary *dict = [MWXMLParse dictForXMLData:value.first];
         if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
@@ -123,7 +123,7 @@
     }
     
     MWTCINListDateModel *model =  self.viewModel.listArray[indexPath.row];
-    [cell configCellWithLeft:model.TARIFF_NAME mid:model.TARIFF_NO right:model.TARIFF_NAME];
+    [cell configCellWithLeft:model.title mid:model.TARIFF_NO right:model.TARIFF_NAME];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

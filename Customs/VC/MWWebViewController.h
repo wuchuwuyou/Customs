@@ -10,4 +10,5 @@
 
 @interface MWWebViewController : MWBaseViewController
 @property (nonatomic,copy) NSString *content;
+@property (nonatomic,copy) NSString *urlString;
 @end

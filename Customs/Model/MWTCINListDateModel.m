@@ -22,9 +22,14 @@
     return [NSString stringWithFormat:@"第%zd节",sec];
 }
 - (NSString<Ignore> *)title {
-    NSString * h = _TARIFF_NO;
+    NSMutableString * h = [NSMutableString stringWithString:_TARIFF_NO];
     NSLog(@"h length :%zd", h.length);
     NSLog(@"h :%@",h);
+
+    [h replaceOccurrencesOfString:@" " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, h.length)];
+    NSLog(@"h length :%zd", h.length);
+    NSLog(@"h :%@",h);
+    
     if ([h hasPrefix:@"CA"]) {
         NSString *no = [h substringWithRange:NSMakeRange(2, h.length-2)];
         NSLog(@"no :%@",no);
@@ -36,6 +41,7 @@
         return [NSString stringWithFormat:@"第%@章",no];
     }else{
         NSLog(@"h :%@",h);
+        return [NSString stringWithFormat:@"第%@节",h];
         return h;
     }
 }

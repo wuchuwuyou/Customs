@@ -38,7 +38,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    self.tariffViewModel = [[MWTariffViewModel alloc] initWithMWInputViewArray:self.inputViewArray];
+    //    self.tariffViewModel = [[MWTariffViewModel alloc] initWithMWInputViewArray:self.inputViewArray];
     
     
     /// 监听键盘事件
@@ -58,9 +58,9 @@
     
     [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
     [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
-
     
-
+    
+    
 }
 - (IBAction)resetAll:(id)sender {
     
@@ -75,35 +75,77 @@
     //    }
     NSString *title = self.subtitle.inputText;
     NSString *keyword = self.keyword.inputText;
-    if ((keyword == nil || keyword.length == 0 )&& (title == nil || title.length == 0)) {
-        title = @"CA";
+    
+//    if ((keyword == nil || keyword.length == 0 )&& (title == nil || title.length == 0)) {
+//        //        title = @"CA";
+//        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
+//        [vm subtitle:nil keyword:nil];
+//        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
+//        vc.viewModel = vm;
+//        [self.navigationController pushViewController:vc animated: YES];
+//        return;
+//    }
+    if ([title.lowercaseString isEqualToString:@"ca"] || [title.lowercaseString isEqualToString:@"ch"]) {
+        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
+        [vm subtitle:nil keyword:nil];
+        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+        return;
     }
     if ([title.lowercaseString hasPrefix:@"ca"]) {
-        // 类
+        MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
+        [vm subtitle:title keyword:keyword];
+        MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+    }else if ([title.lowercaseString hasPrefix:@"ch"]){
+        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+        [vm subtitle:title keyword:keyword];
+        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+    }else if([self isPureNumandCharacters:title]){
+        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+        [vm subtitle:title keyword:keyword];
+        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+    }else {
         MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
         [vm subtitle:title keyword:keyword];
         MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
         vc.viewModel = vm;
         [self.navigationController pushViewController:vc animated: YES];
 
-    }else if ([title.lowercaseString hasPrefix:@"ch"]) {
-        MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
-        [vm subtitle:title keyword:keyword];
-        MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
-        vc.viewModel = vm;
-        [self.navigationController pushViewController:vc animated: YES];
-    }else {
-        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-        [vm subtitle:title keyword:keyword];
-        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
-        vc.viewModel = vm;
-        [self.navigationController pushViewController:vc animated: YES];
     }
-//    MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-//    [vm subtitle:self.subtitle.inputText keyword:self.keyword.inputText];
-//    MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
-//    vc.viewModel = vm;
-//    [self.navigationController pushViewController:vc animated: YES];
+    
+    //    if ([title.lowercaseString hasPrefix:@"ca"]) {
+    //        // 类
+    //        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
+    //        [vm subtitle:title keyword:keyword];
+    //        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
+    //        vc.viewModel = vm;
+    //        [self.navigationController pushViewController:vc animated: YES];
+    //
+    //    }else if ([title.lowercaseString hasPrefix:@"ch"]) {
+    //        MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
+    //        [vm subtitle:title keyword:keyword];
+    //        MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
+    //        vc.viewModel = vm;
+    //        [self.navigationController pushViewController:vc animated: YES];
+    //    }else {
+    //        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+    //        [vm subtitle:title keyword:keyword];
+    //        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+    //        vc.viewModel = vm;
+    //        [self.navigationController pushViewController:vc animated: YES];
+    //    }
+    //    MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+    //    [vm subtitle:self.subtitle.inputText keyword:self.keyword.inputText];
+    //    MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+    //    vc.viewModel = vm;
+    //    [self.navigationController pushViewController:vc animated: YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification{
@@ -149,6 +191,18 @@
     } completion:nil];
     
 }
+- (BOOL)isPureNumandCharacters:(NSString *)string
+{
+    if (string.length == 0) {
+        return NO;
+    }
+    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
+    if(string.length > 0)
+    {
+        return NO;
+    }
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -160,13 +214,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

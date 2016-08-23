@@ -10,8 +10,13 @@
 
 @implementation NSDictionary (MWJSONTransform)
 - (NSString *)getJSONString{
-    NSError *parseError = nil;
     
+    NSArray *keys = self.allKeys;
+    if (keys.count == 0) {
+        return @"";
+    }
+    NSError *parseError = nil;
+
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&parseError];
     
     if (parseError) {

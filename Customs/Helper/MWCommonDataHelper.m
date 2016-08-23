@@ -25,7 +25,7 @@
     
     NSInteger num = [model toDictionary].allKeys.count;
     
-    for (NSInteger i = 0; i<num ; i++) {
+    for (NSInteger i = 0; i<10 ; i++) {
         
         MWCommonModel *m = [[MWCommonModel alloc] init];
         
@@ -125,7 +125,7 @@
     
     NSInteger num = [model toDictionary].allKeys.count;
     
-    for (NSInteger i = 0; i<num ; i++) {
+    for (NSInteger i = 0; i<8 ; i++) {
         
         MWCommonModel *m = [[MWCommonModel alloc] init];
         
@@ -175,7 +175,7 @@
     
     NSInteger num = [model toDictionary].allKeys.count;
     
-    for (NSInteger i = 0; i<num ; i++) {
+    for (NSInteger i = 0; i<5 ; i++) {
         
         MWCommonModel *m = [[MWCommonModel alloc] init];
         

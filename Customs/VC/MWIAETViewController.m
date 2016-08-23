@@ -77,7 +77,7 @@
 - (void)initViews{
     self.inputViewArray = [NSMutableArray array];
     self.bgScrollView.backgroundColor = [UIColor clearColor];
-    [self.inputCode titleText:NSLocalizedString(@"tariff_no",@"税则列号")];
+    [self.inputCode titleText:NSLocalizedString(@"tariff_no",@"税则号列")];
     [self.inputName titleText:NSLocalizedString(@"goods_name",@"货品名称")];
     [self.inputViewArray addObject:self.inputCode];
     [self.inputViewArray addObject:self.inputName];
@@ -99,7 +99,7 @@
     [self.inputViewArray addObject:self.inputXDSLDM1];
     [self.inputViewArray addObject:self.inputXDSLDM2];
 
-    [self.inputXDSLXG1 titleText:NSLocalizedString(@"conventional_tariff_HongKong", @"鞋底女税率(香港)")];
+    [self.inputXDSLXG1 titleText:NSLocalizedString(@"conventional_tariff_HongKong", @"协定税率(香港)")];
     [self.inputXDSLXG2 titleText:@""];
     
     
