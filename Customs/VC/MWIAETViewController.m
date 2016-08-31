@@ -21,29 +21,29 @@
 
 @property (weak, nonatomic) IBOutlet MWInputView *inputName;
 
-@property (weak ,nonatomic) IBOutlet MWInputView *inputZHGSL1;
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputZHGSL1;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputZHGSL2;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputPTSL1;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputPTSL2;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLDM1;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLDM2;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLXG1;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLXG2;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLAM1;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLAM2;
+//
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputCKSL1;
 
-@property (weak ,nonatomic) IBOutlet MWInputView *inputZHGSL2;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputPTSL1;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputPTSL2;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLDM1;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLDM2;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLXG1;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLXG2;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLAM1;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputXDSLAM2;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputCKSL1;
-
-@property (weak ,nonatomic) IBOutlet MWInputView *inputCKSL2;
+//@property (weak ,nonatomic) IBOutlet MWInputView *inputCKSL2;
 
 @property (weak, nonatomic) IBOutlet MWInputViewButton *resetButton;
 @property (weak, nonatomic) IBOutlet MWInputViewButton *searchButton;
@@ -82,44 +82,44 @@
     [self.inputViewArray addObject:self.inputCode];
     [self.inputViewArray addObject:self.inputName];
 
-    [self.inputZHGSL1 titleText:NSLocalizedString(@"MFN_tariff", @"最惠国税率")];
-    [self.inputZHGSL2 titleText:@""];
-    [self.inputViewArray addObject:self.inputZHGSL1];
-    [self.inputViewArray addObject:self.inputZHGSL2];
-
-    [self.inputPTSL1 titleText:NSLocalizedString(@"general_tariff", @"普通税率")];
-    [self.inputPTSL2 titleText:@""];
-    [self.inputViewArray addObject:self.inputPTSL1];
-    [self.inputViewArray addObject:self.inputPTSL2];
-
-
-    [self.inputXDSLDM1 titleText:NSLocalizedString(@"conventional_tariff_ASEAN", @"协定税率(东盟)")];
-    [self.inputXDSLDM2 titleText:@""];
-
-    [self.inputViewArray addObject:self.inputXDSLDM1];
-    [self.inputViewArray addObject:self.inputXDSLDM2];
-
-    [self.inputXDSLXG1 titleText:NSLocalizedString(@"conventional_tariff_HongKong", @"协定税率(香港)")];
-    [self.inputXDSLXG2 titleText:@""];
-    
-    
-    [self.inputViewArray addObject:self.inputXDSLXG1];
-    [self.inputViewArray addObject:self.inputXDSLXG2];
-
-    [self.inputXDSLAM1 titleText:NSLocalizedString(@"conventional_tariff_Macao", @"协定税率(澳门)")];
-    [self.inputXDSLAM2 titleText:@""];
-
-    
-    [self.inputViewArray addObject:self.inputXDSLAM1];
-    [self.inputViewArray addObject:self.inputXDSLAM2];
-
-    
-    [self.inputCKSL1 titleText:NSLocalizedString(@"export_tariff", @"出口税率")];
-    [self.inputCKSL2 titleText:@""];
-
-    
-    [self.inputViewArray addObject:self.inputCKSL1];
-    [self.inputViewArray addObject:self.inputCKSL2];
+//    [self.inputZHGSL1 titleText:NSLocalizedString(@"MFN_tariff", @"最惠国税率")];
+//    [self.inputZHGSL2 titleText:@""];
+//    [self.inputViewArray addObject:self.inputZHGSL1];
+//    [self.inputViewArray addObject:self.inputZHGSL2];
+//
+//    [self.inputPTSL1 titleText:NSLocalizedString(@"general_tariff", @"普通税率")];
+//    [self.inputPTSL2 titleText:@""];
+//    [self.inputViewArray addObject:self.inputPTSL1];
+//    [self.inputViewArray addObject:self.inputPTSL2];
+//
+//
+//    [self.inputXDSLDM1 titleText:NSLocalizedString(@"conventional_tariff_ASEAN", @"协定税率(东盟)")];
+//    [self.inputXDSLDM2 titleText:@""];
+//
+//    [self.inputViewArray addObject:self.inputXDSLDM1];
+//    [self.inputViewArray addObject:self.inputXDSLDM2];
+//
+//    [self.inputXDSLXG1 titleText:NSLocalizedString(@"conventional_tariff_HongKong", @"协定税率(香港)")];
+//    [self.inputXDSLXG2 titleText:@""];
+//    
+//    
+//    [self.inputViewArray addObject:self.inputXDSLXG1];
+//    [self.inputViewArray addObject:self.inputXDSLXG2];
+//
+//    [self.inputXDSLAM1 titleText:NSLocalizedString(@"conventional_tariff_Macao", @"协定税率(澳门)")];
+//    [self.inputXDSLAM2 titleText:@""];
+//
+//    
+//    [self.inputViewArray addObject:self.inputXDSLAM1];
+//    [self.inputViewArray addObject:self.inputXDSLAM2];
+//
+//    
+//    [self.inputCKSL1 titleText:NSLocalizedString(@"export_tariff", @"出口税率")];
+//    [self.inputCKSL2 titleText:@""];
+//
+//    
+//    [self.inputViewArray addObject:self.inputCKSL1];
+//    [self.inputViewArray addObject:self.inputCKSL2];
 
     
 }
