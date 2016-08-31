@@ -48,8 +48,8 @@
     
     [self initViews];
     
-    self.viewModel = [[MWGLJDViewModel alloc] initWithInputViewArray:self.inputViewArray];
-    self.viewModel.type = self.type;
+//    self.viewModel = [[MWGLJDViewModel alloc] initWithInputViewArray:self.inputViewArray];
+//    self.viewModel.type = self.type;
     [self.resetButton setTitle:NSLocalizedString(@"reset", @"重置") forState:UIControlStateNormal];
     [self.searchButton setTitle:NSLocalizedString(@"search", @"查询") forState:UIControlStateNormal];
     
@@ -85,7 +85,10 @@
     //    for (MWInputView *v in self.inputViewArray) {
     //        NSLog(@"%@",v.inputText);
     //    }
+    self.viewModel = [[MWGLJDViewModel alloc] initWithInputViewArray:self.inputViewArray];
+    self.viewModel.type = self.type;
     NSLog(@"%@",[self.viewModel.reqModel toDictionary]);
+
     MWGLJDTableViewController *tbVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MWGLJDTableViewController"];
     tbVC.viewModel = self.viewModel;
     tbVC.type = self.type;
