@@ -76,15 +76,15 @@
     NSString *title = self.subtitle.inputText;
     NSString *keyword = self.keyword.inputText;
     
-//    if ((keyword == nil || keyword.length == 0 )&& (title == nil || title.length == 0)) {
-//        //        title = @"CA";
-//        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
-//        [vm subtitle:nil keyword:nil];
-//        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
-//        vc.viewModel = vm;
-//        [self.navigationController pushViewController:vc animated: YES];
-//        return;
-//    }
+    if ((keyword == nil || keyword.length == 0 )&& (title == nil || title.length == 0)) {
+        //        title = @"CA";
+        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
+        [vm subtitle:nil keyword:nil];
+        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+        return;
+    }
     if ([title.lowercaseString isEqualToString:@"ca"] || [title.lowercaseString isEqualToString:@"ch"]) {
         MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
         [vm subtitle:nil keyword:nil];

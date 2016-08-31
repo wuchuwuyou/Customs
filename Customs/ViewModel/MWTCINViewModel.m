@@ -73,7 +73,7 @@
     [params setValue:@"CLS00004" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
-    [params setValue:@"TARIFF_NO" forKey:@"orderType"];
+    [params setValue:@"CAST(SUBSTRING(TARIFF_NO,3,LEN(TARIFF_NO)-1) AS INT)" forKey:@"orderType"];
     
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper CHTraiffCommentaryURL] andParameters:params];
 }
