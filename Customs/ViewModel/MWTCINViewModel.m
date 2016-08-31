@@ -40,7 +40,7 @@
     [params setValue:@"CLS00004" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
-    [params setValue:@"" forKey:@"orderType"];
+    [params setValue:@"TARIFF_NO" forKey:@"orderType"];
     if (!self.searchType) {
         self.searchType = @(0);
     }
@@ -73,7 +73,7 @@
     [params setValue:@"CLS00004" forKey:@"messageCode"];
     [params setValue:@(self.page_index) forKey:@"pageNo"];
     [params setValue:@(self.page_size) forKey:@"pageSize"];
-    [params setValue:@"" forKey:@"orderType"];
+    [params setValue:@"TARIFF_NO" forKey:@"orderType"];
     
     return [[MWAPIManager sharedManager] requestWithPath:[MWAPIHelper CHTraiffCommentaryURL] andParameters:params];
 }
