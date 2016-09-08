@@ -20,7 +20,7 @@
 "conventional_tariff_Macao" = "协定税率(澳门)";
 "conventional_tariff_APTA" =  "协定税率(亚太)";
 "export_tariff" = "出口税率";
-"goods_no" = "商品编号";
+"goods_no" = "商品编码";
 "goods_name_1" = "商品名称";
 
 "tariff_result" = "进出口税则查询结果";

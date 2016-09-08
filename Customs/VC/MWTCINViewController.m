@@ -77,40 +77,13 @@
     NSString *keyword = self.keyword.inputText;
     
     if ((keyword == nil || keyword.length == 0 )&& (title == nil || title.length == 0)) {
-        //        title = @"CA";
+//                title = @"CA";
         MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
         [vm subtitle:nil keyword:nil];
         MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
         vc.viewModel = vm;
         [self.navigationController pushViewController:vc animated: YES];
-        return;
-    }
-    if ([title.lowercaseString isEqualToString:@"ca"] || [title.lowercaseString isEqualToString:@"ch"]) {
-        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
-        [vm subtitle:nil keyword:nil];
-        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
-        vc.viewModel = vm;
-        [self.navigationController pushViewController:vc animated: YES];
-        return;
-    }
-    if ([title.lowercaseString hasPrefix:@"ca"]) {
-        MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
-        [vm subtitle:title keyword:keyword];
-        MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
-        vc.viewModel = vm;
-        [self.navigationController pushViewController:vc animated: YES];
-    }else if ([title.lowercaseString hasPrefix:@"ch"]){
-        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-        [vm subtitle:title keyword:keyword];
-        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
-        vc.viewModel = vm;
-        [self.navigationController pushViewController:vc animated: YES];
-    }else if([self isPureNumandCharacters:title]){
-        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
-        [vm subtitle:title keyword:keyword];
-        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
-        vc.viewModel = vm;
-        [self.navigationController pushViewController:vc animated: YES];
+        
     }else {
         MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
         [vm subtitle:title keyword:keyword];
@@ -119,6 +92,40 @@
         [self.navigationController pushViewController:vc animated: YES];
 
     }
+//    if ([title.lowercaseString isEqualToString:@"ca"] || [title.lowercaseString isEqualToString:@"ch"]) {
+//        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
+//        [vm subtitle:nil keyword:nil];
+//        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
+//        vc.viewModel = vm;
+//        [self.navigationController pushViewController:vc animated: YES];
+//        return;
+//    }
+//    if ([title.lowercaseString hasPrefix:@"ca"]) {
+//        MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
+//        [vm subtitle:title keyword:keyword];
+//        MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
+//        vc.viewModel = vm;
+//        [self.navigationController pushViewController:vc animated: YES];
+//    }else if ([title.lowercaseString hasPrefix:@"ch"]){
+//        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+//        [vm subtitle:title keyword:keyword];
+//        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+//        vc.viewModel = vm;
+//        [self.navigationController pushViewController:vc animated: YES];
+//    }else if([self isPureNumandCharacters:title]){
+//        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+//        [vm subtitle:title keyword:keyword];
+//        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+//        vc.viewModel = vm;
+//        [self.navigationController pushViewController:vc animated: YES];
+//    }else {
+//        MWTCINClassViewModel *vm = [[MWTCINClassViewModel alloc] init];
+//        [vm subtitle:title keyword:keyword];
+//        MWTCINClassViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINClassViewController"];
+//        vc.viewModel = vm;
+//        [self.navigationController pushViewController:vc animated: YES];
+//
+//    }
     
     //    if ([title.lowercaseString hasPrefix:@"ca"]) {
     //        // 类

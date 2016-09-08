@@ -14,6 +14,8 @@
 #import "MWTCINChapterViewModel.h"
 #import "MWTCINChapterViewController.h"
 #import "MWErrorAlert.h"
+#import "MWTCINTableViewController.h"
+#import "MWTCINTabBarViewController.h"
 @interface MWTCINClassViewController ()
 @property (nonatomic,strong)  MWListHeaderView *headerView;
 
@@ -141,13 +143,79 @@
     //    [self.navigationController pushViewController:detail animated:YES];
     
 //    [self loadDetailDataWithModel:model];
+    NSString * tar = model.TARIFF_NO.lowercaseString;
+    if ([tar hasPrefix:@"ca"]) {
+        // 类 -> 章
+        MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
+        [vm subtitle:model.TARIFF_NO keyword:self.viewModel.keyword];
+        MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+
+    }else if ([tar hasPrefix:@"ch"]){
+        // 章 -> 节
+        MWTCINViewModel *vm = [[MWTCINViewModel alloc] init];
+        [vm subtitle:model.TARIFF_NO keyword:self.viewModel.keyword];
+        MWTCINTableViewController  *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINTableViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+
+    }else if ([self isPureNumandCharacters:tar]) {
+        // 节 -> 详情
+        [self loadDetailDataWithModel:model];
+    }else {
+        MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
+        [vm subtitle:model.TARIFF_NO keyword:self.viewModel.keyword];
+        MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
+        vc.viewModel = vm;
+        [self.navigationController pushViewController:vc animated: YES];
+    }
     
-    MWTCINChapterViewModel *vm = [[MWTCINChapterViewModel alloc] init];
-    [vm subtitle:model.TARIFF_NO keyword:self.viewModel.keyword];
-    MWTCINChapterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MWTCINChapterViewController"];
-    vc.viewModel = vm;
-    [self.navigationController pushViewController:vc animated: YES];
 }
+- (void)loadDetailDataWithModel:(MWTCINListDateModel *)model{
+    
+    [SVProgressHUD show];
+    
+    [[MWTCINViewModel loadDetailData:model.TARIFF_NO] subscribeNext:^(RACTuple *value) {
+        NSArray *arr = [MWXMLParse dictForXMLData:value.first];
+        
+        //        NSArray *arr  = value.first;
+        NSDictionary *dict = [arr lastObject];
+        if ([MWErrorAlert hasErrorMessageWithDict:dict]) {
+            
+            return ;
+        }
+        NSError *error;
+        MWTCINDetailDataModel *detailModel = [[MWTCINDetailDataModel alloc] initWithDictionary:dict error:&error];
+        if (error) {
+            NSLog(@"解析错误%@",[error errorString]);
+            [SVProgressHUD showErrorWithStatus:[error errorString]];
+        }else
+        {
+            MWTCINTabBarViewController *vc = [[MWTCINTabBarViewController alloc] init];
+            vc.model = detailModel;
+            [self.navigationController pushViewController:vc animated:YES];
+            [SVProgressHUD dismiss];
+        }
+        
+    } error:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error errorString]];
+    }];
+}
+
+- (BOOL)isPureNumandCharacters:(NSString *)string
+{
+    if (string.length == 0) {
+        return NO;
+    }
+    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
+    if(string.length > 0)
+    {
+        return NO;
+    }
+    return YES;
+}
+
 //
 //- (void)loadDetailDataWithModel:(MWTCINListDateModel *)model{
 //    
