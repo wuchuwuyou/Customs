@@ -17,13 +17,14 @@
     dispatch_once(&onceToken, ^{
         instance = [self manager];
         AFHTTPRequestSerializer * requestSerializer = [AFHTTPRequestSerializer serializer];
+        requestSerializer.timeoutInterval = 60.0 * 3;
 //        [requestSerializer setValue:@"your user agent" forHTTPHeaderField:@"User-Agent"];
         instance.requestSerializer = requestSerializer;
         instance.responseSerializer = [AFHTTPResponseSerializer new];
 
 //        instance.responseSerializer = [AFXMLParserResponseSerializer serializer];
 //        instance.requestSerializer = [AFHTTPRequestSerializer serializer];
-        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",@"text/xml",@"application/soap+xml",@"application/xml",nil];
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",@"text/xml",@"application/soap+xml",@"application/xml",@"text/plain",nil];
         
     });
     return instance;
